@@ -6,7 +6,7 @@ public class Historia {
         return false;
     }
 
-    public static void main(string[] args){
+    public static void main(String[] args){
         matar(100, "espada");
     }
 
