@@ -1,5 +1,7 @@
 # Diseño de software para cómputo científico
-## Unidad 1 - Practico I
+## Unidad 1 - Práctico I
+
+**Fecha de entrega:** Agosto 25 del 2019 a las 23:59 (se enviara un anuncio de como entregar el práctico)
 
 ### Criterio de evaluación
 
