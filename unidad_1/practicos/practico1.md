@@ -3,6 +3,23 @@
 
 ### Criterio de evaluación
 
+- Se debe escribir todos los programas para Python 3.7
+- Se recomienda crear un entorno virtual para aislar los scripts del problema.
+- Cada ejercicio debe ser una función, cuya documentación debe ser su enunciado
+- Al finalizar del modulo debe haber un main que ejecuta todos los ejercicios.
+- El cumplimento de estos criterios es parte de la evaluación.
+- El archivo debe llamarse `u1e1_apellido.py`
+- El archivo no debe tirar errores de estilo [PEP 8](https://www.python.org/dev/peps/pep-0008/) (Verificarlo con la
+  herramienta *Flake8*
+
+### Notas
+
+- Flake 8: [http://flake8.pycqa.org](http://flake8.pycqa.org)
+- Entornos virtuales en Python 3: [https://docs.python.org/3/library/venv.html](https://docs.python.org/3/library/venv.html)
+- Como crear entornos virtuales con anaconda:  [https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html)
+- Como crear entornos virtuales con virtualenv [https://virtualenv.pypa.io](https://virtualenv.pypa.io)
+
+
 
 1. Strings
 
