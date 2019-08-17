@@ -12,7 +12,7 @@
 - El archivo no debe tirar errores de estilo [PEP 8](https://www.python.org/dev/peps/pep-0008/) (Verificarlo con la
   herramienta *Flake8*
 
-### Notas
+#### Notas
 
 - Flake 8: [http://flake8.pycqa.org](http://flake8.pycqa.org)
 - Entornos virtuales en Python 3: [https://docs.python.org/3/library/venv.html](https://docs.python.org/3/library/venv.html)
@@ -20,11 +20,13 @@
 - Como crear entornos virtuales con virtualenv [https://virtualenv.pypa.io](https://virtualenv.pypa.io)
 
 
+### Ejercicios 
 
-1. Strings
+#### 1. Strings
 
-1.1 Facturas
-Dado una número de facturas, implementar una función que devuleva el string ‘Cantidad de facturas: <nro> ‘ donde nro es el número que se pasa como argumento. Si las facturas son mas de 12, se tiene que devolver ‘Cantidad de facturas: muchas’.
+##### 1.1 Facturas
+
+Dado una número de facturas, implementar una función que devuleva el string `Cantidad de facturas: <nro>` donde `nro` es el número que se pasa como argumento. Si las facturas son mas de 12, se tiene que devolver `Cantidad de facturas: muchas`.
 
 1.2 Ambos
 Dado un string s, implementar la función ambos que devuelve un string construido con los dos primeros y dos últimos caracteres. Por ejemplo, aplicar ambos a  ‘primavera’ devuelve ‘prra’. Si  s posee menos de dos caracteres, el resultado es el string vacio.
