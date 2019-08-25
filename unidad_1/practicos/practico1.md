@@ -22,7 +22,7 @@
 - Como crear entornos virtuales con virtualenv [https://virtualenv.pypa.io](https://virtualenv.pypa.io)
 
 
-### Ejercicios 
+### Ejercicios
 
 #### 1. Strings
 
@@ -35,7 +35,7 @@ Dado un string `s`, implementar la función `ambos` que devuelve un string const
 
 ##### 1.3. Fix
 
-Dado un string `s`, implementar una función `fix` que reemplaza todas las ocurrencias del primer caracter por `*` a excepción de la primera ocurrencia. Por ejemplo evaluar fix a la palabra `burbuja` devuelve `bur*uja`. 
+Dado un string `s`, implementar una función `fix` que reemplaza todas las ocurrencias del primer caracter por `*` a excepción de la primera ocurrencia. Por ejemplo evaluar fix a la palabra `burbuja` devuelve `bur*uja`.
 Ayuda, estudiar la función replace.
 
 ##### 1.4. Mezclar
@@ -70,8 +70,8 @@ Implementar la función `mapeo` que toma un string y devuelve un diccionario con
 
 ##### 3.2. Busqueda reversa
 
-Implementar la función `busqueda_reversa` que dado un diccionario y un objeto cualquiera, permita buscar por valores de diccionarios en vez de claves. 
-Ejemplo: 
+Implementar la función `busqueda_reversa` que dado un diccionario y un objeto cualquiera, permita buscar por valores de diccionarios en vez de claves.
+Ejemplo:
 
 ```pycon
 >>> d = {‘c’: 0, ‘a’:1, ‘s’:2, ‘a’: 3}
@@ -94,4 +94,4 @@ Implementar la función `invitados` que devuelve solo aquellas personas que asis
 
 ##### 4.2. Justificar
 
-Dado un string implementar la función `justificar` que fija la longitud de cada línea en 80 caracteres y justifica cada línea. 
+Dado un string implementar la función `justificar` que fija la longitud de cada línea en 80 caracteres y justifica cada línea.
