@@ -11,4 +11,4 @@ from hypothesis import strategies as st
 def test_sum(num1, num2):
     assert sum(num1, 0) == num1
     assert sum(num1, num2) == sum(num2, num1)
-    assert num1 <= 30
+    assert float(num1) % 2 == 0
