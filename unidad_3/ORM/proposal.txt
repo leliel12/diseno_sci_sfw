@@ -1,0 +1,17 @@
+Evadiendo SQL con Peewee ORM
+============================
+
+Peewee es un ORM ligero fuertemente inspirado en el de Django. Soporta una 
+sitáxis declarativa muy cómoda que permite definir clases que interactúan con la
+base de datos evitando en cierta medida el utilizar el lenguaje sql (y
+mantenernos dentro de la orientación a objetos y python). 
+
+
+Descripción
+===========
+
+Se presenta de modo introductorio el orm Peewee sus ventajas y desventajas. Caso
+practico integración con el framework web flask (Que si alguien lo explica no
+explico nada pero sino doy un paneo general)
+
+
