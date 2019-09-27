@@ -1,6 +1,6 @@
 # Primera entrega
 
-- Fecha de entrega: Martes 24/10 23:59
+- Fecha de entrega: Martes 01/10 23:59
 - Subir al repo de github de cada proyecto. (yo lo clono y ejecuto los tests)
 
 ### Graspy
