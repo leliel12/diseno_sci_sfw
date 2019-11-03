@@ -60,3 +60,4 @@ target/
 .ipynb_checkpoints*
 .pytest_cache
 unidad_4/fake_files/*
+unidad_4/dd_data/*
