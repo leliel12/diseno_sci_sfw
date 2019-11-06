@@ -1,0 +1,23 @@
+!    -*- f90 -*-
+! Note: the context of this file is case sensitive.
+
+python module vectores ! in
+    interface  ! in :vectores
+        module vectores ! in :vectores:vectores.f90
+            function producto_escalar(n,u,v) result (p) ! in :vectores:vectores.f90:vectores
+                integer, optional,intent(hide),check(len(u)>=n),depend(u) :: n=len(u)
+                double precision dimension(n),intent(in) :: u
+                double precision dimension(n),intent(in),depend(n) :: v
+                double precision :: p
+            end function producto_escalar
+            function producto_vectorial(u,v) result (w) ! in :vectores:vectores.f90:vectores
+                double precision dimension(3),intent(in) :: u
+                double precision dimension(3),intent(in) :: v
+                double precision dimension(3) :: w
+            end function producto_vectorial
+        end module vectores
+    end interface
+end python module vectores
+
+! This file was auto-generated with f2py (version:2).
+! See http://cens.ioc.ee/projects/f2py2e/
