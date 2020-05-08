@@ -59,6 +59,6 @@ target/
 # custom
 .ipynb_checkpoints*
 .pytest_cache
-unidad_4/fake_files/*
-unidad_4/dd_data/*
+legacy/unidad_4/fake_files/*
+legacy/unidad_4/dd_data/*
 *.o
