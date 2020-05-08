@@ -1,6 +1,7 @@
 # Curso doctoral FAMAF: Diseño de software para cómputo científico
 
-Ver programa: [programa.pdf](programa.pdf)
+Programa aprobado: [programa.pdf](programa.pdf)
+Programa revisado: [programa_new.pdf](programa_new.pdf) 
 
 La ediciones anteriores pueden encontrarse en:
 
