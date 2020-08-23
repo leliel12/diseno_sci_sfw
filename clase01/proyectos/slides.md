@@ -1,18 +1,171 @@
 ---
 title:  Pragmatismo en la Planificación de Proyectos
-author: Juan Cabral - jbc.develop@gmail.com
-date: Mayo 19, 2017
+author: Diseño de software para cómputo científico
+date: 2020
 header-includes:
     - \usepackage{caption}
+classoption: "aspectratio=169"
 
 ---
+
+# Anecdotas interesantes
+
+## Mariner 1
+
+- Fue la primera misión NASA del Programa Mariner en intentar sobrevolar Venus.
+- A los 4 min y 53 s del lanzamiento se produjo una inclinación inesperada del cohete hacia el noreste que daba alguna posibilidad de que el cohete cayese cerca de las rutas transatlánticas,
+- Se decidió autodestruir el cohete.
+- **Problemas:** Se omitió un guion (`-`) en las instrucciones del programa de guiado del cohete.
+
+
+---
+
+# Anecdotas interesantes
+
+## Mariner 1
+
+- Fue la primera misión NASA del Programa Mariner en intentar sobrevolar Venus.
+- A los 4 min y 53 s del lanzamiento se produjo una inclinación inesperada del cohete hacia el noreste que daba alguna posibilidad de que el cohete cayese cerca de las rutas transatlánticas,
+- Se decidió autodestruir el cohete.
+- **Problemas:** Se omitió un guion (`-`) en las instrucciones del programa de guiado del cohete.
+
+
+### Resultado
+
+Perdida de US$18.5 million en 1962.
+
+
+---
+
+# Anecdotas interesantes
+
+## Pentium FDIV bug
+
+- Thomas Nicely, profesor de matemáticas en Lynchburg College, escribió un código, matemático el cual comenzó a mostrar inconsistencia el 13 de junio de 1994.
+- Se logro demostrar que esto se debía a un error en el manejo de división de flotantes en los nuevos procesadores Pentium.
+- El error de la división estaba en el orden de 61 partes por millón.
+- El problema era una tabla de división a nivel ensamblador que le faltaba 5 registros sobre 1000.
+- Intel reconoce posteriormente el bug, y si una persona podía demostrar que había sido afectada por el error, entonces Intel procedería a cambiar su procesador.
+- El error era realmente poco importante para la mayoría.
+- Los demandaban el reemplazo de los procesadores defectuosos y empresas como IBM se unieron a la denuncia.
+- Intel se vio forzada a aceptar sustituir todos los microprocesadores defectuosos.
+
+---
+
+# Anecdotas interesantes
+
+## Pentium FDIV bug
+
+- Thomas Nicely, profesor de matemáticas en Lynchburg College, escribió un código, matemático el cual comenzó a mostrar inconsistencia el 13 de junio de 1994.
+- Se logro demostrar que esto se debía a un error en el manejo de división de flotantes en los nuevos procesadores Pentium.
+- El error de la división estaba en el orden de 61 partes por millón.
+- El problema era una tabla de división a nivel ensamblador que le faltaba 5 registros sobre 1000.
+- Intel reconoce posteriormente el bug, y si una persona podía demostrar que había sido afectada por el error, entonces Intel procedería a cambiar su procesador.
+- El error era realmente poco importante para la mayoría.
+- Los demandaban el reemplazo de los procesadores defectuosos y empresas como IBM se unieron a la denuncia.
+- Intel se vio forzada a aceptar sustituir todos los microprocesadores defectuosos.
+
+
+
+### Resultado
+
+Perdida equivalente a $730 millones de dólares en 2018.
+
+
+---
+
+# Anecdotas interesantes
+
+## Mars Climate Orbiter
+
+-  Fue una sonda de la NASA lanzada desde Cabo Cañaveral el 11 de diciembre de 1998.
+-  Después de un viaje de 9 meses y medio, se estrello contra marte.
+-  La misión en tierra enviaba los datos en formato imperial, los instrumentos de NASA trabajan con sistema métrico.
+
+
+### Resultado
+
+El costo de la misión perdida fue de $ 327,6 millones en total.
+El dato que encontré que la perdida fue de 125 millones de dólares (El cohete llevaba 2 sondas).
+
+
+---
+
+# Anécdotas interesantes
+
+## Boeing 737 MAX
+
+- En 2010, Airbus lanzó el A320neo, que incorporaba una nueva planta motriz más eficiente y presentaba unos costes operativos menores (7% mas eficiencia en combustible).
+- Boeing aprueba en 2011 Aunque se calculó que diseñar un nuevo 737 que iba a tomar 6 años, pero estuvo listo en menos de tres meses.
+- Boeing afirma que el 737 MAX consume un 16 % menos que los A320, y un 4 % menos que el A320neo.
+- Este poco tiempo llevo a un error de software en los sistemas de navegación y simuladores.
+
+---
+
+# Anécdotas interesantes
+
+## Boeing 737 MAX
+
+- En 2010, Airbus lanzó el A320neo, que incorporaba una nueva planta motriz más eficiente y presentaba unos costes operativos menores (7% mas eficiencia en combustible).
+- Boeing aprueba en 2011 Aunque se calculó que diseñar un nuevo 737 que iba a tomar 6 años, pero estuvo listo en menos de tres meses.
+- Boeing afirma que el 737 MAX consume un 16 % menos que los A320, y un 4 % menos que el A320neo.
+- Este poco tiempo llevo a un error de software en los sistemas de navegación y simuladores.
+
+
+### Resultados
+
+- Entre octubre de 2018 a marzo de 2019 dos 737 MAX 8 recién estrenados sufrieron accidentes fatales, los vuelos 610 de Lion Air y 302 de Ethiopian Airlines.
+- 6 mil millones en pérdida.
+- 346 muertos.
+
+
+---
+
+# Anécdotas interesantes
+
+## Pero claro: A mí no me va a pasar.
+
+
+---
+
+# Anécdotas interesantes
+
+## Pero claro: A mí no me va a pasar.
+
+- Desde 2016 mantengo el paquete Scikit-Criteria.
+- Es una colección de Métodos de Análisis Multi-Criterio Integrado Al Stack Científico de Python.
+- Lo hice por hobby, y esta en un estado de beta constante.
+- El año pasado me llega este mail.
+
+
+----
+
+# Anécdotas interesantes
+
+
+\includegraphics[width=400px]{imgs/skcriteria_mail.jpeg}
+
+
+
+# Anécdotas interesantes
+
+## Pero claro: A mí no me va a pasar.
+
+- Desde 2016 mantengo el paquete Scikit-Criteria.
+- Es una colección de Métodos de Análisis Multi-Criterio Integrado Al Stack Científico de Python.
+- Lo hice por hobby, y esta en un estado de beta constante.
+- El año pasado me llega este mail.
+- Y ya que estamos vamos a scholar [https://scholar.google.com/citations?user=qhWYqpoAAAAJ&hl=en](https://scholar.google.com/citations?user=qhWYqpoAAAAJ&hl=en)
+
+
+----
+
 
 # Consideraciones:
 
 1. Toda respuesta profesional empieza con la palabra **"depende"**
 2. Tener en cuenta que error, falla y no-conformidades no son lo mismo.
-3. Overkill \centerline{\includegraphics[height=170px]{imgs/overkill.png}}
-4. Lean Dilbert (http://dilbert.com/)
+3. Overkill \centerline{\includegraphics[width=170px]{imgs/overkill.png}}
 
 
 
@@ -52,10 +205,8 @@ header-includes:
 
 # Proyectos
 
-> It's a temporary endeavor undertaken to create a unique product, service
-  or result.
-
->>                                                  PMI
+It's a temporary endeavor undertaken to create a unique product, service
+or result. (PMI)
 
 
 ## Triángulo de Hierro
@@ -180,16 +331,10 @@ $$
 - [https://github.com/leliel12/otree_wissink/blob/master/_doc/estimation.ipynb](https://github.com/leliel12/otree_wissink/blob/master/_doc/estimation.ipynb)
 
 
-----------------------------------------------------------------------
-
-# Redes PERT
-
-\centerline{\includegraphics[height=170px]{imgs/pert.png}}
-
 
 ----------------------------------------------------------------------
 
-# Frederick Brooks (cont)
+# Frederick Brooks
 
 Turing Award 199: For landmark contributions to computer architecture, operating systems, and software engineering.
 
@@ -217,6 +362,13 @@ $$
 $$
     1225 = \frac{50 (50 - 1)}{2}
 $$
+
+
+----------------------------------------------------------------------
+
+## Group intercommunication formula
+
+\centerline{\includegraphics[height=200px]{imgs/g_i.png}}
 
 
 ----------------------------------------------------------------------
@@ -322,3 +474,13 @@ of work has been done on a new system, allowing a user to experience it. This ex
 
 ### Slides
  [https://github.com/leliel12/talks/blob/master/iate2017/proyectos_sem/slides.pdf](https://github.com/leliel12/talks/blob/master/iate2017/proyectos_sem/slides.pdf)
+
+
+-------------------
+
+# Fuentes
+
+- [https://en.wikipedia.org/wiki/Mariner_1](https://en.wikipedia.org/wiki/Mariner_1)
+- [https://en.wikipedia.org/wiki/Pentium_FDIV_bug](https://en.wikipedia.org/wiki/Pentium_FDIV_bug)
+- [https://www.youtube.com/watch?v=6FsmLwUlTV4&list=PLFQMOORsd0x5pRstKFQJvmdkqCpWDR7YP&index=9&t=0s](https://www.youtube.com/watch?v=6FsmLwUlTV4&list=PLFQMOORsd0x5pRstKFQJvmdkqCpWDR7YP&index=9&t=0s)
+- [https://es.wikipedia.org/wiki/Boeing_737_MAX](https://es.wikipedia.org/wiki/Boeing_737_MAX)
