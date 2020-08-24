@@ -74,7 +74,7 @@ Perdida equivalente a $730 millones de dólares en 2018.
 
 ---
 
-# Anecdotas interesantes
+# Anécdotas interesantes
 
 ## Mars Climate Orbiter
 
@@ -156,6 +156,34 @@ El dato que encontré que la perdida fue de 125 millones de dólares (El cohete 
 - Lo hice por hobby, y esta en un estado de beta constante.
 - El año pasado me llega este mail.
 - Y ya que estamos vamos a scholar [https://scholar.google.com/citations?user=qhWYqpoAAAAJ&hl=en](https://scholar.google.com/citations?user=qhWYqpoAAAAJ&hl=en)
+
+
+
+----
+
+# Cómo empieza todo?
+
+## Augusta Ada Byron - Condesa de Lovelace (1851-1852)
+
+\includegraphics[width=400px]{imgs/Ada_Byron.png}
+
+
+
+---
+
+# Cómo empieza todo? - Dr. Alan Turing (1912-1954)
+
+\includegraphics[width=400px]{imgs/turing.png}
+
+
+> Turing, Alan Mathison. "On computable numbers, with an application to the Entscheidungsproblem." J. of Math 58.345-363 (1936): 5.
+
+---
+
+# Cómo empieza todo? - Dr. Alan Turing (1912-1954)
+
+- “We shall need a great number of mathematicians of ability” because “there will probably be a great deal of work of this kind to be done”
+- “One of our difficulties will be the maintenance of an appropriate discipline, so that we do not lose track of what we are doing.”
 
 
 ----
@@ -484,3 +512,5 @@ of work has been done on a new system, allowing a user to experience it. This ex
 - [https://en.wikipedia.org/wiki/Pentium_FDIV_bug](https://en.wikipedia.org/wiki/Pentium_FDIV_bug)
 - [https://www.youtube.com/watch?v=6FsmLwUlTV4&list=PLFQMOORsd0x5pRstKFQJvmdkqCpWDR7YP&index=9&t=0s](https://www.youtube.com/watch?v=6FsmLwUlTV4&list=PLFQMOORsd0x5pRstKFQJvmdkqCpWDR7YP&index=9&t=0s)
 - [https://es.wikipedia.org/wiki/Boeing_737_MAX](https://es.wikipedia.org/wiki/Boeing_737_MAX)
+- Alan Turing, 1946, (AMT/C/32, p19) and Proposed Electronic Calculator (AMT/B/1, p18, §6)
+- Alan Turing, 1946, Lecture to the London Mathematical Society (AMT/C/32, p18, §2)
