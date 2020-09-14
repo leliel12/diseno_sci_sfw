@@ -6,7 +6,6 @@
 ### Criterios
 
 - Se debe escribir todos los programas para Python 3.8
-- Cada ejercicio debe ser una función, cuya documentación debe ser su enunciado
 - Al finalizar del modulo debe haber un main que ejecuta todos los ejercicios.
 - El archivo no debe tirar errores de estilo [PEP 8](https://www.python.org/dev/peps/pep-0008/) (Verificarlo con la
   herramienta *Flake8* y *Black*

@@ -61,4 +61,5 @@ target/
 .pytest_cache
 legacy/unidad_4/fake_files/*
 legacy/unidad_4/dd_data/*
+practicos/*.ipynb
 *.o
