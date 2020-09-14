@@ -1,25 +1,20 @@
 # Diseño de software para cómputo científico
 ## Unidad 1 - Práctico I
 
-**Fecha de entrega:** Agosto 25 del 2019 a las 23:59 (se enviara un anuncio de como entregar el práctico)
+**Fecha de resolución:** 17/09/2020
 
-### Criterio de evaluación
+### Criterios
 
-- Se debe escribir todos los programas para Python 3.7
-- Se recomienda crear un entorno virtual para aislar los scripts del problema.
+- Se debe escribir todos los programas para Python 3.8
 - Cada ejercicio debe ser una función, cuya documentación debe ser su enunciado
 - Al finalizar del modulo debe haber un main que ejecuta todos los ejercicios.
-- El cumplimento de estos criterios es parte de la evaluación.
-- El archivo debe llamarse `u1e1_apellido.py`
 - El archivo no debe tirar errores de estilo [PEP 8](https://www.python.org/dev/peps/pep-0008/) (Verificarlo con la
-  herramienta *Flake8*
+  herramienta *Flake8* y *Black*
 
 #### Notas
 
 - Flake 8: [http://flake8.pycqa.org](http://flake8.pycqa.org)
-- Entornos virtuales en Python 3: [https://docs.python.org/3/library/venv.html](https://docs.python.org/3/library/venv.html)
-- Como crear entornos virtuales con anaconda:  [https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html)
-- Como crear entornos virtuales con virtualenv [https://virtualenv.pypa.io](https://virtualenv.pypa.io)
+- Black: [https://github.com/psf/black](https://github.com/psf/black)
 
 
 ### Ejercicios
