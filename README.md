@@ -15,3 +15,4 @@ La ediciones anteriores pueden encontrarse en:
 - [How to Think Like a Computer Scientist: Learning with Python 3](https://www.ict.ru.ac.za/Resources/cspw/thinkcspy3/thinkcspy3.pdf) (PDF)
 - [Automate the Boring Stuff with Python](https://automatetheboringstuff.com/)
 - [Curso de Python para ciencias e ingenierías](https://github.com/mgaitan/curso-python-cientifico)
+- [Pro-Git](https://git-scm.com/book/es/v2)
