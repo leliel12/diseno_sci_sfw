@@ -23,7 +23,7 @@
 
 - Desarrollar un decorador `silence` que recibe N clases de Exceptions (E) como
 parámetros posicionales.
-- *silence* y convierte las Exceptiones generadas en función decorada
+- *silence* y convierte las excepciones generadas en función decorada
   que sean de los tipos E, en un `SilencedWarning` que es-un `UserWarning`.
 - *SilencedWarning* tiene como mensaje la exception original como string.
 
@@ -77,8 +77,8 @@ Asumamos un lenguaje de programación muy parecido a (LISP)[https://es.wikipedia
 en el cual el lenguaje esta representado de la forma `(O L R)` donde 
 
 - `O` es el operador/función.
-- `L` es el parametro izquierdo, que puede ser un número u otra estrucura anidada `(O L R)`.
-- `R` es el parametro derecho, que puede ser un número u otra estrucura anidada `(O L R)`.
+- `L` es el parámetro izquierdo, que puede ser un número u otra estructura anidada `(O L R)`.
+- `R` es el parámetro derecho, que puede ser un número u otra estructura anidada `(O L R)`.
 
 En este caso lo implementaremos con tuplas. Así la operación `(1 + 3) * 4` podría representarse como:
 
@@ -90,14 +90,14 @@ Por cuestiones de simplicidad, las funciones/operadores son representadas como s
 son siempre floats o ints.
 
 
-Desarrollar una función `tups()` que reciba como parámetro una epresión de este lenguaje y la resuelva. Tambien
+Desarrollar una función `tups()` que reciba como parámetro una epresión de este lenguaje y la resuelva. También
 de soportar resolver una expresión de un solo dígito (`tups(42)` devuelve *42*). Por simplicidad solo implementar
-la suma y la multiplicacón.
+la suma y la multiplicación.
 
 Probar con las siguientes 3 expresiones
 
 ```python
-run(1) # debería dar 1
-run( ("+", 1, 3) )   # debería dar 4
-run( ("*", ("+", 1, 3), 4) ) # debería dar 16
+tups(1) # debería dar 1
+tups( ("+", 1, 3) )   # debería dar 4
+tups( ("*", ("+", 1, 3), 4) ) # debería dar 16
 ```
