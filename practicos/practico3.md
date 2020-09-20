@@ -71,23 +71,26 @@ TypeError: unsupported operand type(s) for /: 'int' and 'str'
 ```
 
 
-#### 1. Metaclase
+#### 1. TUPS - Tuple Processor
 
-Dada la descripción en un diccionario (dc) de una clase *C*, implementar una
-funcion `crear_clase`, que reciba dc y creee C.
+Asumamos un lenguaje de programación muy parecido a (LISP)[https://es.wikipedia.org/wiki/Lisp],
+en el cual el lenguaje esta representado de la forma `(O L R)` donde 
 
-- *dc* debe tener una llave *name* con el nombre de C.
-- *dc* debe tener una llave *properties* la cual es una lista de diccionarios,
-  y cada diccionario solo tiene dos llaves:
+- `O` es el operador/función.
+- `L` es el parametro izquierdo, que puede ser un número u otra estrucura anidada `(O L R)`.
+- `R` es el parametro derecho, que puede ser un número u otra estrucura anidada `(O L R)`.
 
-  1. "name": el nombre de la propiedad.
-  2. "readonly": Booleano si es True, no deberia poder reescribirse luego
-     de la inicializacion.
-- Todas las propiedades definidas en *properties* deben inicializarse en
-  el contructor.
+En este caso lo implementaremos con tuplas. Así la operación `(1 + 3) * 4` podría representarse como:
+`("*", ("+", 1, 3), 4)`
 
 
 
-- `{"name": 'NombreClase', "properties": [´{
+assert run(1) == 1
 
+assert run(
+    ("+", 1, 3)
+) == 4
 
+assert run(
+    ("*", ("+", 1, 3), 4)
+) == 16
