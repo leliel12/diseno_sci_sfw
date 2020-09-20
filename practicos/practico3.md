@@ -73,7 +73,7 @@ TypeError: unsupported operand type(s) for /: 'int' and 'str'
 
 #### 1. TUPS - Tuple Processor
 
-Asumamos un lenguaje de programación muy parecido a [LISP[(https://es.wikipedia.org/wiki/Lisp),
+Asumamos un lenguaje de programación muy parecido a [LISP](https://es.wikipedia.org/wiki/Lisp),
 en el cual el lenguaje esta representado de la forma `(O L R)` donde 
 
 - `O` es el operador/función.
