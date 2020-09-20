@@ -100,4 +100,5 @@ Probar con las siguientes 3 expresiones
 tups(1) # debería dar 1
 tups( ("+", 1, 3) )   # debería dar 4
 tups( ("*", ("+", 1, 3), 4) ) # debería dar 16
+tups( ("+", ("*", 37, ("+", ("*", ("+", 1, 3), 4), ("*", 4, 25))), 135) ))  # 4427
 ```
