@@ -81,16 +81,23 @@ en el cual el lenguaje esta representado de la forma `(O L R)` donde
 - `R` es el parametro derecho, que puede ser un número u otra estrucura anidada `(O L R)`.
 
 En este caso lo implementaremos con tuplas. Así la operación `(1 + 3) * 4` podría representarse como:
-`("*", ("+", 1, 3), 4)`
+
+```python
+("*", ("+", 1, 3), 4)
+```
+
+Por cuestiones de simplicidad, las funciones/operadores son representadas como string y `L` y `R`
+son siempre floats o ints.
 
 
+Desarrollar una función `tups()` que reciba como parámetro una epresión de este lenguaje y la resuelva. Tambien
+de soportar resolver una expresión de un solo dígito (`tups(42)` devuelve *42*). Por simplicidad solo implementar
+la suma y la multiplicacón.
 
-assert run(1) == 1
+Probar con las siguientes 3 expresiones
 
-assert run(
-    ("+", 1, 3)
-) == 4
-
-assert run(
-    ("*", ("+", 1, 3), 4)
-) == 16
+```python
+run(1) # debería dar 1
+run( ("+", 1, 3) )   # debería dar 4
+run( ("*", ("+", 1, 3), 4) ) # debería dar 16
+```
