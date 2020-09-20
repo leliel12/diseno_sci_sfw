@@ -94,7 +94,7 @@ Desarrollar una función `tups()` que reciba como parámetro una epresión de es
 de soportar resolver una expresión de un solo dígito (`tups(42)` devuelve *42*). Por simplicidad solo implementar
 la suma y la multiplicación.
 
-Probar con las siguientes 3 expresiones
+Probar con las siguientes 4 expresiones
 
 ```python
 tups(1) # debería dar 1
