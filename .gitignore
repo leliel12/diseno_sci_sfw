@@ -64,3 +64,6 @@ legacy/unidad_4/dd_data/*
 practicos/*.ipynb
 *.o
 clase13/db/example.db
+
+clase14/db/*
+clase14/zodb/*
