@@ -22,7 +22,7 @@
 
 ## Pymetheo (JBC)
 
-- **Repository:**
+- **Repository:** https://gitlab.com/dsklar/pymetheus
 
 
 ## Galaxy chop (BOS)
