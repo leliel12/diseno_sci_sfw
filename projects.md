@@ -30,24 +30,30 @@
 - **Repository:** https://github.com/vcristiani/galaxy-chop
 
 
-## Modelos Reducidos (MB)
+## RBPy Modelos Reducidos (MB)
 
-- **Repository:**
+- **Repository:** https://gitlab.com/aaron3.141592653589/rbpy
+
+
+## Bartolina (MCH)
+
+- **Repository:** https://github.com/exiliadadelsur/Bartolina
 
 
 ## Open Cluster (MCH):
 
-- **Repository:**
+- **Repository:** https://github.com/simonpedrogonzalez/opencluster
 
 
 ## Simulai (MCH)
 
-- **Repository:**
+- **Repository:** https://github.com/carosaav/SimulAI
 
 
 ## MRI (MCH)
 
-- **Repository:**
+- **Repository:** https://github.com/jerefarrher/Filter-MRI
+
 
 
 ----
