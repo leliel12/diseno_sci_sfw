@@ -2,52 +2,52 @@
 
 ## Pyedra (JBC)
 
-- **Repository: **
+- **Repository:** https://github.com/milicolazo/Pyedra/
 
 
 ## Deep-Spyce (JBC)
 
-- **Repository: **
+- **Repository:**
 
 
 ## APODE (JBC)
 
-- **Repository: **
+- **Repository:** https://github.com/ngrion/apode
 
 
 ## NirDust (JBC)
 
-- **Repository: **
+- **Repository:** https://github.com/Gaiana/nirdust
 
 
 ## Pymetheo (JBC)
 
-- **Repository: **
+- **Repository:**
 
 
 ## Galaxy chop (BOS)
 
-- **Repository: **
+- **Repository:** https://github.com/vcristiani/galaxy-chop
 
 
 ## Modelos Reducidos (MB)
 
-- **Repository: **
+- **Repository:**
 
 
 ## Open Cluster (MCH):
 
-- **Repository: **
+- **Repository:**
 
 
 ## Simulai (MCH)
 
-- **Repository: **
+- **Repository:**
 
 
 ## MRI (MCH)
 
-- **Repository: **
+- **Repository:**
 
 
 ----
@@ -57,17 +57,17 @@
 
 ## PySVF (JBC)
 
-- **Repository: **
+- **Repository:** https://github.com/geralfaro/PySVF
 
 
 ## Scorpio (MCH)
 
-- **Repository: **
+- **Repository:**
 
 
 ## GriSPy
 
-- **Repository: **
+- **Repository:** https://github.com/mchalela/GriSPy/
 
 > Chalela, M., Sillero, E., Pereyra, L., García, M. A., Cabral, J. B., Lares, M., & Merchán, M. (2019). GriSPy: A Python package for Fixed-Radius Nearest Neighbors Search. arXiv preprint arXiv:1912.09585.
 
