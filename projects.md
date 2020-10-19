@@ -2,52 +2,58 @@
 
 ## Pyedra (JBC)
 
-- **Repository: **
+- **Repository:** https://github.com/milicolazo/Pyedra/
 
 
 ## Deep-Spyce (JBC)
 
-- **Repository: **
+- **Repository:**
 
 
 ## APODE (JBC)
 
-- **Repository: **
+- **Repository:** https://github.com/ngrion/apode
 
 
 ## NirDust (JBC)
 
-- **Repository: **
+- **Repository:** https://github.com/Gaiana/nirdust
 
 
 ## Pymetheo (JBC)
 
-- **Repository: **
+- **Repository:** https://gitlab.com/dsklar/pymetheus
 
 
 ## Galaxy chop (BOS)
 
-- **Repository: **
+- **Repository:** https://github.com/vcristiani/galaxy-chop
 
 
-## Modelos Reducidos (MB)
+## RBPy Modelos Reducidos (MB)
 
-- **Repository: **
+- **Repository:** https://gitlab.com/aaron3.141592653589/rbpy
+
+
+## Bartolina (MCH)
+
+- **Repository:** https://github.com/exiliadadelsur/Bartolina
 
 
 ## Open Cluster (MCH):
 
-- **Repository: **
+- **Repository:** https://github.com/simonpedrogonzalez/opencluster
 
 
 ## Simulai (MCH)
 
-- **Repository: **
+- **Repository:** https://github.com/carosaav/SimulAI
 
 
 ## MRI (MCH)
 
-- **Repository: **
+- **Repository:** https://github.com/jerefarrher/Filter-MRI
+
 
 
 ----
@@ -57,17 +63,17 @@
 
 ## PySVF (JBC)
 
-- **Repository: **
+- **Repository:** https://github.com/geralfaro/PySVF
 
 
 ## Scorpio (MCH)
 
-- **Repository: **
+- **Repository:**
 
 
 ## GriSPy
 
-- **Repository: **
+- **Repository:** https://github.com/mchalela/GriSPy/
 
 > Chalela, M., Sillero, E., Pereyra, L., García, M. A., Cabral, J. B., Lares, M., & Merchán, M. (2019). GriSPy: A Python package for Fixed-Radius Nearest Neighbors Search. arXiv preprint arXiv:1912.09585.
 
