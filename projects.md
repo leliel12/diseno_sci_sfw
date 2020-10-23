@@ -7,7 +7,7 @@
 
 ## Deep-Spyce (JBC)
 
-- **Repository:**
+- **Repository:** https://github.com/suaraujo/DeepSpyce
 
 
 ## APODE (JBC)
