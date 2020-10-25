@@ -69,3 +69,6 @@ clase14/db/*
 clase14/zodb/*
 clase15/parquet/*
 clase16/fake_files/
+clase18/db_data/
+clase18/dd_data/
+clase18/mydask.png
