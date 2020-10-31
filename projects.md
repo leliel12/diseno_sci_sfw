@@ -50,7 +50,7 @@
 - **Repository:** https://github.com/carosaav/SimulAI
 
 
-##  Sciki-MRIFilter(MCH)
+##  Scikit-MRIFilter(MCH)
 
 - **Repository:** https://github.com/jerefarrher/skmrifilte
 
