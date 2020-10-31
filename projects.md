@@ -32,7 +32,7 @@
 
 ## RBPy Modelos Reducidos (MB)
 
-- **Repository:** https://gitlab.com/aaron3.141592653589/rbpy
+- **Repository:** https://gitlab.com/aaronuv/rbpy
 
 
 ## Bartolina (MCH)
@@ -50,9 +50,9 @@
 - **Repository:** https://github.com/carosaav/SimulAI
 
 
-## MRI (MCH)
+##  Sciki-MRIFilter(MCH)
 
-- **Repository:** https://github.com/jerefarrher/Filter-MRI
+- **Repository:** https://github.com/jerefarrher/skmrifilte
 
 
 
