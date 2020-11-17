@@ -20,9 +20,9 @@
 - **Repository:** https://github.com/Gaiana/nirdust
 
 
-## Pymetheo (JBC)
+## Pyrrha (JBC)
 
-- **Repository:** https://gitlab.com/dsklar/pymetheus
+- **Repository:** https://gitlab.com/dsklar/pyrrha/
 
 
 ## Galaxy chop (BOS)
@@ -50,9 +50,9 @@
 - **Repository:** https://github.com/carosaav/SimulAI
 
 
-##  Scikit-MRIFilter(MCH)
+##  Modapy(MCH)
 
-- **Repository:** https://github.com/jerefarrher/skmrifilte
+- **Repository:** https://github.com/juancgvazquez/MODApy-VCFDataFrame
 
 
 
