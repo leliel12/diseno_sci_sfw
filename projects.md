@@ -1,3 +1,27 @@
+# Proyectos desarrollados en el curso
+
+## Badge
+
+[![https://github.com/leliel12/diseno_sci_sfw](https://img.shields.io/badge/DiSoftCompCi-FAMAF-ffda00)](https://github.com/leliel12/diseno_sci_sfw)
+
+**Markdown**
+
+```markdown
+[![https://github.com/leliel12/diseno_sci_sfw](https://img.shields.io/badge/DiSoftCompCi-FAMAF-ffda00)](https://github.com/leliel12/diseno_sci_sfw)
+```
+
+```rst
+.. image:: https://img.shields.io/badge/QuatroPe-Applications-1c5896
+   :target: https://quatrope.github.io/
+   :alt: QuatroPe
+```
+
+```html
+<a href="https://quatrope.github.io/" rel="nofollow">
+    <img alt="QuatroPe" src="https://img.shields.io/badge/DiSoftCompCi-FAMAF-ffda00">
+</a>
+```
+
 # Class 2020
 
 ## Pyedra (JBC)
@@ -78,6 +102,9 @@
 > Chalela, M., Sillero, E., Pereyra, L., García, M. A., Cabral, J. B., Lares, M., & Merchán, M. (2019). GriSPy: A Python package for Fixed-Radius Nearest Neighbors Search. arXiv preprint arXiv:1912.09585.
 
 > Chalela, M., Sillero, E., Pereyra, L., Garcia, M. A., Cabral, J. B., Lares, M., & Merchán, M. (2019). GriSPy: Fixed-radius nearest neighbors grid search in Python. ascl, ascl-1912.
+
+
+
 
 
 
