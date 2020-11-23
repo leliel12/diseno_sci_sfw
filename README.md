@@ -1,5 +1,7 @@
 # Curso doctoral FAMAF: Diseño de software para cómputo científico
 
+[![https://github.com/leliel12/diseno_sci_sfw](https://img.shields.io/badge/DiSoftCompCi-FAMAF-ffda00)](https://github.com/leliel12/diseno_sci_sfw)
+
 - Programa aprobado: [programa.pdf](programa.pdf)
 - Programa revisado: [programa_new.pdf](programa_new.pdf)
 - Presentación de la materia: [slides.pdf](slides.pdf)
