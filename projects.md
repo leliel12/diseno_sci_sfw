@@ -11,14 +11,14 @@
 ```
 
 ```rst
-.. image:: https://img.shields.io/badge/QuatroPe-Applications-1c5896
-   :target: https://quatrope.github.io/
-   :alt: QuatroPe
+.. image:: https://img.shields.io/badge/DiSoftCompCi-FAMAF-ffda00
+   :target: https://github.com/leliel12/diseno_sci_sfw
+   :alt: Curso doctoral FAMAF: Diseño de software para cómputo científico
 ```
 
 ```html
-<a href="https://quatrope.github.io/" rel="nofollow">
-    <img alt="QuatroPe" src="https://img.shields.io/badge/DiSoftCompCi-FAMAF-ffda00">
+<a href="https://github.com/leliel12/diseno_sci_sfw" rel="nofollow">
+    <img alt="Curso doctoral FAMAF: Diseño de software para cómputo científico" src="https://img.shields.io/badge/DiSoftCompCi-FAMAF-ffda00">
 </a>
 ```
 
