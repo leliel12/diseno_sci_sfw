@@ -92,7 +92,11 @@
 
 ## Scorpio (MCH)
 
-- **Repository:**
+- **Repository:** https://github.com/josegit88/SCORPIO
+
+## Piscis
+
+- **Repository:** https://github.com/vanedaza/piscis
 
 
 ## GriSPy
