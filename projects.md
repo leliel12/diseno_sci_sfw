@@ -54,7 +54,7 @@
 - **Repository:** https://github.com/vcristiani/galaxy-chop
 
 
-## RBPy Modelos Reducidos (MB)
+## Arby (MB)
 
 - **Repository:** https://github.com/aaronuv/arby
 
