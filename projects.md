@@ -56,7 +56,7 @@
 
 ## RBPy Modelos Reducidos (MB)
 
-- **Repository:** https://gitlab.com/aaronuv/rbpy
+- **Repository:** https://github.com/aaronuv/arby
 
 
 ## Bartolina (MCH)
