@@ -1,1 +1,0 @@
-rst2pdf slides.rst -b1 -s slides.style -o ../03_ORM.pdf

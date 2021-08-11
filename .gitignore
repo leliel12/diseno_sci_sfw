@@ -61,14 +61,14 @@ target/
 .pytest_cache
 legacy/unidad_4/fake_files/*
 legacy/unidad_4/dd_data/*
-practicos/*.ipynb
+legacy/practicos/*.ipynb
 *.o
-clase13/db/example.db
+legacy/clase13/db/example.db
 
-clase14/db/*
-clase14/zodb/*
-clase15/parquet/*
-clase16/fake_files/
-clase18/db_data/
-clase18/dd_data/
-clase18/mydask.png
+legacy/clase14/db/*
+legacy/clase14/zodb/*
+legacy/clase15/parquet/*
+legacy/clase16/fake_files/
+legacy/clase18/db_data/
+legacy/clase18/dd_data/
+legacy/clase18/mydask.png
