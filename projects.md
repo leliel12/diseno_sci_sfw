@@ -24,14 +24,13 @@
 
 # Class 2020
 
+## Arby (MB)
+
+- **Repository:** https://github.com/aaronuv/arby
+
 ## Pyedra (JBC)
 
 - **Repository:** https://github.com/milicolazo/Pyedra/
-
-
-## Deep-Spyce (JBC)
-
-- **Repository:** https://github.com/suaraujo/DeepSpyce
 
 
 ## APODE (JBC)
@@ -54,11 +53,6 @@
 - **Repository:** https://github.com/vcristiani/galaxy-chop
 
 
-## Arby (MB)
-
-- **Repository:** https://github.com/aaronuv/arby
-
-
 ## Bartolina (MCH)
 
 - **Repository:** https://github.com/exiliadadelsur/Bartolina
@@ -79,20 +73,14 @@
 - **Repository:** https://github.com/juancgvazquez/MODApy-VCFDataFrame
 
 
+## Deep-Spyce (JBC)
+
+- **Repository:** https://github.com/suaraujo/DeepSpyce
 
 ----
 
 # Class 2019
 
-
-## PySVF (JBC)
-
-- **Repository:** https://github.com/geralfaro/PySVF
-
-
-## Scorpio (MCH)
-
-- **Repository:** https://github.com/josegit88/SCORPIO
 
 ## Piscis
 
@@ -105,7 +93,10 @@
 
 > Chalela, M., Sillero, E., Pereyra, L., García, M. A., Cabral, J. B., Lares, M., & Merchán, M. (2019). GriSPy: A Python package for Fixed-Radius Nearest Neighbors Search. arXiv preprint arXiv:1912.09585.
 
-> Chalela, M., Sillero, E., Pereyra, L., Garcia, M. A., Cabral, J. B., Lares, M., & Merchán, M. (2019). GriSPy: Fixed-radius nearest neighbors grid search in Python. ascl, ascl-1912.
+
+## Scorpio (MCH)
+
+- **Repository:** https://github.com/josegit88/SCORPIO
 
 
 
