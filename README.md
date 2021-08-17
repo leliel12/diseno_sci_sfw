@@ -13,7 +13,11 @@ La ediciones anteriores pueden encontrarse en:
 
 ## Clases
 
-- **20210817** Clase 1: Proyectos testigo. [Introducción a la ingeniería de software y gestión de proyectos](https://github.com/leliel12/diseno_sci_sfw/blob/master/unidad1/01_ing_softy.ipynb).
+
+
+- **20210817** Clase 1: Proyectos testigo. 
+  [Introducción a la ingeniería de software y gestión de proyectos](https://github.com/leliel12/diseno_sci_sfw/blob/master/unidad1/01_ing_softy.ipynb).
+  [![youtube](https://img.shields.io/badge/-Video-red?logo=youtube)](https://drive.google.com/file/d/12a87Unvp54PrlPvqFX_EqzCQd4I18nDA/view)
 - **20210819** Clase 2: Alto y Bajo Nivel. Python.
 - **20210824** Clase 3: Stack científico de Python, Git, Virtualenv.
 - **20210826** Clase 4: Introducción a paradigma orientado a objetos. Documentación.
