@@ -21,6 +21,18 @@ La ediciones anteriores pueden encontrarse en:
 - **20210902** Clase 6: Manejo de excepciones. Metaprogramación.
 
 
+## El práctico
+
+### Entrega 1: 14 de Septiembre
+
+- **Establecer el problema científico a resolver.** Las bases teóricas del problema deben estar bien entendidas. Recordar que esto no es un proyecto de investigación científica, es un proyecto de desarrollo de software. El problema no debe tener una implementación de Python. BUSCAR en PyPI https://pypi.org/ 
+- **Prototipo funcional de código.** El prototipo debe ser capaz de resolver el problema científico propuesto. Considerar que en esta etapa no se pide ningún criterio de calidad de software, solo la funcionalidad del prototipo. El prototipo debe estar escrito en Python 3.9 válido.
+- **Repositorio público en GitHub/Gitlab/BitBucket**. El prototipo debe estar disponible en un repositorio de github con el nombre del proyecto. Configurar el repositorio para que todos los integrantes del grupo tengan acceso.
+- **Grupos:** Entre 3 y 5 personas. No hace falta que todos sean expertos en el tema. Ya tuvimos matemáticos haciendo dinámica y formación galáctica; y un biotecnólogo haciendo economía. Agarren un tema que les interese. Grupos más chicos tienen que justificarlo MUY bien. Más grandes no van a ser aceptados bajo ninguna circunstancia.
+
+### Entrega 2: A definir
+
+
 ## Bibliografía
 
 - [Dive into Python 3](http://histo.ucsf.edu/BMS270/diveintopython3-r802.pdf) (PDF)
