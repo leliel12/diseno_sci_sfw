@@ -30,7 +30,10 @@ La ediciones anteriores pueden encontrarse en:
    - [Python](https://github.com/leliel12/diseno_sci_sfw/blob/master/unidad1/03_python.ipynb).
    - [Stack científico de Python](https://github.com/leliel12/diseno_sci_sfw/blob/master/unidad1/04_scipy.ipynb).
    
-- **20210826** Clase 4: Introducción a paradigma orientado a objetos. Documentación.
+- **20210826** Clase 4: 
+  [![youtube](https://img.shields.io/badge/-Video-red?logo=youtube)](https://youtu.be/kCAdv4fJ1XI)
+  - [Introducción a paradigma orientado a objetos](https://github.com/leliel12/diseno_sci_sfw/blob/master/unidad1/05_OOP.ipynb)
+  
 - **20210831** Clase 5: Modelo de objetos de Python. Decoradores.
 - **20210902** Clase 6: Manejo de excepciones. Metaprogramación.
 
