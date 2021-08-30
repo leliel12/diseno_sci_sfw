@@ -49,6 +49,17 @@ La ediciones anteriores pueden encontrarse en:
 
 ### Entrega 2: A definir
 
+## Editores
+
+Estos son los [editores o IDE](https://realpython.com/lessons/ides-vs-code-editors/) más populares en Python
+
+- [Vim/NeoVim con *fisa-vim-config*](https://vim.fisadev.com/).
+- [Emacs con Python mode](https://www.emacswiki.org/emacs/PythonProgrammingInEmacs).
+- [Sublime Text](https://www.sublimetext.com/).
+- [Atom](https://atom.io/).
+- [VisualStudio Code](https://code.visualstudio.com/) (hay que instalar extensiones para cada lenguaje).
+- [PyCharm](https://www.jetbrains.com/pycharm/) (IDE)
+- [Geany](https://www.geany.org/).
 
 ## Bibliografía
 
