@@ -13,8 +13,6 @@ La ediciones anteriores pueden encontrarse en:
 
 ## Clases
 
-
-
 - **20210817** Clase 1: 
   [![youtube](https://img.shields.io/badge/-Video-red?logo=youtube)](https://youtu.be/IvAZ9tg7TZM)
   - Proyectos testigo. 
@@ -34,8 +32,10 @@ La ediciones anteriores pueden encontrarse en:
   [![youtube](https://img.shields.io/badge/-Video-red?logo=youtube)](https://youtu.be/kCAdv4fJ1XI)
   - [Introducción a paradigma orientado a objetos](https://github.com/leliel12/diseno_sci_sfw/blob/master/unidad1/05_OOP.ipynb)
   
-- **20210831** Clase 5: Modelo de objetos de Python. Decoradores.
-- **20210902** Clase 6: Manejo de excepciones. Metaprogramación.
+### Pendientes
+
+- **YYYYMMDD** Clase X: Modelo de objetos de Python. Decoradores.
+- **YYYYMMDD** Clase X: Manejo de excepciones. Metaprogramación.
 
 
 ## El práctico
