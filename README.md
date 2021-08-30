@@ -6,12 +6,12 @@
 - Programa revisado: [programa_new.pdf](programa_new.pdf)
 - Presentación de la materia: [slides.pdf](slides.pdf)
 
-La ediciones anteriores pueden encontrarse en:
+La ediciones anteriores pueden encontrarse en: ⏰
 
 - [2020](https://github.com/leliel12/diseno_sci_sfw/tree/2020)
 - [2019](https://github.com/leliel12/diseno_sci_sfw/tree/2019)
 
-## Clases
+## Clases 🏫
 
 - **20210817** Clase 1: 
   [![youtube](https://img.shields.io/badge/-Video-red?logo=youtube)](https://youtu.be/IvAZ9tg7TZM)
@@ -38,7 +38,7 @@ La ediciones anteriores pueden encontrarse en:
 - **YYYYMMDD** Clase X: Manejo de excepciones. Metaprogramación.
 
 
-## El práctico
+## El práctico ☢️
 
 ### Entrega 1: 14 de Septiembre
 
@@ -49,7 +49,7 @@ La ediciones anteriores pueden encontrarse en:
 
 ### Entrega 2: A definir
 
-## Editores
+## Editores 📝
 
 Estos son los [editores o IDE](https://realpython.com/lessons/ides-vs-code-editors/) más populares en Python
 
@@ -61,7 +61,7 @@ Estos son los [editores o IDE](https://realpython.com/lessons/ides-vs-code-edito
 - [PyCharm](https://www.jetbrains.com/pycharm/) (IDE)
 - [Geany](https://www.geany.org/).
 
-## Bibliografía
+## Bibliografía 📚
 
 - [Dive into Python 3](http://histo.ucsf.edu/BMS270/diveintopython3-r802.pdf) (PDF)
 - [How to Think Like a Computer Scientist: Learning with Python 3](https://www.ict.ru.ac.za/Resources/cspw/thinkcspy3/thinkcspy3.pdf) (PDF)
