@@ -31,6 +31,12 @@ La ediciones anteriores pueden encontrarse en: ⏰
 - **20210826** Clase 4: 
   [![youtube](https://img.shields.io/badge/-Video-red?logo=youtube)](https://youtu.be/kCAdv4fJ1XI)
   - [Introducción a paradigma orientado a objetos](https://github.com/leliel12/diseno_sci_sfw/blob/master/unidad1/05_OOP.ipynb)
+
+- **20210831** Clase 5:
+  [![youtube](https://img.shields.io/badge/-Video-red?logo=youtube)](https://youtu.be/-2V8dFxQYdc)
+  - [Introducción a paradigma orientado a objetos 2](https://github.com/leliel12/diseno_sci_sfw/blob/master/unidad1/05_OOP.ipynb)
+  - [GIT](https://github.com/leliel12/diseno_sci_sfw/blob/master/unidad1/06_git.ipynb)
+  
   
 ### Pendientes
 
