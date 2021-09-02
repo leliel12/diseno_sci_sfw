@@ -29,18 +29,24 @@ La ediciones anteriores pueden encontrarse en: ⏰
    - [Stack científico de Python](https://github.com/leliel12/diseno_sci_sfw/blob/master/unidad1/04_scipy.ipynb).
    
 - **20210826** Clase 4: 
-  [![youtube](https://img.shields.io/badge/-Video-red?logo=youtube)](https://youtu.be/kCAdv4fJ1XI)
+  
   - [Introducción a paradigma orientado a objetos](https://github.com/leliel12/diseno_sci_sfw/blob/master/unidad1/05_OOP.ipynb)
 
 - **20210831** Clase 5:
   [![youtube](https://img.shields.io/badge/-Video-red?logo=youtube)](https://youtu.be/-2V8dFxQYdc)
   - [Introducción a paradigma orientado a objetos 2](https://github.com/leliel12/diseno_sci_sfw/blob/master/unidad1/05_OOP.ipynb)
   - [GIT](https://github.com/leliel12/diseno_sci_sfw/blob/master/unidad1/06_git.ipynb)
+
+- **20210902** Clase 6:
+  [![youtube](https://img.shields.io/badge/-Video-red?logo=youtube)](https://youtu.be/7q2X28EjMS8)
+  - [Modelo de objetos de Python](https://github.com/leliel12/diseno_sci_sfw/blob/master/unidad1/07_model.ipynb)
+  - [Decoradores](https://github.com/leliel12/diseno_sci_sfw/blob/master/unidad1/08_decoradores.ipynb)  
   
+ 
   
 ### Pendientes
 
-- **YYYYMMDD** Clase X: Modelo de objetos de Python. Decoradores.
+
 - **YYYYMMDD** Clase X: Manejo de excepciones. Metaprogramación.
 
 
