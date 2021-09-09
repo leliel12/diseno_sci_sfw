@@ -41,7 +41,11 @@ La ediciones anteriores pueden encontrarse en: ⏰
   [![youtube](https://img.shields.io/badge/-Video-red?logo=youtube)](https://youtu.be/7q2X28EjMS8)
   - [Modelo de objetos de Python](https://github.com/leliel12/diseno_sci_sfw/blob/master/unidad1/07_model.ipynb)
   - [Decoradores](https://github.com/leliel12/diseno_sci_sfw/blob/master/unidad1/08_decoradores.ipynb)  
-  
+
+- **20210907** Clase 7:
+  [![youtube](https://img.shields.io/badge/-Video-red?logo=youtube)](https://youtu.be/x6kN_i0Vm24)
+  - [Exceptions](https://github.com/leliel12/diseno_sci_sfw/blob/master/unidad1/09_exceptions.ipynb)
+  - [Meta-Programación](https://github.com/leliel12/diseno_sci_sfw/blob/master/unidad1/10_meta.ipynb)
  
   
 ### Pendientes
