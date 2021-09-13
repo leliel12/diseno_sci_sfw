@@ -46,6 +46,11 @@ La ediciones anteriores pueden encontrarse en: ⏰
   [![youtube](https://img.shields.io/badge/-Video-red?logo=youtube)](https://youtu.be/x6kN_i0Vm24)
   - [Exceptions](https://github.com/leliel12/diseno_sci_sfw/blob/master/unidad1/09_exceptions.ipynb)
   - [Meta-Programación](https://github.com/leliel12/diseno_sci_sfw/blob/master/unidad1/10_meta.ipynb)
+
+- **20210909** Clase 8:
+  [![youtube](https://img.shields.io/badge/-Video-red?logo=youtube)](https://youtu.be/0fBEIYryk8A)
+  - [Clases en el mundo real](https://github.com/leliel12/diseno_sci_sfw/blob/master/unidad1/11_oo_real_world.ipynb)
+  - [Taxonomía](https://github.com/leliel12/diseno_sci_sfw/blob/master/unidad1/12_queseespera.ipynb)
  
   
 ### Pendientes
