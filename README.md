@@ -52,12 +52,10 @@ La ediciones anteriores pueden encontrarse en: ⏰
   - [Clases en el mundo real](https://github.com/leliel12/diseno_sci_sfw/blob/master/unidad1/11_oo_real_world.ipynb)
   - [Taxonomía](https://github.com/leliel12/diseno_sci_sfw/blob/master/unidad1/12_queseespera.ipynb)
  
+- **20210914** Clase 9:
+  - Calidad.
+  - Entornos virtuales y code-style.
   
-### Pendientes
-
-
-- **YYYYMMDD** Clase X: Manejo de excepciones. Metaprogramación.
-
 
 ## El práctico ☢️
 
