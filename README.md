@@ -53,8 +53,9 @@ La ediciones anteriores pueden encontrarse en: ⏰
   - [Taxonomía](https://github.com/leliel12/diseno_sci_sfw/blob/master/unidad1/12_queseespera.ipynb)
  
 - **20210914** Clase 9:
-  - Calidad.
-  - Entornos virtuales y code-style.
+  [![youtube](https://img.shields.io/badge/-Video-red?logo=youtube)](https://youtu.be/T8wvg5KvLrQ)
+  - [Calidad](https://github.com/leliel12/diseno_sci_sfw/blob/master/unidad2/00_qa.ipynb).
+  - [Entornos virtuales](https://github.com/leliel12/diseno_sci_sfw/blob/master/unidad2/01_entornos.ipynb) y [code-style](https://github.com/leliel12/diseno_sci_sfw/blob/master/unidad2/02_code_style.ipynb).
   
 
 ## El práctico ☢️
