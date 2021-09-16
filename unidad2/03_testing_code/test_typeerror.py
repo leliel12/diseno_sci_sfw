@@ -1,5 +1,5 @@
 import pytest
-import numpy as np
+ 
 
 def sum(a, b):
     if not isinstance(a, (float, int)):
