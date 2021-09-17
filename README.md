@@ -56,6 +56,12 @@ La ediciones anteriores pueden encontrarse en: ⏰
   [![youtube](https://img.shields.io/badge/-Video-red?logo=youtube)](https://youtu.be/T8wvg5KvLrQ)
   - [Calidad](https://github.com/leliel12/diseno_sci_sfw/blob/master/unidad2/00_qa.ipynb).
   - [Entornos virtuales](https://github.com/leliel12/diseno_sci_sfw/blob/master/unidad2/01_entornos.ipynb) y [code-style](https://github.com/leliel12/diseno_sci_sfw/blob/master/unidad2/02_code_style.ipynb).
+
+- **20210916** Clase 10:
+   [![youtube](https://img.shields.io/badge/-Video-red?logo=youtube)](https://www.youtube.com/watch?v=R1A8xN0bmeo)
+   - [Testing/PyTest](https://github.com/leliel12/diseno_sci_sfw/blob/master/unidad2/03_testing.ipynb)
+   - [Coverage](https://github.com/leliel12/diseno_sci_sfw/blob/master/unidad2/04_codecoverage.ipynb)
+   - [Debug](https://github.com/leliel12/diseno_sci_sfw/blob/master/unidad2/05_debug.ipynb)
   
 
 ## El práctico ☢️
