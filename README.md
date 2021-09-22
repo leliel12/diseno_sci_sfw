@@ -62,6 +62,15 @@ La ediciones anteriores pueden encontrarse en: ⏰
    - [Testing/PyTest](https://github.com/leliel12/diseno_sci_sfw/blob/master/unidad2/03_testing.ipynb)
    - [Coverage](https://github.com/leliel12/diseno_sci_sfw/blob/master/unidad2/04_codecoverage.ipynb)
    - [Debug](https://github.com/leliel12/diseno_sci_sfw/blob/master/unidad2/05_debug.ipynb)
+   
+   
+- **20210921** Clase 11:
+    [![youtube](https://img.shields.io/badge/-Video-red?logo=youtube)](https://youtu.be/KmEmALFXyZ8)
+    - [Mock](https://github.com/leliel12/diseno_sci_sfw/blob/master/unidad2/06_mock.ipynb)
+    - [Empaquetado](https://github.com/leliel12/diseno_sci_sfw/blob/master/unidad2/07_packaging.ipynb)
+    - [TOX](https://github.com/leliel12/diseno_sci_sfw/blob/master/unidad2/08_tox.ipynb)
+    
+
   
 
 ## El práctico ☢️
