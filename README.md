@@ -70,8 +70,9 @@ La ediciones anteriores pueden encontrarse en: ⏰
     - [TOX](https://github.com/leliel12/diseno_sci_sfw/blob/master/unidad2/08_tox.ipynb)
     
 - **20210923** Clase 12:
-    - Property based testing
-    - Integración continua
+    [![youtube](https://img.shields.io/badge/-Video-red?logo=youtube)](https://youtu.be/ILXR7ScxEHI)
+    - [Integración continua](https://github.com/leliel12/diseno_sci_sfw/blob/master/unidad2/09_CI.ipynb)
+    - [Property based testing](https://github.com/leliel12/diseno_sci_sfw/blob/master/unidad2/10_PBT.ipynb)
     
 
   
