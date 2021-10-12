@@ -81,7 +81,11 @@ La ediciones anteriores pueden encontrarse en: ⏰
 
 - **20211007** Clase 14:
     [![youtube](https://img.shields.io/badge/-Video-red?logo=youtube)](https://youtu.be/JXLhUfKwFGY)
-    - [SQL y Bases relacionales](#)
+    - [SQL y Bases relacionales](https://github.com/leliel12/diseno_sci_sfw/blob/a6769de1907bcc2daab546581399fb9c8b0415e7/unidad3/02_sql.ipynb)
+
+- **20211012** Clase 15:
+  - [Mapeadores objeto-relacional/ORM](https://github.com/leliel12/diseno_sci_sfw/blob/a6769de1907bcc2daab546581399fb9c8b0415e7/unidad3/03_orm.ipynb)
+  - [Licencias](https://github.com/leliel12/diseno_sci_sfw/blob/a6769de1907bcc2daab546581399fb9c8b0415e7/unidad6/licencias.ipynb)
     
 
   
