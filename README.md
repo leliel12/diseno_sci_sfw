@@ -78,6 +78,10 @@ La ediciones anteriores pueden encontrarse en: ⏰
   [![youtube](https://img.shields.io/badge/-Video-red?logo=youtube)](https://youtu.be/hBf9ztmP6pM)
   - [Mutation Testing](https://github.com/leliel12/diseno_sci_sfw/blob/master/unidad2/11_mutation.ipynb)
   - [Pickle/CSV/JSON/XML/YAML](https://github.com/leliel12/diseno_sci_sfw/blob/master/unidad3/01_files.ipynb)
+
+- **20211007** Clase 14:
+    [![youtube](https://img.shields.io/badge/-Video-red?logo=youtube)](https://youtu.be/JXLhUfKwFGY)
+    - [SQL y Bases relacionales](#)
     
 
   
