@@ -84,7 +84,7 @@ La ediciones anteriores pueden encontrarse en: ⏰
     - [SQL y Bases relacionales](https://github.com/leliel12/diseno_sci_sfw/blob/a6769de1907bcc2daab546581399fb9c8b0415e7/unidad3/02_sql.ipynb)
 
 - **20211012** Clase 15:
-  - [Mapeadores objeto-relacional/ORM](https://github.com/leliel12/diseno_sci_sfw/blob/a6769de1907bcc2daab546581399fb9c8b0415e7/unidad3/03_orm.ipynb)
+  - [Mapeadores objeto-relacional (ORM)](https://github.com/leliel12/diseno_sci_sfw/blob/a6769de1907bcc2daab546581399fb9c8b0415e7/unidad3/03_orm.ipynb)
   - [Licencias](https://github.com/leliel12/diseno_sci_sfw/blob/a6769de1907bcc2daab546581399fb9c8b0415e7/unidad6/licencias.ipynb)
     
 
