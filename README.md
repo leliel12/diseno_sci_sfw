@@ -88,6 +88,10 @@ La ediciones anteriores pueden encontrarse en: ⏰
   - [Mapeadores objeto-relacional (ORM)](https://github.com/leliel12/diseno_sci_sfw/blob/a6769de1907bcc2daab546581399fb9c8b0415e7/unidad3/03_orm.ipynb)
   - [Licencias](https://github.com/leliel12/diseno_sci_sfw/blob/a6769de1907bcc2daab546581399fb9c8b0415e7/unidad6/licencias.ipynb)
     
+- **20211014** Clase 16:
+  [![youtube](https://img.shields.io/badge/-Video-red?logo=youtube)](https://youtu.be/r_O50BwP-no)
+  - [No-SQL/ACID/BASE/CAP](https://github.com/leliel12/diseno_sci_sfw/blob/004ed38ad48118e3bd4f05c9932798bb6bc19495/unidad3/04_nosql.ipynb)
+  - [HDF5](https://github.com/leliel12/diseno_sci_sfw/blob/004ed38ad48118e3bd4f05c9932798bb6bc19495/unidad3/05_hdf5.ipynb)
 
   
 
