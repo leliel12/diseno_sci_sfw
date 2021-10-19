@@ -93,6 +93,11 @@ La ediciones anteriores pueden encontrarse en: ⏰
   - [No-SQL/ACID/BASE/CAP](https://github.com/leliel12/diseno_sci_sfw/blob/004ed38ad48118e3bd4f05c9932798bb6bc19495/unidad3/04_nosql.ipynb)
   - [HDF5](https://github.com/leliel12/diseno_sci_sfw/blob/004ed38ad48118e3bd4f05c9932798bb6bc19495/unidad3/05_hdf5.ipynb)
 
+- **20211019** Clase 17:
+  [![youtube](https://img.shields.io/badge/-Video-red?logo=youtube)](https://www.youtube.com/watch?v=YEcZo3DwyrY)
+  - [Paqrquet](https://github.com/leliel12/diseno_sci_sfw/blob/86d385680e81d0e3377f90f0449b0d80c9fdb98b/unidad3/06_parquet.ipynb)
+  - [Optimización](https://github.com/leliel12/diseno_sci_sfw/blob/86d385680e81d0e3377f90f0449b0d80c9fdb98b/unidad4/00_optimizacion.ipynb)
+
   
 
 ## El práctico ☢️
