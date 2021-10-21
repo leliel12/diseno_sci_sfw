@@ -16,23 +16,6 @@ def variance(values):
     return sum_of_squares / (len(values) - 1)
 
 
-def adaptive_confidence_interval(values, max_iterations=1000, alpha=0.05, trials=5, variance_threshold=0.5):
-    """ Compute confidence interval using as few iterations as possible """
-
-    try_iterations = 10
-
-    while True:
-        intervals = [confidence_interval(values, try_iterations, alpha) for _ in range(trials)]
-        band_variance = variance([upper_bound - lower_bound for lower_bound, upper_bound in intervals])
-
-        print(try_iterations, band_variance)
-
-        if band_variance < variance_threshold or try_iterations > max_iterations:
-            return intervals[random.randint(0, trials - 1)], try_iterations
-
-        try_iterations *= 2
-
-
 def confidence_interval(values, iterations, alpha):
     """ Compute confidence interval of mean """
 
@@ -49,6 +32,23 @@ def confidence_interval(values, iterations, alpha):
     pivot = lambda idx: (2 * mean(values) - subsample_means[idx])
 
     return pivot(lower_index), pivot(upper_index)
+
+
+def adaptive_confidence_interval(values, max_iterations=1000, alpha=0.05, trials=5, variance_threshold=0.5):
+    """ Compute confidence interval using as few iterations as possible """
+
+    try_iterations = 10
+
+    while True:
+        intervals = [confidence_interval(values, try_iterations, alpha) for _ in range(trials)]
+        band_variance = variance([upper_bound - lower_bound for lower_bound, upper_bound in intervals])
+
+        print(try_iterations, band_variance)
+
+        if band_variance < variance_threshold or try_iterations > max_iterations:
+            return intervals[random.randint(0, trials - 1)], try_iterations
+
+        try_iterations *= 2
 
 
 def main(sample_size):
