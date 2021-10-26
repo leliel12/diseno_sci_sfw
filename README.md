@@ -98,6 +98,12 @@ La ediciones anteriores pueden encontrarse en: ⏰
   - [Paqrquet](https://github.com/leliel12/diseno_sci_sfw/blob/86d385680e81d0e3377f90f0449b0d80c9fdb98b/unidad3/06_parquet.ipynb)
   - [Optimización](https://github.com/leliel12/diseno_sci_sfw/blob/86d385680e81d0e3377f90f0449b0d80c9fdb98b/unidad4/00_optimizacion.ipynb)
 
+- **20211021** Clase 18:
+  [![youtube](https://img.shields.io/badge/-Video-red?logo=youtube)](https://youtu.be/GvrZBUHLaqI)
+  - [Profiling/Benchmark](https://github.com/leliel12/diseno_sci_sfw/blob/b560f0f40f76e77c0baa8b8e17b3f81a483a38aa/unidad4/01_profiling.ipynb)
+  - [Command-Line-Interface (CLI)](https://github.com/leliel12/diseno_sci_sfw/blob/b560f0f40f76e77c0baa8b8e17b3f81a483a38aa/unidad6/CLI.ipynb)
+
+
   
 
 ## El práctico ☢️
