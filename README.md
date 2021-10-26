@@ -103,6 +103,11 @@ La ediciones anteriores pueden encontrarse en: ⏰
   - [Profiling/Benchmark](https://github.com/leliel12/diseno_sci_sfw/blob/b560f0f40f76e77c0baa8b8e17b3f81a483a38aa/unidad4/01_profiling.ipynb)
   - [Command-Line-Interface (CLI)](https://github.com/leliel12/diseno_sci_sfw/blob/b560f0f40f76e77c0baa8b8e17b3f81a483a38aa/unidad6/CLI.ipynb)
 
+- **20211026** Clase 19:
+  [![youtube](https://img.shields.io/badge/-Video-red?logo=youtube)](https://youtu.be/UxuTq1d1f6A)
+  - [Paralelismo/Concurrencia](https://github.com/leliel12/diseno_sci_sfw/blob/7780bd1aa12865abd1d516e8d6e3f18ce90d0f37/unidad4/02_thread_process.ipynb)
+  - [Documentación 1](https://github.com/leliel12/diseno_sci_sfw/blob/7780bd1aa12865abd1d516e8d6e3f18ce90d0f37/unidad6/documentation_parte_1.ipynb)
+
 
   
 
