@@ -108,8 +108,12 @@ La ediciones anteriores pueden encontrarse en: ⏰
   - [Paralelismo/Concurrencia](https://github.com/leliel12/diseno_sci_sfw/blob/7780bd1aa12865abd1d516e8d6e3f18ce90d0f37/unidad4/02_thread_process.ipynb)
   - [Documentación 1](https://github.com/leliel12/diseno_sci_sfw/blob/7780bd1aa12865abd1d516e8d6e3f18ce90d0f37/unidad6/documentation_parte_1.ipynb)
 
+- **20211028** Clase 20:
+  [![youtube](https://img.shields.io/badge/-Video-red?logo=youtube)](https://youtu.be/nhUp3-vkDNg6A)
+  - [Documentación: Sphinx](https://github.com/leliel12/diseno_sci_sfw/blob/2b941ddfa96d61e57a650860b79552cf8ab7c690/unidad6/documentation_parte_2.ipynb)
+  - [Dask](https://github.com/leliel12/diseno_sci_sfw/blob/2b941ddfa96d61e57a650860b79552cf8ab7c690/unidad4/04_dask.ipynb)
 
-  
+
 
 ## El práctico ☢️
 
