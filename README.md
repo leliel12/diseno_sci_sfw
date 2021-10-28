@@ -153,7 +153,7 @@ La ediciones anteriores pueden encontrarse en: ⏰
 - En el template para el informe final hay un archivo txt que contiene una lista de publicaciones listas para citar.
 - El final es una presentación grupal (con slides) con tiempo máximo de 40 min, en el cual uno explica el proyecto si entrar tanto en detalles técnicos, sino mas bien USO y por que es un aporte. 
 
-#### Validar en otra facultad/universidad:
+### Validar el curso en otra facultad/universidad:
 
 Si van a van a validar el curso en otro programa doctoral que no sea del de FaMAF-UNC, van a necesitar:
 
