@@ -76,3 +76,5 @@ legacy/clase18/mydask.png
 **/.mutmut-cache/
 **/.mutmut-cache
 unidad4/fake_files/
+unidad4/d*_data/*
+dask-worker-space/
