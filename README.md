@@ -149,9 +149,16 @@ La ediciones anteriores pueden encontrarse en: ⏰
 - Todo el proyecto versionado en github/gitlab.
 - Subir el proyecto a PyPI
 
-- Presentar informe hasta 48hs antes. Hay un macro sugerido en el repositorio Github del curso (diseno_sci_sfw). Debe incluir el contexto científico, definir el problema a resolver, explicar la API, ejemplo de uso y calidad de software.
+- Presentar informe hasta 48hs antes. Hay un [template latex sugerido](https://github.com/leliel12/diseno_sci_sfw/blob/80857c790e406017b68722be893bc180e314dca8/final/final.zip) en el repositorio Github del curso (diseno_sci_sfw). Debe incluir el contexto científico, definir el problema a resolver, explicar la API, ejemplo de uso y calidad de software. 
+- En el template para el informe final hay un archivo txt que contiene una lista de publicaciones listas para citar.
 - El final es una presentación grupal (con slides) con tiempo máximo de 40 min, en el cual uno explica el proyecto si entrar tanto en detalles técnicos, sino mas bien USO y por que es un aporte. 
 
+#### Validar en otra facultad/universidad:
+
+Si van a van a validar el curso en otro programa doctoral que no sea del de FaMAF-UNC, van a necesitar:
+
+- [Programa de la materia](https://github.com/leliel12/diseno_sci_sfw/blob/80857c790e406017b68722be893bc180e314dca8/programa.pdf)
+- [CV de los profesores](https://github.com/leliel12/diseno_sci_sfw/tree/master/final/cv)
 
 ## Editores 📝
 
