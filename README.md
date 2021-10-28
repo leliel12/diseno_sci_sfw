@@ -124,7 +124,34 @@ La ediciones anteriores pueden encontrarse en: ⏰
 - **Repositorio público en GitHub/Gitlab/BitBucket**. El prototipo debe estar disponible en un repositorio de github con el nombre del proyecto. Configurar el repositorio para que todos los integrantes del grupo tengan acceso.
 - **Grupos:** Entre 3 y 5 personas. No hace falta que todos sean expertos en el tema. Ya tuvimos matemáticos haciendo dinámica y formación galáctica; y un biotecnólogo haciendo economía. Agarren un tema que les interese. Grupos más chicos tienen que justificarlo MUY bien. Más grandes no van a ser aceptados bajo ninguna circunstancia.
 
-### Entrega 2: A definir
+### Entrega 2: Final 
+
+#### O como sacar un 10
+- La funcionalidad del proyecto de software tiene que estar completa. 
+- El valor del Coverage `>= 90%` (ideal `~95%`).
+- Todo el código tiene que tener estilo y tiene que ser validado por un linter (Ejemplos: [Flake8](https://flake8.pycqa.org) para Python, [Fortran-Linter](https://pypi.org/project/fortran-linter/) para Fortran.
+  - Para la gente que use Flake8 instalar los plugins 
+   [`flake8-black`](https://pypi.org/project/flake8-black/) (si usan [black](https://pypi.org/project/black/)), 
+   [`flake8-import-order`](https://pypi.org/project/flake8-import-order/), 
+   [`pep8-naming`](https://pypi.org/project/pep8-naming/) y 
+   [`flake8-builtins`](https://pypi.org/project/flake8-builtins/)
+
+- Usar un integrador de testing (como [tox](https://pypi.org/project/tox/) o un Make), que integre tests, coverage, check-manifest, docstyle y doc-build.
+- Algún integrador continuo (travis, github actions, gitlab, circle-ci, azure, etc) que se encargue de comprobar las métricas de testing del proyecto
+- Documentación online que incluya:
+    - Motivación.
+    - Contactos.
+    - Guía de instalación.
+    - Tutorial con un ejemplo práctico.
+    - Referencia de API.
+- README, con motivación, badges, mini guia de instalacion e información de contacto.
+- LICENCIA (archivo en la raiz del repo `LICENSE` o `COPIYING`).
+- Todo el proyecto versionado en github/gitlab.
+- Subir el proyecto a PyPI
+
+- Presentar informe hasta 48hs antes. Hay un macro sugerido en el repositorio Github del curso (diseno_sci_sfw). Debe incluir el contexto científico, definir el problema a resolver, explicar la API, ejemplo de uso y calidad de software.
+- El final es una presentación grupal (con slides) con tiempo máximo de 40 min, en el cual uno explica el proyecto si entrar tanto en detalles técnicos, sino mas bien USO y por que es un aporte. 
+
 
 ## Editores 📝
 
