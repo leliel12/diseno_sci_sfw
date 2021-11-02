@@ -115,7 +115,7 @@ La ediciones anteriores pueden encontrarse en: ⏰
 
 - **20211102** Clase 21:
   [![youtube](https://img.shields.io/badge/-Video-red?logo=youtube)](https://youtu.be/z5GCP88FCEA)
-- [Numba](https://github.com/leliel12/diseno_sci_sfw/blob/ba11090d6c9eb4943b782dac7ae0654148f4327d/unidad4/05_jit.ipynb)
+  - [Numba](https://github.com/leliel12/diseno_sci_sfw/blob/ba11090d6c9eb4943b782dac7ae0654148f4327d/unidad4/05_jit.ipynb)
 
 ## El práctico ☢️
 
