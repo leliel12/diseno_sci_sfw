@@ -113,7 +113,9 @@ La ediciones anteriores pueden encontrarse en: ⏰
   - [Documentación: Sphinx](https://github.com/leliel12/diseno_sci_sfw/blob/2b941ddfa96d61e57a650860b79552cf8ab7c690/unidad6/documentation_parte_2.ipynb)
   - [Dask](https://github.com/leliel12/diseno_sci_sfw/blob/2b941ddfa96d61e57a650860b79552cf8ab7c690/unidad4/04_dask.ipynb)
 
-
+- **20211102** Clase 21:
+  [![youtube](https://img.shields.io/badge/-Video-red?logo=youtube)](https://youtu.be/z5GCP88FCEA)
+- [Numba](https://github.com/leliel12/diseno_sci_sfw/blob/ba11090d6c9eb4943b782dac7ae0654148f4327d/unidad4/05_jit.ipynb)
 
 ## El práctico ☢️
 
