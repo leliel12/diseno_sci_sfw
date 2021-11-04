@@ -117,6 +117,10 @@ La ediciones anteriores pueden encontrarse en: ⏰
   [![youtube](https://img.shields.io/badge/-Video-red?logo=youtube)](https://youtu.be/z5GCP88FCEA)
   - [Numba](https://github.com/leliel12/diseno_sci_sfw/blob/ba11090d6c9eb4943b782dac7ae0654148f4327d/unidad4/05_jit.ipynb)
 
+- **20211104** Clase 22:
+  [![youtube](https://img.shields.io/badge/-Video-red?logo=youtube)](https://youtu.be/4CFS85Gijig)
+  - [Cython](https://github.com/leliel12/diseno_sci_sfw/blob/9c628f6f2ff9e7a28d1190ca1398364749e03814/unidad5/01_Cython.ipynb)
+
 ## El práctico ☢️
 
 ### Entrega 1: 14 de Septiembre
