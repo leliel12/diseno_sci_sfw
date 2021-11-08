@@ -1,0 +1,14 @@
+!    -*- f90 -*-
+! Note: the context of this file is case sensitive.
+
+python module fib_smart ! in 
+    interface  ! in :fib_smart
+        subroutine fib(a,n) ! in :fib_smart:fib.for
+            real*8, dimension(n), depend(n), intent(out) :: a
+            integer, intent(in) :: n
+        end subroutine fib
+    end interface 
+end python module fib_smart
+
+! This file was auto-generated with f2py (version:1.21.2).
+! See http://cens.ioc.ee/projects/f2py2e/
