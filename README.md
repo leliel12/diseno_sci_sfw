@@ -121,6 +121,10 @@ La ediciones anteriores pueden encontrarse en: ⏰
   [![youtube](https://img.shields.io/badge/-Video-red?logo=youtube)](https://youtu.be/4CFS85Gijig)
   - [Cython](https://github.com/leliel12/diseno_sci_sfw/blob/9c628f6f2ff9e7a28d1190ca1398364749e03814/unidad5/01_Cython.ipynb)
 
+- **20211109** Clase 23
+  [![youtube](https://img.shields.io/badge/-Video-red?logo=youtube)](https://youtu.be/heOoloIt0dg)
+  - [Fortran](https://github.com/leliel12/diseno_sci_sfw/blob/2da38b33099265ca46069c2fce252080f2a70861/unidad5/02_FORTRAN.ipynb)
+
 ## El práctico ☢️
 
 ### Entrega 1: 14 de Septiembre
