@@ -40,6 +40,8 @@ class ParticlePlotter:
         hist_kws.setdefault("cmap", "Greys")
         ax.hist2d(p.x, p.y, **hist_kws)
         ax.scatter(p.x, p.y, **scatter_kws)
+        ax.set_title("Scatter Hist")
+        
         return ax
     
 @attr.s
@@ -57,7 +59,7 @@ class ParticleOOPAcc:
     
 from matplotlib.testing.decorators import check_figures_equal
 
-@check_figures_equal(extensions=["png"])
+@check_figures_equal()
 def test_ParticleOOP_scatterhist(fig_test, fig_ref):
     p = ParticleOOPAcc(
         x = np.random.normal(size=100), 
@@ -75,3 +77,5 @@ def test_ParticleOOP_scatterhist(fig_test, fig_ref):
   
     exp_ax.hist2d(p.x, p.y, cmap="Greys")
     exp_ax.scatter(p.x, p.y)    
+    
+    exp_ax.set_title("Scatter Hist")
