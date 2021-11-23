@@ -125,6 +125,19 @@ La ediciones anteriores pueden encontrarse en: ⏰
   [![youtube](https://img.shields.io/badge/-Video-red?logo=youtube)](https://youtu.be/heOoloIt0dg)
   - [Fortran](https://github.com/leliel12/diseno_sci_sfw/blob/2da38b33099265ca46069c2fce252080f2a70861/unidad5/02_FORTRAN.ipynb)
 
+- **20211111** Clase 24
+  [![youtube](https://img.shields.io/badge/-Video-red?logo=youtube)](https://youtu.be/4uTBQWXbXA0)
+  - [Plot API](https://github.com/leliel12/diseno_sci_sfw/blob/f5633959e26fb128a7a8a62aacd8353fea941c3a/extra/Plots.ipynb)
+
+- **20211116** Clase 25
+  - Rol del programador científico (no grabada)
+
+- **20211118** Clase 26
+  [![youtube](https://img.shields.io/badge/-Video-red?logo=youtube)]()
+  - [Testing-Plot API](https://github.com/leliel12/diseno_sci_sfw/blob/f5633959e26fb128a7a8a62aacd8353fea941c3a/extra/Plots.ipynb)
+  - [Integracion con C]()
+ 
+
 ## El práctico ☢️
 
 ### Entrega 1: 14 de Septiembre
