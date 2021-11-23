@@ -133,9 +133,9 @@ La ediciones anteriores pueden encontrarse en: ⏰
   - Rol del programador científico (no grabada)
 
 - **20211118** Clase 26
-  [![youtube](https://img.shields.io/badge/-Video-red?logo=youtube)]()
+  [![youtube](https://img.shields.io/badge/-Video-red?logo=youtube)](https://youtu.be/YcLR6jyD6DA)
   - [Testing-Plot API](https://github.com/leliel12/diseno_sci_sfw/blob/f5633959e26fb128a7a8a62aacd8353fea941c3a/extra/Plots.ipynb)
-  - [Integracion con C]()
+  - [Integracion con C](https://github.com/leliel12/diseno_sci_sfw/blob/ee8f8f9412b8e48de4c1acbdf6aba6a223d5baba/unidad5/03_C.ipynb)
  
 
 ## El práctico ☢️
