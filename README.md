@@ -137,6 +137,12 @@ La ediciones anteriores pueden encontrarse en: ⏰
   - [Testing-Plot API](https://github.com/leliel12/diseno_sci_sfw/blob/f5633959e26fb128a7a8a62aacd8353fea941c3a/extra/Plots.ipynb)
   - [Integracion con C](https://github.com/leliel12/diseno_sci_sfw/blob/ee8f8f9412b8e48de4c1acbdf6aba6a223d5baba/unidad5/03_C.ipynb)
  
+ - **20211123** Clase 27
+  [![youtube](https://img.shields.io/badge/-Video-red?logo=youtube)](https://youtu.be/cm5osu5hdY0)
+  - [Structural Pattern Matching](https://github.com/leliel12/diseno_sci_sfw/blob/e383b52ce5f80158489fbe16a252b849ca0c676a/extra/match_statement.ipynb)
+
+ - **20211125** Clase 28
+ 
 
 ## El práctico ☢️
 
