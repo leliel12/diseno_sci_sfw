@@ -22,6 +22,10 @@
 </a>
 ```
 
+# Class 2021
+
+- Scikit-NeuroMSI
+- StratoPy
 # Class 2020
 
 ## Arby (MB)
@@ -58,24 +62,11 @@
 - **Repository:** https://github.com/exiliadadelsur/Bartolina
 
 
-## Open Cluster (MCH):
-
-- **Repository:** https://github.com/simonpedrogonzalez/opencluster
-
 
 ## Simulai (MCH)
 
 - **Repository:** https://github.com/carosaav/SimulAI
 
-
-##  Modapy(MCH)
-
-- **Repository:** https://github.com/juancgvazquez/MODApy-VCFDataFrame
-
-
-## Deep-Spyce (JBC)
-
-- **Repository:** https://github.com/suaraujo/DeepSpyce
 
 ----
 
