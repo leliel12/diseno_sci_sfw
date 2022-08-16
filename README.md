@@ -14,7 +14,7 @@ La ediciones anteriores pueden encontrarse en: ⏰
 
  **20220816* Clase 1:
   - [Introducción a la ingeniería de software y gestión de proyectos](https://github.com/leliel12/diseno_sci_sfw/blob/2022/unidad1/00_ing_softy.ipynb).
-  - [From FATS to feets]().
+  - [Analisis 1: From FATS to feets](https://github.com/leliel12/diseno_sci_sfw/blob/2022/unidad1/01_from_FATS_to_feets.ipynb).
   
 ## El práctico ☢️
 
