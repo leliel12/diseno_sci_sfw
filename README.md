@@ -13,8 +13,9 @@ La ediciones anteriores pueden encontrarse en: ⏰
 ## Clases 🏫
 
  **20220816* Clase 1:
+  - [Introducción a la ingeniería de software y gestión de proyectos](https://github.com/leliel12/diseno_sci_sfw/blob/2022/unidad1/00_ing_softy.ipynb).
   - [From FATS to feets]().
-  - [Introducción a la ingeniería de software y gestión de proyectos]().
+  
 ## El práctico ☢️
 
 ### Entrega 1: 16 de Septiembre
