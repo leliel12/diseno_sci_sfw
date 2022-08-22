@@ -6,15 +6,21 @@
 
 La ediciones anteriores pueden encontrarse en: ⏰
 
-- [2021](https://github.com/leliel12/diseno_sci_sfw/tree/2021)
+- [2021](https://github.com/leliel12/diseno_sci_sfw/tree/2021) (con videos)
 - [2020](https://github.com/leliel12/diseno_sci_sfw/tree/2020)
 - [2019](https://github.com/leliel12/diseno_sci_sfw/tree/2019)
 
-## Clases 🏫
+## Clases 🏫 
 
  **20220816* Clase 1:
-  - [Introducción a la ingeniería de software y gestión de proyectos](https://github.com/leliel12/diseno_sci_sfw/blob/2022/unidad1/00_ing_softy.ipynb).
   - [Analisis 1: From FATS to feets](https://github.com/leliel12/diseno_sci_sfw/blob/2022/unidad1/01_from_FATS_to_feets.ipynb).
+  - [Introducción a la ingeniería de software y gestión de proyectos](https://github.com/leliel12/diseno_sci_sfw/blob/2022/unidad1/00_ing_softy.ipynb).
+  
+
+ **20220816* Clase 1:
+  - [Alto y bajo nivel](https://github.com/leliel12/diseno_sci_sfw/blob/2022/unidad2/00_alto_nivel.ipynb).
+  - [Python](https://github.com/leliel12/diseno_sci_sfw/blob/2022/unidad1/01_python.ipynb).
+  - [Stack científico de Python](https://github.com/leliel12/diseno_sci_sfw/blob/2022/unidad1/02_scipy.ipynb).
   
 ## El práctico ☢️
 
