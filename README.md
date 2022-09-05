@@ -10,18 +10,25 @@ La ediciones anteriores pueden encontrarse en: ⏰
 - [2020](https://github.com/leliel12/diseno_sci_sfw/tree/2020)
 - [2019](https://github.com/leliel12/diseno_sci_sfw/tree/2019)
 
-## Clases 🏫 
+## Clases 🏫
 
  **20220816* Clase 1:
   - [Analisis 1: From FATS to feets](https://github.com/leliel12/diseno_sci_sfw/blob/2022/unidad1/01_from_FATS_to_feets.ipynb).
   - [Introducción a la ingeniería de software y gestión de proyectos](https://github.com/leliel12/diseno_sci_sfw/blob/2022/unidad1/00_ing_softy.ipynb).
-  
 
- **20220816* Clase 1:
+
+ **20220823* Clase 2:
   - [Alto y bajo nivel](https://github.com/leliel12/diseno_sci_sfw/blob/2022/unidad2/00_alto_nivel.ipynb).
   - [Python](https://github.com/leliel12/diseno_sci_sfw/blob/2022/unidad1/01_python.ipynb).
+
+
+**20220830* Clase 3:
   - [Stack científico de Python](https://github.com/leliel12/diseno_sci_sfw/blob/2022/unidad1/02_scipy.ipynb).
-  
+  - [POO](https://github.com/leliel12/diseno_sci_sfw/blob/2022/unidad1/03_OOP.ipynb)
+  - [Modelo de objetos de Python](https://github.com/leliel12/diseno_sci_sfw/blob/2022/unidad1/04_model.ipynb)
+  - [Decoradores](https://github.com/leliel12/diseno_sci_sfw/blob/2022/unidad1/05_decoradores.ipynb)
+  - [Exceptions](https://github.com/leliel12/diseno_sci_sfw/blob/2022/unidad1/06_exceptions.ipynb)
+
 ## El práctico ☢️
 
 ### Entrega 1: 16 de Septiembre
