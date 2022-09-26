@@ -13,28 +13,28 @@ La ediciones anteriores pueden encontrarse en: ⏰
 ## Clases 🏫
 
  **20220816** Clase 1:
-  - [Analisis 1: From FATS to feets](https://github.com/leliel12/diseno_sci_sfw/blob/2022/unidad1/01_from_FATS_to_feets.ipynb).
-  - [Introducción a la ingeniería de software y gestión de proyectos](https://github.com/leliel12/diseno_sci_sfw/blob/2022/unidad1/00_ing_softy.ipynb).
+  - [Analisis 1: From FATS to feets](unidad1/01_from_FATS_to_feets.ipynb).
+  - [Introducción a la ingeniería de software y gestión de proyectos](unidad1/00_ing_softy.ipynb).
 
 
  **20220823** Clase 2:
-  - [Alto y bajo nivel](https://github.com/leliel12/diseno_sci_sfw/blob/2022/unidad2/00_alto_nivel.ipynb).
-  - [Python](https://github.com/leliel12/diseno_sci_sfw/blob/2022/unidad2/01_python.ipynb).
+  - [Alto y bajo nivel](unidad2/00_alto_nivel.ipynb).
+  - [Python](unidad2/01_python.ipynb).
 
 
 **20220830** Clase 3:
-  - [POO](https://github.com/leliel12/diseno_sci_sfw/blob/2022/unidad2/03_OOP.ipynb)
-  - [Modelo de objetos de Python](https://github.com/leliel12/diseno_sci_sfw/blob/2022/unidad2/04_model.ipynb)
+  - [POO](unidad2/03_OOP.ipynb)
+  - [Modelo de objetos de Python](unidad2/04_model.ipynb)
 
 
 **20220906** Clase 4:
-  - [Stack científico de Python](https://github.com/leliel12/diseno_sci_sfw/blob/2022/unidad2/02_scipy.ipynb).
-  - [Decoradores](https://github.com/leliel12/diseno_sci_sfw/blob/2022/unidad2/05_decoradores.ipynb)
-  - [Exceptions](https://github.com/leliel12/diseno_sci_sfw/blob/2022/unidad2/06_exceptions.ipynb)
+  - [Stack científico de Python](unidad2/02_scipy.ipynb).
+  - [Decoradores](unidad2/05_decoradores.ipynb)
+  - [Exceptions](unidad2/06_exceptions.ipynb)
 
 **20220813** Clase 5:
 
-- [Metaprogamación](https://github.com/leliel12/diseno_sci_sfw/blob/2022/unidad2/07_meta.ipynb)
+- [Metaprogamación](unidad2/07_meta.ipynb)
 - [Taxonomía](unidad1/03_taxonomia.ipynb)
 
 **20220827** Clase 6:
