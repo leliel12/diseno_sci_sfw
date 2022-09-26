@@ -46,14 +46,22 @@ La ediciones anteriores pueden encontrarse en: ⏰
 
 ## El práctico ☢️
 
-### Entrega 1: 16 de Septiembre
+### Entrega 0: 04 de Octubre 2022
 
 - **Establecer el problema científico a resolver.** Las bases teóricas del problema deben estar bien entendidas. Recordar que esto no es un proyecto de investigación científica, es un proyecto de desarrollo de software. El problema no debe tener una implementación de Python. BUSCAR en PyPI https://pypi.org/
-- **Prototipo funcional de código.** El prototipo debe ser capaz de resolver el problema científico propuesto. Considerar que en esta etapa no se pide ningún criterio de calidad de software, solo la funcionalidad del prototipo. El prototipo debe estar escrito en Python 3.9 válido.
 - **Repositorio público en GitHub/Gitlab/BitBucket**. El prototipo debe estar disponible en un repositorio de github con el nombre del proyecto. Configurar el repositorio para que todos los integrantes del grupo tengan acceso.
 - **Grupos:** Entre 3 y 5 personas. No hace falta que todos sean expertos en el tema. Ya tuvimos matemáticos haciendo dinámica y formación galáctica; y un biotecnólogo haciendo economía. Agarren un tema que les interese. Grupos más chicos tienen que justificarlo MUY bien. Más grandes no van a ser aceptados bajo ninguna circunstancia.
 
-### Entrega 2: Final (En proceso)
+
+### Entrega 1: 11 de Octubre 2022
+
+- **Prototipo funcional de código.** El prototipo debe ser capaz de resolver el problema científico propuesto. Considerar que en esta etapa no se pide ningún criterio de calidad de software, solo la funcionalidad del prototipo. El prototipo debe estar escrito en Python 3.10 válido.
+
+### Entrega $i-ésima$:
+
+Todas las clases van a haber consultas.
+
+### Entrega Final (En proceso)
 
 #### O como sacar un 10
 - La funcionalidad del proyecto de software tiene que estar completa.
