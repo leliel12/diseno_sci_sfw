@@ -19,18 +19,30 @@ La ediciones anteriores pueden encontrarse en: ⏰
 
  **20220823** Clase 2:
   - [Alto y bajo nivel](https://github.com/leliel12/diseno_sci_sfw/blob/2022/unidad2/00_alto_nivel.ipynb).
-  - [Python](https://github.com/leliel12/diseno_sci_sfw/blob/2022/unidad1/01_python.ipynb).
+  - [Python](https://github.com/leliel12/diseno_sci_sfw/blob/2022/unidad2/01_python.ipynb).
 
 
 **20220830** Clase 3:
-  - [POO](https://github.com/leliel12/diseno_sci_sfw/blob/2022/unidad1/03_OOP.ipynb)
-  - [Modelo de objetos de Python](https://github.com/leliel12/diseno_sci_sfw/blob/2022/unidad1/04_model.ipynb)
- 
-  
+  - [POO](https://github.com/leliel12/diseno_sci_sfw/blob/2022/unidad2/03_OOP.ipynb)
+  - [Modelo de objetos de Python](https://github.com/leliel12/diseno_sci_sfw/blob/2022/unidad2/04_model.ipynb)
+
+
 **20220906** Clase 4:
-  - [Stack científico de Python](https://github.com/leliel12/diseno_sci_sfw/blob/2022/unidad1/02_scipy.ipynb).
-  - [Decoradores](https://github.com/leliel12/diseno_sci_sfw/blob/2022/unidad1/05_decoradores.ipynb)
-  - [Exceptions](https://github.com/leliel12/diseno_sci_sfw/blob/2022/unidad1/06_exceptions.ipynb)
+  - [Stack científico de Python](https://github.com/leliel12/diseno_sci_sfw/blob/2022/unidad2/02_scipy.ipynb).
+  - [Decoradores](https://github.com/leliel12/diseno_sci_sfw/blob/2022/unidad2/05_decoradores.ipynb)
+  - [Exceptions](https://github.com/leliel12/diseno_sci_sfw/blob/2022/unidad2/06_exceptions.ipynb)
+
+**20220813** Clase 5:
+
+- [Metaprogamación](https://github.com/leliel12/diseno_sci_sfw/blob/2022/unidad2/07_meta.ipynb)
+- [Taxonomía](unidad1/03_taxonomia.ipynb)
+
+**20220827** Clase 6:
+
+- [OOP in real world](unidad2/08_oo_real_world.ipynb)
+- [Pattern matching](unidad2/09_match_statement.ipynb)
+- [Intro a QA](unidad3/00_intro_qa.ipynb)
+
 
 ## El práctico ☢️
 
