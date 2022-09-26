@@ -13,3 +13,5 @@ parent(marry, paul).
 
 father(F, C) :- man(F), parent(F, C).
 mother(M, C) :- woman(M), parent(M, C).
+
+
