@@ -37,11 +37,21 @@ La ediciones anteriores pueden encontrarse en: ⏰
 - [Metaprogamación](unidad2/07_meta.ipynb)
 - [Taxonomía](unidad1/03_taxonomia.ipynb)
 
-**20220827** Clase 6:
+**20220927** Clase 6:
 
 - [OOP in real world](unidad2/08_oo_real_world.ipynb)
 - [Pattern matching](unidad2/09_match_statement.ipynb)
 - [Intro a QA](unidad3/00_intro_qa.ipynb)
+
+**20221004** Clase 7:
+
+- [Testing](unidad3/01_testing.ipynb)
+- [Code-Coverage](unidad3/02_codecoverage.ipynb)
+- [Code Style](unidad3/03_code_style.ipynb)
+- [Entornos Virtuales](unidad6/00_entornos.ipynb)
+
+
+
 
 
 ## El práctico ☢️
