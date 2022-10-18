@@ -50,7 +50,11 @@ La ediciones anteriores pueden encontrarse en: ⏰
 - [Code Style](unidad3/03_code_style.ipynb)
 - [Entornos Virtuales](unidad6/00_entornos.ipynb)
 
+**20221011** Clase 8
 
+- [Mock](unidad3/04_mock.ipynb)
+- [Property Based Testing](unidad3/05_PBT.ipynb)
+- [Mutation Testing](unidad3/06_mutation.ipynb)
 
 
 
