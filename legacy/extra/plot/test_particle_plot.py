@@ -75,7 +75,7 @@ def test_ParticleOOP_scatterhist(fig_test, fig_ref):
     #expected
     exp_ax = fig_ref.subplots()
   
-    exp_ax.hist2d(p.x, p.y, cmap="Greys")
+    exp_ax.hist2d(p.x, p.y, cmap="viridis")
     exp_ax.scatter(p.x, p.y)    
     
     exp_ax.set_title("Scatter Hist")
