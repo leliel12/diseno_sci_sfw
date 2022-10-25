@@ -56,6 +56,18 @@ La ediciones anteriores pueden encontrarse en: ⏰
 - [Property Based Testing](unidad3/05_PBT.ipynb)
 - [Mutation Testing](unidad3/06_mutation.ipynb)
 
+**20221018** Clase 9
+
+- [Packaging](unidad7/01_packaging.ipynb)
+- [TOX (Orquestación de testing)](unidad7/02_tox.ipynb)
+- [Plot API integration](unidad3/07_plot_api_integration.ipynb)
+
+
+**20221021** Clase 10
+
+- [Licenciamiento](unidad1/04_licencias.ipynb)
+- [Patrones de diseño](unidad3/08_patterns.ipynb)
+- [Profiling](unidad3/09_profiling.ipynb)
 
 
 ## El práctico ☢️
