@@ -69,6 +69,15 @@ La ediciones anteriores pueden encontrarse en: ⏰
 - [Patrones de diseño](unidad3/08_patterns.ipynb)
 - [Profiling](unidad3/09_profiling.ipynb)
 
+**20221101** Clase 11
+
+- [General IO](unidad4/01_files.ipynb) 
+- [SQL](unidad4/02_sql.ipynb)  
+- [ORM](unidad4/03_orm.ipynb)  
+- [NoSQL](unidad4/04_nosql.ipynb)  
+- [HDF5](unidad4/05_hdf5.ipynb)  
+- [Apache Parquet](unidad4/06_parquet.ipynb)
+
 
 ## El práctico ☢️
 
