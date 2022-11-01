@@ -79,3 +79,11 @@ unidad4/fake_files/
 unidad4/d*_data/*
 dask-worker-space/
 legacy/extra/result_images/
+
+unidad4/03_orm/example.db
+unidad4/04_nosql/mydata.fs
+unidad4/04_nosql/mydata.fs.index
+unidad4/04_nosql/mydata.fs.lock
+unidad4/04_nosql/mydata.fs.tmp
+unidad4/06_parquet/*
+unidad4/hdf5/*
