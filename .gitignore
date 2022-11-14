@@ -87,3 +87,4 @@ unidad4/04_nosql/mydata.fs.lock
 unidad4/04_nosql/mydata.fs.tmp
 unidad4/06_parquet/*
 unidad4/hdf5/*
+legacy/unidad4/dd_data/

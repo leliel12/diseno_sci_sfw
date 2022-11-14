@@ -71,12 +71,27 @@ La ediciones anteriores pueden encontrarse en: ⏰
 
 **20221101** Clase 11
 
-- [General IO](unidad4/01_files.ipynb) 
-- [SQL](unidad4/02_sql.ipynb)  
-- [ORM](unidad4/03_orm.ipynb)  
-- [NoSQL](unidad4/04_nosql.ipynb)  
-- [HDF5](unidad4/05_hdf5.ipynb)  
+- [General IO](unidad4/01_files.ipynb)
+- [SQL](unidad4/02_sql.ipynb)
+- [ORM](unidad4/03_orm.ipynb)
+- [NoSQL](unidad4/04_nosql.ipynb)
+- [HDF5](unidad4/05_hdf5.ipynb)
 - [Apache Parquet](unidad4/06_parquet.ipynb)
+
+**20221108** Clase 12
+
+- [Optimización](unidad5/00_optimizacion.ipynb)
+- [Paralelismo + Concurrencia](unidad5/02_thread_process.ipynb)
+- [Dask](unidad5/04_dask.ipynb)
+- [Documentación](unidad7/documentation_parte_1.ipynb)
+- [Sphinx](unidad7/documentation_parte_2.ipynb)
+
+
+**20221115** Clase 13
+
+- [Numba (JIT)](unidad5/05_jit.ipynb)
+- [Integración continua](unidad3/10_CI.ipynb)
+- [Fortran (Standalone)]()
 
 
 ## El práctico ☢️
