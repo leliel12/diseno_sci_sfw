@@ -1,5 +1,86 @@
-.reveal .rendered_html code.cm-s-ipython{
-  font-size: 60%;
-    max-height: none;
-    background-color: #f7f7f7;
+:root {
+    --primary: #7b8e2d;
+    /* Used for subtitles, captions and code */
+    --secondary: #5e705f;
+    /* Links  */
+    --links: #7b8e2d;
+    /* Background color of jupyter input cell */
+    --jupyter-in-cell-bg: #e3ffd28c;
+}
+
+.rise-enabled .reveal section img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 50%;
+    max-width: 95%;
+}
+
+.rise-enabled .text_cell_render.rendered_html p,
+.rise-enabled .text_cell_render.rendered_html li,
+.rise-enabled .text_cell_render.rendered_html ol,
+.rise-enabled .text_cell_render.rendered_html ul {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.rise-enabled .text_cell_render.rendered_html h2 {
+    font-size: 54px
+}
+
+.rise-enabled .cell .maintitle,
+.rise-enabled .cell .maintitle * {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    color: var(--primary) !important
+}
+
+.rise-enabled .cell .maintitle h1 {
+    font-size: 60px;
+}
+
+.rise-enabled .cell .maintitle h3 {
+    margin-top: 0em;
+}
+
+.rise-enabled .cell h1,
+.rise-enabled .cell h3,
+.rise-enabled .cell em,
+.rise-enabled .cell strong,
+.rise-enabled .cell li::marker,
+.rise-enabled .cell span.MathJax,
+.rise-enabled .cell code {
+    color: var(--primary) !important
+}
+
+.rise-enabled .cell .decisionmatrix-dim {
+    color: black !important;
+}
+
+.rise-enabled .cell h2,
+.rise-enabled .cell h4 {
+    color: var(--secondary) !important
+}
+
+.rise-enabled .cell a {
+    color: var(--links) !important;
+    text-decoration: none !important;
+}
+
+.rise-enabled .cell a::after {
+    content: "⬏";
+    color: var(--primary) !important
+}
+
+.rise-enabled .cell table.clean,
+.rise-enabled .cell table.clean tr,
+.rise-enabled .cell table.clean td {
+    background-color: white;
+    border: none;
+}
+
+.rise-enabled .cell code {
+    overflow-y: scroll;
+    background-color: var(--jupyter-in-cell-bg) !important;
 }

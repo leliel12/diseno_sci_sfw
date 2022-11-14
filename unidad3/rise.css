@@ -79,3 +79,8 @@
     background-color: white;
     border: none;
 }
+
+.rise-enabled .cell code {
+    overflow-y: scroll;
+    background-color: var(--jupyter-in-cell-bg) !important;
+}
