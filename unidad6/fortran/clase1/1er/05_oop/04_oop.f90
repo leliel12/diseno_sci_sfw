@@ -1,3 +1,4 @@
+! Herencia
 module oop
     implicit none
 
@@ -11,7 +12,6 @@ module oop
         procedure :: dot
     end type
 
-    ! Herencia
     type, extends(vector) :: vector_3d
         real :: z
     end type

@@ -2,7 +2,6 @@ module mod1
     implicit none ! Declara implicit none para TODO lo que esté en dentro.
 
     real :: x
-    
 end module mod1
 
 subroutine sub(var)

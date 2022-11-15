@@ -9,5 +9,4 @@ module oop
         real :: x
         real :: y
     end type
-
 end module

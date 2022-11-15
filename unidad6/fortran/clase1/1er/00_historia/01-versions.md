@@ -1,5 +1,7 @@
 ## Versiones
 
+
+
 ### Fortran "clásico"
 - FORTRAN I
 - FORTRAN II    :+ funciones y subrutinas
@@ -7,12 +9,20 @@
 - FORTRAN 66    :  ANSI estandariza lo anterior.
 - FORTRAN 77    :+ bloques, character, parameter y save. Una revisión agregó do while
 
+
+
 ### Fortran "moderno"
 - Fortran 90    :+ módulos, memoria dinámica, tipos de dato, mucho más
 - Fortran 95    :+ forall, where, deloación automática de variables.
 - Fortran 2003  :+ tipos de datos parametrizados, interoperabilidad con C
 - Fortran 2008  :+ bloques (otros bloques), facilidades en concurrencia y paralelismo
 - Fortran 2018  :  nada importante
+
+
+
+
+
+
 
 
 - Fortran 66: had IF … GOTO but no IF…THEN
