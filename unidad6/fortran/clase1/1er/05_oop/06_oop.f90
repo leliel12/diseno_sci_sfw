@@ -1,3 +1,4 @@
+! Nuevos operadores
 module oop
     implicit none
 
@@ -9,7 +10,6 @@ module oop
         real :: y
     end type
 
-    ! Nuevos operadores
     interface operator(.dot.)
         module procedure :: dot
     end interface

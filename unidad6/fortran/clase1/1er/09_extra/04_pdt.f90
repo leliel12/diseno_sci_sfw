@@ -1,5 +1,4 @@
 ! https://blog.hpc.qmul.ac.uk/fortran-parameterized-derived-types-1.html
-! 
 ! Tipos de datos parametrizados
 ! 
 module parametrized
@@ -21,4 +20,3 @@ program main
     t%a = [1, 2, 3, 4, 5] ! No lee del 4to en adelante
     print *, t%a
 end program
-

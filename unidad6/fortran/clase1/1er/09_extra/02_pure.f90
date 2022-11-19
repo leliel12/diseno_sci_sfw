@@ -4,7 +4,7 @@ pure function f(x)
     implicit none
     real(8), intent(in) :: x
     real(8) :: f
-    x = 3
-    print *, "No puedo printear desde procedimientos puros"
+    ! x = 3
+    ! print *, "No puedo printear desde procedimientos puros"
     f = 2*x
 end function f
