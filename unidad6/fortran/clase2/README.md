@@ -53,7 +53,7 @@ un Makefile.
 
 ### Makefiles: Ejemplo básico
 
-- Ejemplo
+- Ejemplo: `makefiles` dir
 
 Algo mejor:
 
@@ -113,6 +113,10 @@ Contiene
 - fprettify.
 - flinter.
 - fortran-linter.
+
+Un set de guidelines de estilo:
+
+[https://flinter.readthedocs.io/en/latest/fortran_guidelines.html](https://flinter.readthedocs.io/en/latest/fortran_guidelines.html)
 
 ### Linters: fprettify
 
@@ -279,7 +283,66 @@ También permite agregar páginas estáticas, ya sean html o markdown.
 `Ford` se maneja con un único archivo de configuración donde se especifican los
 detalles de qué documentar y cómo.
 
+- Ejemplo: `feos`
+
+## Otras cosas
+Existen varias herramientas para mejorar Fortran en mal estado. No se puede
+llegar a evaluarlas dentro del scope del curso (ni yo llegué a usarlas), pero
+dejo el link a una compilación por si es de utilidad para alguien:
+
+
+\small
+- Roquefort: transforma bloques `common` a módulos y solo importa
+variables/rutinas que se usan
+  - [https://github.com/NLESC-JCER/roquefort](https://github.com/NLESC-JCER/roquefort)
+
+- f90wrap: Genera wrappers para objetos que no son compatibles con f2py (lo que sigue)
+  - [https://github.com/jameskermode/f90wrap](https://github.com/jameskermode/f90wrap)
+
+Más herramietnas:
+
+- [https://github.com/Beliavsky/Fortran-Tools#refactoring](https://github.com/Beliavsky/Fortran-Tools#refactoring)
+\normalsize
+
 # Interfaces con otros lenguajes
+
+## C
+
+\tiny
+A partir de Fortran 2003 se puede correr código Fortran desde C (y viceversa)
+
+#### Fortran
+```fortran
+!function.f09
+subroutine f(x, y) bind(C, name="f_fortran")
+    use iso_c_binding, only: c_double
+    real(c_double), intent(in) :: x
+    real(c_double), intent(out) :: y
+    y = x**2
+end subroutine f
+```
+
+#### C
+```C
+// cside.c
+#include <stdio.h>
+extern double f_fortran(double [], double []);
+main()
+{
+    double x=2.0; double y=5.0; double z;
+    z = f_fortran(&x, &y); 
+    printf("x: %f, y: %f, z: %f",
+            x, y, z);
+}
+```
+
+\Tiny
+#### Compilación
+```bash
+gfortran -c function.f90
+gcc -o exec cside.c function.f90
+```
+\normalsize
 
 ## Python
 

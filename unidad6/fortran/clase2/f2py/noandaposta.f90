@@ -6,8 +6,8 @@ module noanda
 contains
 
     subroutine noanda_sub(x, y)
-        type(obj) :: x
-        real :: y
+        type(obj), intent(in) :: x
+        real, intent(out) :: y
 
         y = sum(x%att)
     end subroutine noanda_sub
