@@ -6,104 +6,29 @@
 
 La ediciones anteriores pueden encontrarse en: ⏰
 
+- [2022](https://github.com/leliel12/diseno_sci_sfw/tree/2023) (con videos)
 - [2021](https://github.com/leliel12/diseno_sci_sfw/tree/2021) (con videos)
 - [2020](https://github.com/leliel12/diseno_sci_sfw/tree/2020)
 - [2019](https://github.com/leliel12/diseno_sci_sfw/tree/2019)
 
 ## Clases 🏫
 
- **20220816** Clase 1:
+ **20230816** Clase 1:
   - [Analisis 1: From FATS to feets](unidad1/01_from_FATS_to_feets.ipynb).
   - [Introducción a la ingeniería de software y gestión de proyectos](unidad1/00_ing_softy.ipynb).
 
 
- **20220823** Clase 2:
-  - [Alto y bajo nivel](unidad2/00_alto_nivel.ipynb).
-  - [Python](unidad2/01_python.ipynb).
-
-
-**20220830** Clase 3:
-  - [POO](unidad2/03_OOP.ipynb)
-  - [Modelo de objetos de Python](unidad2/04_model.ipynb)
-
-
-**20220906** Clase 4:
-  - [Stack científico de Python](unidad2/02_scipy.ipynb).
-  - [Decoradores](unidad2/05_decoradores.ipynb)
-  - [Exceptions](unidad2/06_exceptions.ipynb)
-
-**20220813** Clase 5:
-
-- [Metaprogamación](unidad2/07_meta.ipynb)
-- [Taxonomía](unidad1/03_taxonomia.ipynb)
-
-**20220927** Clase 6:
-
-- [OOP in real world](unidad2/08_oo_real_world.ipynb)
-- [Pattern matching](unidad2/09_match_statement.ipynb)
-- [Intro a QA](unidad3/00_intro_qa.ipynb)
-
-**20221004** Clase 7:
-
-- [Testing](unidad3/01_testing.ipynb)
-- [Code-Coverage](unidad3/02_codecoverage.ipynb)
-- [Code Style](unidad3/03_code_style.ipynb)
-- [Entornos Virtuales](unidad6/00_entornos.ipynb)
-
-**20221011** Clase 8
-
-- [Mock](unidad3/04_mock.ipynb)
-- [Property Based Testing](unidad3/05_PBT.ipynb)
-- [Mutation Testing](unidad3/06_mutation.ipynb)
-
-**20221018** Clase 9
-
-- [Packaging](unidad7/01_packaging.ipynb)
-- [TOX (Orquestación de testing)](unidad7/02_tox.ipynb)
-- [Plot API integration](unidad3/07_plot_api_integration.ipynb)
-
-
-**20221021** Clase 10
-
-- [Licenciamiento](unidad1/04_licencias.ipynb)
-- [Patrones de diseño](unidad3/08_patterns.ipynb)
-- [Profiling](unidad3/09_profiling.ipynb)
-
-**20221101** Clase 11
-
-- [General IO](unidad4/01_files.ipynb)
-- [SQL](unidad4/02_sql.ipynb)
-- [ORM](unidad4/03_orm.ipynb)
-- [NoSQL](unidad4/04_nosql.ipynb)
-- [HDF5](unidad4/05_hdf5.ipynb)
-- [Apache Parquet](unidad4/06_parquet.ipynb)
-
-**20221108** Clase 12
-
-- [Optimización](unidad5/00_optimizacion.ipynb)
-- [Paralelismo + Concurrencia](unidad5/02_thread_process.ipynb)
-- [Dask](unidad5/04_dask.ipynb)
-- [Documentación](unidad7/documentation_parte_1.ipynb)
-- [Sphinx](unidad7/documentation_parte_2.ipynb)
-
-
-**20221115** Clase 13
-
-- [Numba (JIT)](unidad5/05_jit.ipynb)
-- [Integración continua](unidad3/10_CI.ipynb)
-- [Fortran (Standalone)]()
-
 
 ## El práctico ☢️
 
-### Entrega 0: 04 de Octubre 2022
+### Entrega 0: 04 de Sept 2023
 
 - **Establecer el problema científico a resolver.** Las bases teóricas del problema deben estar bien entendidas. Recordar que esto no es un proyecto de investigación científica, es un proyecto de desarrollo de software. El problema no debe tener una implementación de Python. BUSCAR en PyPI https://pypi.org/
 - **Repositorio público en GitHub/Gitlab/BitBucket**. El prototipo debe estar disponible en un repositorio de github con el nombre del proyecto. Configurar el repositorio para que todos los integrantes del grupo tengan acceso.
 - **Grupos:** Entre 3 y 5 personas. No hace falta que todos sean expertos en el tema. Ya tuvimos matemáticos haciendo dinámica y formación galáctica; y un biotecnólogo haciendo economía. Agarren un tema que les interese. Grupos más chicos tienen que justificarlo MUY bien. Más grandes no van a ser aceptados bajo ninguna circunstancia.
 
 
-### Entrega 1: 11 de Octubre 2022
+### Entrega 1: Aun No definido
 
 - **Prototipo funcional de código.** El prototipo debe ser capaz de resolver el problema científico propuesto. Considerar que en esta etapa no se pide ningún criterio de calidad de software, solo la funcionalidad del prototipo. El prototipo debe estar escrito en Python 3.10 válido.
 
