@@ -6,7 +6,7 @@
 
 La ediciones anteriores pueden encontrarse en: ⏰
 
-- [2022](https://github.com/leliel12/diseno_sci_sfw/tree/2023) (con videos)
+- [2022](https://github.com/leliel12/diseno_sci_sfw/tree/2022) (con videos)
 - [2021](https://github.com/leliel12/diseno_sci_sfw/tree/2021) (con videos)
 - [2020](https://github.com/leliel12/diseno_sci_sfw/tree/2020)
 - [2019](https://github.com/leliel12/diseno_sci_sfw/tree/2019)
@@ -14,8 +14,8 @@ La ediciones anteriores pueden encontrarse en: ⏰
 ## Clases 🏫
 
  **20230816** Clase 1:
-  - [Analisis 1: From FATS to feets](unidad1/01_from_FATS_to_feets.ipynb).
-  - [Introducción a la ingeniería de software y gestión de proyectos](unidad1/00_ing_softy.ipynb).
+  - [Analisis 1: From FATS to feets](introduccón/01_from_FATS_to_feets.ipynb).
+  - [Introducción a la ingeniería de software y gestión de proyectos](introduccón/00_ing_softy.ipynb).
 
 
 
