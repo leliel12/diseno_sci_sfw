@@ -18,6 +18,11 @@ La ediciones anteriores pueden encontrarse en: ⏰
   - [Introducción a la ingeniería de software y gestión de proyectos](introduccón/00_ing_softy.ipynb).
 
 
+## Offline 🧉
+
+- [Git](offline/git.md)
+
+
 
 ## El práctico ☢️
 
