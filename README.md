@@ -20,7 +20,7 @@ La ediciones anteriores pueden encontrarse en: ⏰
 
 ### Offline 🧉
 
-- **20230816** [Git](offline/git.md)
+- **20230816** - [Git](offline/git.md)
 
 
 
