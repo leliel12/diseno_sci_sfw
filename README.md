@@ -14,7 +14,7 @@ La ediciones anteriores pueden encontrarse en: ⏰
 ## Clases 🏫
 
  **20230816** Clase 1:
-  - [Analisis 1: From FATS to feets](introduccón/01_from_FATS_to_feets.ipynb).
+  - [Caso de estudio: From FATS to feets](introduccón/01_from_FATS_to_feets.ipynb).
   - [Introducción a la ingeniería de software y gestión de proyectos](introduccón/00_ing_softy.ipynb).
 
 
