@@ -27,7 +27,7 @@ La ediciones anteriores pueden encontrarse en: ⏰
 ### Offline/Tooling 🧉
 
 - **20230816** - [Git](NN_offline/git.md)
-- **20230823** - [Librerías de cómputo científico](NN_offline/scipy.md)
+- **20230823** - [Librerías de cómputo científico](NN_offline/scipy/scipy.md)
 
 
 
