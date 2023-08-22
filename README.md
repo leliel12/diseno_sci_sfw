@@ -6,21 +6,28 @@
 
 La ediciones anteriores pueden encontrarse en: ⏰
 
-- [2022](https://github.com/leliel12/diseno_sci_sfw/tree/2022) (con videos)
+- [2022](https://github.com/leliel12/diseno_sci_sfw/tree/2022)
 - [2021](https://github.com/leliel12/diseno_sci_sfw/tree/2021) (con videos)
 - [2020](https://github.com/leliel12/diseno_sci_sfw/tree/2020)
 - [2019](https://github.com/leliel12/diseno_sci_sfw/tree/2019)
 
 ## Clases 🏫
 
- **20230816** Clase 1:
-  - [Caso de estudio: From FATS to feets](introduccón/01_from_FATS_to_feets.ipynb).
-  - [Introducción a la ingeniería de software y gestión de proyectos](introduccón/00_ing_softy.ipynb).
+### Antecedentes
+- [Introducción a la ingeniería de software y gestión de proyectos](00_antecedentes/00_ing_softy.ipynb).
+- [Caso de estudio: From FATS to feets](00_antecedentes/01_from_FATS_to_feets.ipynb).
+- [Niveles de abstracción en lenguajes de programación](00_antecedentes/02_niveles_de_abstraccion.ipynb)
+
+### Paradigmas
+
+- [Repaso Python](01_paradigmas/01_python.ipynb)
 
 
-### Offline 🧉
 
-- **20230816** - [Git](offline/git.md)
+### Offline/Tooling 🧉
+
+- **20230816** - [Git](NN_offline/git.md)
+- **20230823** - [Librerías de cómputo científico](NN_offline/scipy.md)
 
 
 
