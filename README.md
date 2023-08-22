@@ -20,8 +20,7 @@ La ediciones anteriores pueden encontrarse en: ⏰
 
 ### Paradigmas
 
-- [Repaso Python](01_paradigmas/01_python.ipynb)
-
+- [Repaso - Python](01_paradigmas/01_python.ipynb)
 
 
 ### Offline/Tooling 🧉
