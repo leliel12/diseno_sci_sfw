@@ -21,6 +21,7 @@ La ediciones anteriores pueden encontrarse en: ⏰
 ### Paradigmas
 
 - [Repaso - Python](01_paradigmas/01_python.ipynb)
+- [Orientación a objetos](01_paradigmas/02_OOP.ipynb)
 
 
 ### Offline/Tooling 🧉
@@ -31,6 +32,8 @@ La ediciones anteriores pueden encontrarse en: ⏰
 
 
 ## El práctico ☢️
+
+> Si el código del práctico no está en un repositorio, y no esta con PEP-8, No se revisa.
 
 ### Entrega 0: 04 de Sept 2023
 
