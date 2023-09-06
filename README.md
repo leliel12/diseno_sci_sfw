@@ -22,6 +22,9 @@ La ediciones anteriores pueden encontrarse en: ⏰
 
 - [Repaso - Python](01_paradigmas/01_python.ipynb)
 - [Orientación a objetos](01_paradigmas/02_OOP.ipynb)
+- [Modelo de objetos + Composición](01_paradigmas/03_model.ipynb)
+- [Manejo de excepciones](01_paradigmas/04_exceptions.ipynb)
+
 
 
 ### Offline/Tooling 🧉
