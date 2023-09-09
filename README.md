@@ -18,7 +18,7 @@ La ediciones anteriores pueden encontrarse en: ⏰
 - [Caso de estudio: From FATS to feets](00_antecedentes/01_from_FATS_to_feets.ipynb).
 - [Niveles de abstracción en lenguajes de programación](00_antecedentes/02_niveles_de_abstraccion.ipynb)
 
-### Enfoque en paradigmas de programación
+### Enfoque práctivo en paradigmas de programación
 
 - [Repaso - Python](01_paradigmas/01_python.ipynb)
 - [Orientación a objetos](01_paradigmas/02_OOP.ipynb)
