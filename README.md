@@ -18,19 +18,32 @@ La ediciones anteriores pueden encontrarse en: ⏰
 - [Caso de estudio: From FATS to feets](00_antecedentes/01_from_FATS_to_feets.ipynb).
 - [Niveles de abstracción en lenguajes de programación](00_antecedentes/02_niveles_de_abstraccion.ipynb)
 
-### Paradigmas
+### Enfoque en paradigmas de programación
 
 - [Repaso - Python](01_paradigmas/01_python.ipynb)
 - [Orientación a objetos](01_paradigmas/02_OOP.ipynb)
 - [Modelo de objetos + Composición](01_paradigmas/03_model.ipynb)
 - [Manejo de excepciones](01_paradigmas/04_exceptions.ipynb)
+- [Decoradores](01_paradigmas/05_decoradores.ipynb)
+- [Meta programación](01_paradigmas/06_meta.ipynb)
+- [Objetos en el mundo real](01_paradigmas/07_oo_real_world.ipynb)
+- [Structural Pattern Matching](01_paradigmas/08_match_statement.ipynb)
 
+### Introducción a la calidad de software
+
+### Diseño de software
+
+### Optimización, concurrencia y paralelismo
 
 
 ### Offline/Tooling 🧉
 
 - **20230816** - [Git](NN_offline/git.md)
 - **20230823** - [Librerías de cómputo científico](NN_offline/scipy/scipy.md)
+- **** - [TOX]
+- **** - [Integración continua]
+- **** - [Documentación]
+- **** - [Pakaging]
 
 
 
