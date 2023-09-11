@@ -41,7 +41,7 @@ Estos temas no tienen un contenido teórico muy robusto e involucran primordialm
 
 - **20230816** - [Git](NN_offline/git.md)
 - **20230823** - [Librerías de cómputo científico](NN_offline/scipy/scipy.md)
-- [Objetos en el mundo real](01_paradigmas/07_oo_real_world.ipynb)
+- **20230911** - [Objetos en el mundo real](NN_offline/oo_real_world/oo_real_world.md)
 - **** - [TOX]
 - **** - [Integración continua]
 - **** - [Documentación]
