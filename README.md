@@ -25,8 +25,7 @@ La ediciones anteriores pueden encontrarse en: ⏰
 - [Modelo de objetos + Composición](01_paradigmas/03_model.ipynb)
 - [Manejo de excepciones](01_paradigmas/04_exceptions.ipynb)
 - [Decoradores](01_paradigmas/05_decoradores.ipynb)
-- [Meta programación](01_paradigmas/06_meta.ipynb)
-- [Objetos en el mundo real](01_paradigmas/07_oo_real_world.ipynb)
+- [Clases abstractas + Meta programación](01_paradigmas/06_meta.ipynb)
 - [Structural Pattern Matching](01_paradigmas/08_match_statement.ipynb)
 
 ### Introducción a la calidad de software
@@ -38,8 +37,11 @@ La ediciones anteriores pueden encontrarse en: ⏰
 
 ### Offline/Tooling 🧉
 
+Estos temas no tienen un contenido teórico muy robusto e involucran primordialmente aprender a utilizar alguna librería o framework que implemente alguna técnica de calidad o patrón de diseño
+
 - **20230816** - [Git](NN_offline/git.md)
 - **20230823** - [Librerías de cómputo científico](NN_offline/scipy/scipy.md)
+- [Objetos en el mundo real](01_paradigmas/07_oo_real_world.ipynb)
 - **** - [TOX]
 - **** - [Integración continua]
 - **** - [Documentación]
