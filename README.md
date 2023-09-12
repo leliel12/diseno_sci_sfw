@@ -6,12 +6,12 @@
 
 ## Clases 🏫
 
-### Antecedentes
+### 1. Antecedentes
 - [Introducción a la ingeniería de software y gestión de proyectos](00_antecedentes/00_ing_softy.ipynb).
 - [Caso de estudio: From FATS to feets](00_antecedentes/01_from_FATS_to_feets.ipynb).
 - [Niveles de abstracción en lenguajes de programación](00_antecedentes/02_niveles_de_abstraccion.ipynb)
 
-### Enfoque práctico en paradigmas de programación
+### 2. Enfoque práctico en paradigmas de programación
 
 - [Repaso - Python](01_paradigmas/01_python.ipynb)
 - [Orientación a objetos](01_paradigmas/02_OOP.ipynb)
@@ -21,11 +21,11 @@
 - [Clases abstractas + Meta programación](01_paradigmas/06_meta.ipynb)
 - [Structural Pattern Matching](01_paradigmas/08_match_statement.ipynb)
 
-### Introducción a la calidad de software
+### 3. Introducción a la calidad de software
 
-### Diseño de software
+### 4. Diseño de software
 
-### Optimización, concurrencia y paralelismo
+### 5. Optimización, concurrencia y paralelismo
 
 
 ### Offline/Tooling 🧉
