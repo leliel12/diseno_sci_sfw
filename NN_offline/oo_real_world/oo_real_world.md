@@ -4,7 +4,7 @@ En el video y en los slides van a encontrar cómo se utiliza varias librerías d
 
 ## Video completo mínimo e indespensable:
 
-- [Pendiente de grabacion]
+- [Objetos Python en el mundo real](https://youtu.be/zQ5ciitEEEs)
 - [Slides](./slides.ipynb)
 
 
