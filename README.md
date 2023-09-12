@@ -28,7 +28,7 @@
 ### 5. Optimización, concurrencia y paralelismo
 
 
-### Offline/Tooling 🧉
+### 6. Tooling 🧉
 
 Estos temas no tienen un contenido teórico muy robusto e involucran primordialmente aprender a utilizar alguna librería o framework que implemente alguna técnica de calidad o patrón de diseño
 
