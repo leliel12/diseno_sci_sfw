@@ -30,7 +30,7 @@
 
 ### 6. Tooling 🧉
 
-Estos temas no tienen un contenido teórico muy robusto e involucran primordialmente aprender a utilizar alguna librería o framework que implemente alguna técnica de calidad o patrón de diseño
+Estos temas no tienen un contenido teórico muy robusto e involucran primordialmente aprender a utilizar alguna librería o framework que implementa alguna técnica de calidad o patrón de diseño
 
 - **20230816** - [Git](NN_offline/git.md)
 - **20230823** - [Librerías de cómputo científico](NN_offline/scipy/scipy.md)
