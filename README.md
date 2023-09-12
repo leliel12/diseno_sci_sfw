@@ -4,13 +4,6 @@
 
 - Presentación de la materia: [slides.pdf](slides.pdf)
 
-La ediciones anteriores pueden encontrarse en: ⏰
-
-- [2022](https://github.com/leliel12/diseno_sci_sfw/tree/2022)
-- [2021](https://github.com/leliel12/diseno_sci_sfw/tree/2021) (con videos)
-- [2020](https://github.com/leliel12/diseno_sci_sfw/tree/2020)
-- [2019](https://github.com/leliel12/diseno_sci_sfw/tree/2019)
-
 ## Clases 🏫
 
 ### Antecedentes
@@ -124,3 +117,10 @@ Estos son los [editores o IDE](https://realpython.com/lessons/ides-vs-code-edito
 - [Automate the Boring Stuff with Python](https://automatetheboringstuff.com/)
 - [Curso de Python para ciencias e ingenierías](https://github.com/mgaitan/curso-python-cientifico)
 - [Pro-Git](https://git-scm.com/book/es/v2)
+
+## Ediciones anteriores ⏰
+
+- [2022](https://github.com/leliel12/diseno_sci_sfw/tree/2022)
+- [2021](https://github.com/leliel12/diseno_sci_sfw/tree/2021) (con videos)
+- [2020](https://github.com/leliel12/diseno_sci_sfw/tree/2020)
+- [2019](https://github.com/leliel12/diseno_sci_sfw/tree/2019)
