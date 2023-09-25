@@ -23,6 +23,9 @@
 
 ### 3. Introducción a la calidad de software
 
+- [Introducción a QA](02_QA/00_intro_qa.ipynb)
+- [Debugging + Unit Testing](02_QA/01_testing.ipynb)
+
 ### 4. Diseño de software
 
 ### 5. Optimización, concurrencia y paralelismo
@@ -44,7 +47,11 @@ Estos temas no tienen un contenido teórico muy robusto e involucran primordialm
 
 ## El práctico ☢️
 
-> Si el código del práctico no está en un repositorio, y no esta con PEP-8, No se revisa.
+### Máximas
+
+1. Si el código del práctico no está en un repositorio, y no esta con PEP-8, No se revisa.
+2. ~Si el código no tiene testing no se existe.~
+
 
 ### Entrega 0: 04 de Sept 2023
 
@@ -55,7 +62,7 @@ Estos temas no tienen un contenido teórico muy robusto e involucran primordialm
 
 ### Entrega 1: Aun No definido
 
-- **Prototipo funcional de código.** El prototipo debe ser capaz de resolver el problema científico propuesto. Considerar que en esta etapa no se pide ningún criterio de calidad de software, solo la funcionalidad del prototipo. El prototipo debe estar escrito en Python 3.10 válido.
+- **Prototipo funcional de código.** El prototipo debe ser capaz de resolver el problema científico propuesto. Considerar que en esta etapa no se pide ningún criterio de calidad de software, solo la funcionalidad del prototipo. El prototipo debe estar escrito en Python 3.11 válido.
 
 ### Entrega $i-ésima$:
 
