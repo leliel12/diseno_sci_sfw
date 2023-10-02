@@ -25,6 +25,9 @@
 
 - [Introducción a QA](02_QA/00_intro_qa.ipynb)
 - [Debugging + Unit Testing](02_QA/01_testing.ipynb)
+- [Mock](02_QA/02_mock.ipynb)
+- [Code Coverage](02_QA/03_codecoverage.ipynb)
+- [Análisis estático](02_QA/100_static_code_analysis.ipynb)  (aca esta el tema de estilo)
 
 ### 4. Diseño de software
 
