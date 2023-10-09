@@ -21,13 +21,20 @@
 - [Clases abstractas + Meta programación](01_paradigmas/06_meta.ipynb)
 - [Structural Pattern Matching](01_paradigmas/08_match_statement.ipynb)
 
-### 3. Introducción a la calidad de software
+### 3. Calidad de software
 
 - [Introducción a QA](02_QA/00_intro_qa.ipynb)
 - [Debugging + Unit Testing](02_QA/01_testing.ipynb)
-- [Mock](02_QA/02_mock.ipynb)
-- [Code Coverage](02_QA/03_codecoverage.ipynb)
+- [Code Coverage](02_QA/02_codecoverage.ipynb)
+- [Mock](02_QA/03_mock.ipynb)
+- [Property Base Testing](02_QA/04_pbt.ipynb)
+- [Mutation Testing](02_QA/05_mutation.ipynb)
+- [Profiling](02_QA/06_profiling.ipynb)
+
+#### de aca par abajo todos los links estan rotos en esta unidad
+
 - [Análisis estático](02_QA/100_static_code_analysis.ipynb)  (aca esta el tema de estilo)
+
 
 ### 4. Diseño de software
 
@@ -38,13 +45,14 @@
 
 Estos temas no tienen un contenido teórico muy robusto e involucran primordialmente aprender a utilizar alguna librería o framework que implementa alguna técnica de calidad o patrón de diseño
 
-- **20230816** - [Git](NN_offline/git.md)
-- **20230823** - [Librerías de cómputo científico](NN_offline/scipy/scipy.md)
-- **20230911** - [Objetos en el mundo real](NN_offline/oo_real_world/oo_real_world.md)
+- [Git](NN_offline/git.md)
+- [Librerías de cómputo científico](NN_offline/scipy/scipy.md)
+- [Objetos en el mundo real](NN_offline/oo_real_world/oo_real_world.md)
+- [Pakaging](NN_offline/packaging/packaging.md)
 - **** - [TOX]
 - **** - [Integración continua]
 - **** - [Documentación]
-- **** - [Pakaging]
+
 
 
 
