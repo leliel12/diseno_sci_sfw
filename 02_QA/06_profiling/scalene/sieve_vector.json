@@ -1,0 +1,987 @@
+{
+    "alloc_samples": 46,
+    "elapsed_time_sec": 1.222379446029663,
+    "files": {
+        "sieve_vector.py": {
+            "functions": [
+                {
+                    "line": "sieve",
+                    "lineno": 3,
+                    "memory_samples": [
+                        [
+                            142222057,
+                            105.93855857849121
+                        ],
+                        [
+                            1106629182,
+                            149.89747619628906
+                        ],
+                        [
+                            1106635694,
+                            193.7603940963745
+                        ],
+                        [
+                            1106638834,
+                            203.76042461395264
+                        ],
+                        [
+                            1106641484,
+                            213.76043224334717
+                        ],
+                        [
+                            1106643916,
+                            223.7604627609253
+                        ],
+                        [
+                            1106646299,
+                            233.76049327850342
+                        ],
+                        [
+                            1106648856,
+                            243.76052379608154
+                        ],
+                        [
+                            1106651382,
+                            253.76055431365967
+                        ],
+                        [
+                            1106653780,
+                            263.7605619430542
+                        ],
+                        [
+                            1106656165,
+                            273.7605924606323
+                        ],
+                        [
+                            1106658609,
+                            283.76062297821045
+                        ],
+                        [
+                            1106661070,
+                            293.7606534957886
+                        ],
+                        [
+                            1106663408,
+                            303.7606840133667
+                        ],
+                        [
+                            1106665693,
+                            313.7607145309448
+                        ],
+                        [
+                            1106668062,
+                            323.76074504852295
+                        ],
+                        [
+                            1106670458,
+                            333.7607755661011
+                        ],
+                        [
+                            1106672828,
+                            343.7607831954956
+                        ],
+                        [
+                            1106675230,
+                            353.76081371307373
+                        ],
+                        [
+                            1106677692,
+                            363.76084423065186
+                        ]
+                    ],
+                    "n_avg_mb": 117.83598804473877,
+                    "n_copy_mb_s": 0.0,
+                    "n_core_utilization": 0.12397056538569483,
+                    "n_cpu_percent_c": 21.6847462097111,
+                    "n_cpu_percent_python": 28.371608509990836,
+                    "n_gpu_avg_memory_mb": 0.0,
+                    "n_gpu_peak_memory_mb": 0.0,
+                    "n_gpu_percent": 0,
+                    "n_growth_mb": 213.8633680343628,
+                    "n_malloc_mb": 353.5079641342163,
+                    "n_mallocs": 3,
+                    "n_peak_mb": 213.8633680343628,
+                    "n_python_fraction": 0.6761747988919942,
+                    "n_sys_percent": 0.4173976301099242,
+                    "n_usage_fraction": 0.9723180440644095
+                }
+            ],
+            "imports": [
+                "import numpy as np"
+            ],
+            "leaks": {},
+            "lines": [
+                {
+                    "end_region_line": 1,
+                    "line": "import numpy as np\n",
+                    "lineno": 1,
+                    "memory_samples": [
+                        [
+                            115753692,
+                            10.064393997192383
+                        ]
+                    ],
+                    "n_avg_mb": 10.064393997192383,
+                    "n_copy_mb_s": 15.70568853591874,
+                    "n_core_utilization": 0.2934293876103087,
+                    "n_cpu_percent_c": 46.51485957575441,
+                    "n_cpu_percent_python": 3.01138807443375,
+                    "n_gpu_avg_memory_mb": 0.0,
+                    "n_gpu_peak_memory_mb": 0.0,
+                    "n_gpu_percent": 0,
+                    "n_growth_mb": 10.064393997192383,
+                    "n_malloc_mb": 10.064393997192383,
+                    "n_mallocs": 1,
+                    "n_peak_mb": 10.064393997192383,
+                    "n_python_fraction": 0.997324,
+                    "n_sys_percent": 0.0,
+                    "n_usage_fraction": 0.0276819559355905,
+                    "start_region_line": 1
+                },
+                {
+                    "end_region_line": 2,
+                    "line": "\n",
+                    "lineno": 2,
+                    "memory_samples": [],
+                    "n_avg_mb": 0.0,
+                    "n_copy_mb_s": 0.0,
+                    "n_core_utilization": 0.0,
+                    "n_cpu_percent_c": 0.0,
+                    "n_cpu_percent_python": 0.0,
+                    "n_gpu_avg_memory_mb": 0.0,
+                    "n_gpu_peak_memory_mb": 0.0,
+                    "n_gpu_percent": 0,
+                    "n_growth_mb": 0.0,
+                    "n_malloc_mb": 0.0,
+                    "n_mallocs": 0,
+                    "n_peak_mb": 0.0,
+                    "n_python_fraction": 0,
+                    "n_sys_percent": 0.0,
+                    "n_usage_fraction": 0.0,
+                    "start_region_line": 2
+                },
+                {
+                    "end_region_line": 21,
+                    "line": "def sieve(n):\n",
+                    "lineno": 3,
+                    "memory_samples": [],
+                    "n_avg_mb": 0.0,
+                    "n_copy_mb_s": 0.0,
+                    "n_core_utilization": 0.0,
+                    "n_cpu_percent_c": 0.0,
+                    "n_cpu_percent_python": 0.0,
+                    "n_gpu_avg_memory_mb": 0.0,
+                    "n_gpu_peak_memory_mb": 0.0,
+                    "n_gpu_percent": 0,
+                    "n_growth_mb": 0.0,
+                    "n_malloc_mb": 0.0,
+                    "n_mallocs": 0,
+                    "n_peak_mb": 0.0,
+                    "n_python_fraction": 0,
+                    "n_sys_percent": 0.0,
+                    "n_usage_fraction": 0.0,
+                    "start_region_line": 3
+                },
+                {
+                    "end_region_line": 21,
+                    "line": "    \"\"\"\n",
+                    "lineno": 4,
+                    "memory_samples": [],
+                    "n_avg_mb": 0.0,
+                    "n_copy_mb_s": 0.0,
+                    "n_core_utilization": 0.0,
+                    "n_cpu_percent_c": 0.0,
+                    "n_cpu_percent_python": 0.0,
+                    "n_gpu_avg_memory_mb": 0.0,
+                    "n_gpu_peak_memory_mb": 0.0,
+                    "n_gpu_percent": 0,
+                    "n_growth_mb": 0.0,
+                    "n_malloc_mb": 0.0,
+                    "n_mallocs": 0,
+                    "n_peak_mb": 0.0,
+                    "n_python_fraction": 0,
+                    "n_sys_percent": 0.0,
+                    "n_usage_fraction": 0.0,
+                    "start_region_line": 3
+                },
+                {
+                    "end_region_line": 21,
+                    "line": "    Returns a list of all prime numbers up to n using the Sieve of Eratosthenes algorithm.\n",
+                    "lineno": 5,
+                    "memory_samples": [],
+                    "n_avg_mb": 0.0,
+                    "n_copy_mb_s": 0.0,
+                    "n_core_utilization": 0.0,
+                    "n_cpu_percent_c": 0.0,
+                    "n_cpu_percent_python": 0.0,
+                    "n_gpu_avg_memory_mb": 0.0,
+                    "n_gpu_peak_memory_mb": 0.0,
+                    "n_gpu_percent": 0,
+                    "n_growth_mb": 0.0,
+                    "n_malloc_mb": 0.0,
+                    "n_mallocs": 0,
+                    "n_peak_mb": 0.0,
+                    "n_python_fraction": 0,
+                    "n_sys_percent": 0.0,
+                    "n_usage_fraction": 0.0,
+                    "start_region_line": 3
+                },
+                {
+                    "end_region_line": 21,
+                    "line": "    \"\"\"\n",
+                    "lineno": 6,
+                    "memory_samples": [],
+                    "n_avg_mb": 0.0,
+                    "n_copy_mb_s": 0.0,
+                    "n_core_utilization": 0.0,
+                    "n_cpu_percent_c": 0.0,
+                    "n_cpu_percent_python": 0.0,
+                    "n_gpu_avg_memory_mb": 0.0,
+                    "n_gpu_peak_memory_mb": 0.0,
+                    "n_gpu_percent": 0,
+                    "n_growth_mb": 0.0,
+                    "n_malloc_mb": 0.0,
+                    "n_mallocs": 0,
+                    "n_peak_mb": 0.0,
+                    "n_python_fraction": 0,
+                    "n_sys_percent": 0.0,
+                    "n_usage_fraction": 0.0,
+                    "start_region_line": 3
+                },
+                {
+                    "end_region_line": 21,
+                    "line": "    # Create a boolean array of size n+1 initialized to True.\n",
+                    "lineno": 7,
+                    "memory_samples": [],
+                    "n_avg_mb": 0.0,
+                    "n_copy_mb_s": 0.0,
+                    "n_core_utilization": 0.0,
+                    "n_cpu_percent_c": 0.0,
+                    "n_cpu_percent_python": 0.0,
+                    "n_gpu_avg_memory_mb": 0.0,
+                    "n_gpu_peak_memory_mb": 0.0,
+                    "n_gpu_percent": 0,
+                    "n_growth_mb": 0.0,
+                    "n_malloc_mb": 0.0,
+                    "n_mallocs": 0,
+                    "n_peak_mb": 0.0,
+                    "n_python_fraction": 0,
+                    "n_sys_percent": 0.0,
+                    "n_usage_fraction": 0.0,
+                    "start_region_line": 3
+                },
+                {
+                    "end_region_line": 21,
+                    "line": "    is_prime = np.ones(n+1, dtype=bool)\n",
+                    "lineno": 8,
+                    "memory_samples": [
+                        [
+                            142222057,
+                            105.93855857849121
+                        ]
+                    ],
+                    "n_avg_mb": 95.77992153167725,
+                    "n_copy_mb_s": 0.0,
+                    "n_core_utilization": 0.12163064161381495,
+                    "n_cpu_percent_c": 1.9929802633732354,
+                    "n_cpu_percent_python": 0.48836941818875695,
+                    "n_gpu_avg_memory_mb": 0.0,
+                    "n_gpu_peak_memory_mb": 0.0,
+                    "n_gpu_percent": 0,
+                    "n_growth_mb": 95.77992153167725,
+                    "n_malloc_mb": 95.77992153167725,
+                    "n_mallocs": 1,
+                    "n_peak_mb": 95.77992153167725,
+                    "n_python_fraction": 0.097245,
+                    "n_sys_percent": 0.06873725442618143,
+                    "n_usage_fraction": 0.263441153843326,
+                    "start_region_line": 3
+                },
+                {
+                    "end_region_line": 21,
+                    "line": "\n",
+                    "lineno": 9,
+                    "memory_samples": [],
+                    "n_avg_mb": 0.0,
+                    "n_copy_mb_s": 0.0,
+                    "n_core_utilization": 0.0,
+                    "n_cpu_percent_c": 0.0,
+                    "n_cpu_percent_python": 0.0,
+                    "n_gpu_avg_memory_mb": 0.0,
+                    "n_gpu_peak_memory_mb": 0.0,
+                    "n_gpu_percent": 0,
+                    "n_growth_mb": 0.0,
+                    "n_malloc_mb": 0.0,
+                    "n_mallocs": 0,
+                    "n_peak_mb": 0.0,
+                    "n_python_fraction": 0,
+                    "n_sys_percent": 0.0,
+                    "n_usage_fraction": 0.0,
+                    "start_region_line": 3
+                },
+                {
+                    "end_region_line": 21,
+                    "line": "    # Mark 0 and 1 as composite.\n",
+                    "lineno": 10,
+                    "memory_samples": [],
+                    "n_avg_mb": 0.0,
+                    "n_copy_mb_s": 0.0,
+                    "n_core_utilization": 0.0,
+                    "n_cpu_percent_c": 0.0,
+                    "n_cpu_percent_python": 0.0,
+                    "n_gpu_avg_memory_mb": 0.0,
+                    "n_gpu_peak_memory_mb": 0.0,
+                    "n_gpu_percent": 0,
+                    "n_growth_mb": 0.0,
+                    "n_malloc_mb": 0.0,
+                    "n_mallocs": 0,
+                    "n_peak_mb": 0.0,
+                    "n_python_fraction": 0,
+                    "n_sys_percent": 0.0,
+                    "n_usage_fraction": 0.0,
+                    "start_region_line": 3
+                },
+                {
+                    "end_region_line": 21,
+                    "line": "    is_prime[0] = is_prime[1] = False\n",
+                    "lineno": 11,
+                    "memory_samples": [],
+                    "n_avg_mb": 0.0,
+                    "n_copy_mb_s": 0.0,
+                    "n_core_utilization": 0.0,
+                    "n_cpu_percent_c": 0.0,
+                    "n_cpu_percent_python": 0.0,
+                    "n_gpu_avg_memory_mb": 0.0,
+                    "n_gpu_peak_memory_mb": 0.0,
+                    "n_gpu_percent": 0,
+                    "n_growth_mb": 0.0,
+                    "n_malloc_mb": 0.0,
+                    "n_mallocs": 0,
+                    "n_peak_mb": 0.0,
+                    "n_python_fraction": 0,
+                    "n_sys_percent": 0.0,
+                    "n_usage_fraction": 0.0,
+                    "start_region_line": 3
+                },
+                {
+                    "end_region_line": 21,
+                    "line": "\n",
+                    "lineno": 12,
+                    "memory_samples": [],
+                    "n_avg_mb": 0.0,
+                    "n_copy_mb_s": 0.0,
+                    "n_core_utilization": 0.0,
+                    "n_cpu_percent_c": 0.0,
+                    "n_cpu_percent_python": 0.0,
+                    "n_gpu_avg_memory_mb": 0.0,
+                    "n_gpu_peak_memory_mb": 0.0,
+                    "n_gpu_percent": 0,
+                    "n_growth_mb": 0.0,
+                    "n_malloc_mb": 0.0,
+                    "n_mallocs": 0,
+                    "n_peak_mb": 0.0,
+                    "n_python_fraction": 0,
+                    "n_sys_percent": 0.0,
+                    "n_usage_fraction": 0.0,
+                    "start_region_line": 3
+                },
+                {
+                    "end_region_line": 21,
+                    "line": "    # Loop through all numbers up to the square root of n.\n",
+                    "lineno": 13,
+                    "memory_samples": [],
+                    "n_avg_mb": 0.0,
+                    "n_copy_mb_s": 0.0,
+                    "n_core_utilization": 0.0,
+                    "n_cpu_percent_c": 0.0,
+                    "n_cpu_percent_python": 0.0,
+                    "n_gpu_avg_memory_mb": 0.0,
+                    "n_gpu_peak_memory_mb": 0.0,
+                    "n_gpu_percent": 0,
+                    "n_growth_mb": 0.0,
+                    "n_malloc_mb": 0.0,
+                    "n_mallocs": 0,
+                    "n_peak_mb": 0.0,
+                    "n_python_fraction": 0,
+                    "n_sys_percent": 0.0,
+                    "n_usage_fraction": 0.0,
+                    "start_region_line": 3
+                },
+                {
+                    "end_region_line": 17,
+                    "line": "    for i in range(2, int(n ** 0.5) + 1):\n",
+                    "lineno": 14,
+                    "memory_samples": [],
+                    "n_avg_mb": 0.0,
+                    "n_copy_mb_s": 0.0,
+                    "n_core_utilization": 0.0,
+                    "n_cpu_percent_c": 0.0,
+                    "n_cpu_percent_python": 0.0,
+                    "n_gpu_avg_memory_mb": 0.0,
+                    "n_gpu_peak_memory_mb": 0.0,
+                    "n_gpu_percent": 0,
+                    "n_growth_mb": 0.0,
+                    "n_malloc_mb": 0.0,
+                    "n_mallocs": 0,
+                    "n_peak_mb": 0.0,
+                    "n_python_fraction": 0,
+                    "n_sys_percent": 0.0,
+                    "n_usage_fraction": 0.0,
+                    "start_region_line": 14
+                },
+                {
+                    "end_region_line": 17,
+                    "line": "        # If the current number is prime, mark all its multiples as composite.\n",
+                    "lineno": 15,
+                    "memory_samples": [],
+                    "n_avg_mb": 0.0,
+                    "n_copy_mb_s": 0.0,
+                    "n_core_utilization": 0.0,
+                    "n_cpu_percent_c": 0.0,
+                    "n_cpu_percent_python": 0.0,
+                    "n_gpu_avg_memory_mb": 0.0,
+                    "n_gpu_peak_memory_mb": 0.0,
+                    "n_gpu_percent": 0,
+                    "n_growth_mb": 0.0,
+                    "n_malloc_mb": 0.0,
+                    "n_mallocs": 0,
+                    "n_peak_mb": 0.0,
+                    "n_python_fraction": 0,
+                    "n_sys_percent": 0.0,
+                    "n_usage_fraction": 0.0,
+                    "start_region_line": 14
+                },
+                {
+                    "end_region_line": 17,
+                    "line": "        if is_prime[i]:\n",
+                    "lineno": 16,
+                    "memory_samples": [],
+                    "n_avg_mb": 0.0,
+                    "n_copy_mb_s": 0.0,
+                    "n_core_utilization": 0.12467874436692927,
+                    "n_cpu_percent_c": 0.004315091742115814,
+                    "n_cpu_percent_python": 0.5006081118959265,
+                    "n_gpu_avg_memory_mb": 0.0,
+                    "n_gpu_peak_memory_mb": 0.0,
+                    "n_gpu_percent": 0,
+                    "n_growth_mb": 0.0,
+                    "n_malloc_mb": 0.0,
+                    "n_mallocs": 0,
+                    "n_peak_mb": 0.0,
+                    "n_python_fraction": 0,
+                    "n_sys_percent": 0.0013010190651219348,
+                    "n_usage_fraction": 0.0,
+                    "start_region_line": 14
+                },
+                {
+                    "end_region_line": 17,
+                    "line": "            is_prime[i*i:n+1:i] = False\n",
+                    "lineno": 17,
+                    "memory_samples": [],
+                    "n_avg_mb": 0.0,
+                    "n_copy_mb_s": 0.0,
+                    "n_core_utilization": 0.0,
+                    "n_cpu_percent_c": 0.0,
+                    "n_cpu_percent_python": 0.0,
+                    "n_gpu_avg_memory_mb": 0.0,
+                    "n_gpu_peak_memory_mb": 0.0,
+                    "n_gpu_percent": 0,
+                    "n_growth_mb": 0.0,
+                    "n_malloc_mb": 0.0,
+                    "n_mallocs": 0,
+                    "n_peak_mb": 0.0,
+                    "n_python_fraction": 0,
+                    "n_sys_percent": 0.0,
+                    "n_usage_fraction": 0.0,
+                    "start_region_line": 14
+                },
+                {
+                    "end_region_line": 21,
+                    "line": "\n",
+                    "lineno": 18,
+                    "memory_samples": [],
+                    "n_avg_mb": 0.0,
+                    "n_copy_mb_s": 0.0,
+                    "n_core_utilization": 0.0,
+                    "n_cpu_percent_c": 0.0,
+                    "n_cpu_percent_python": 0.0,
+                    "n_gpu_avg_memory_mb": 0.0,
+                    "n_gpu_peak_memory_mb": 0.0,
+                    "n_gpu_percent": 0,
+                    "n_growth_mb": 0.0,
+                    "n_malloc_mb": 0.0,
+                    "n_mallocs": 0,
+                    "n_peak_mb": 0.0,
+                    "n_python_fraction": 0,
+                    "n_sys_percent": 0.0,
+                    "n_usage_fraction": 0.0,
+                    "start_region_line": 3
+                },
+                {
+                    "end_region_line": 21,
+                    "line": "    # Return a list of all prime numbers up to n.\n",
+                    "lineno": 19,
+                    "memory_samples": [],
+                    "n_avg_mb": 0.0,
+                    "n_copy_mb_s": 0.0,
+                    "n_core_utilization": 0.0,
+                    "n_cpu_percent_c": 0.0,
+                    "n_cpu_percent_python": 0.0,
+                    "n_gpu_avg_memory_mb": 0.0,
+                    "n_gpu_peak_memory_mb": 0.0,
+                    "n_gpu_percent": 0,
+                    "n_growth_mb": 0.0,
+                    "n_malloc_mb": 0.0,
+                    "n_mallocs": 0,
+                    "n_peak_mb": 0.0,
+                    "n_python_fraction": 0,
+                    "n_sys_percent": 0.0,
+                    "n_usage_fraction": 0.0,
+                    "start_region_line": 3
+                },
+                {
+                    "end_region_line": 21,
+                    "line": "    primes = np.nonzero(is_prime)[0][2:]\n",
+                    "lineno": 20,
+                    "memory_samples": [
+                        [
+                            1106629182,
+                            149.89747619628906
+                        ]
+                    ],
+                    "n_avg_mb": 43.86467456817627,
+                    "n_copy_mb_s": 0.0,
+                    "n_core_utilization": 0.12499439702681826,
+                    "n_cpu_percent_c": 4.981197450732905,
+                    "n_cpu_percent_python": 0.5018755154367971,
+                    "n_gpu_avg_memory_mb": 0.0,
+                    "n_gpu_peak_memory_mb": 0.0,
+                    "n_gpu_percent": 0,
+                    "n_growth_mb": 43.86467456817627,
+                    "n_malloc_mb": 43.86467456817627,
+                    "n_mallocs": 1,
+                    "n_peak_mb": 43.86467456817627,
+                    "n_python_fraction": 0.361469,
+                    "n_sys_percent": 0.00024578310319273226,
+                    "n_usage_fraction": 0.12064909112898492,
+                    "start_region_line": 3
+                },
+                {
+                    "end_region_line": 21,
+                    "line": "    return primes.tolist()\n",
+                    "lineno": 21,
+                    "memory_samples": [
+                        [
+                            1106635694,
+                            193.7603940963745
+                        ],
+                        [
+                            1106638834,
+                            203.76042461395264
+                        ],
+                        [
+                            1106641484,
+                            213.76043224334717
+                        ],
+                        [
+                            1106643916,
+                            223.7604627609253
+                        ],
+                        [
+                            1106646299,
+                            233.76049327850342
+                        ],
+                        [
+                            1106648856,
+                            243.76052379608154
+                        ],
+                        [
+                            1106651382,
+                            253.76055431365967
+                        ],
+                        [
+                            1106653780,
+                            263.7605619430542
+                        ],
+                        [
+                            1106656165,
+                            273.7605924606323
+                        ],
+                        [
+                            1106658609,
+                            283.76062297821045
+                        ],
+                        [
+                            1106661070,
+                            293.7606534957886
+                        ],
+                        [
+                            1106663408,
+                            303.7606840133667
+                        ],
+                        [
+                            1106665693,
+                            313.7607145309448
+                        ],
+                        [
+                            1106668062,
+                            323.76074504852295
+                        ],
+                        [
+                            1106670458,
+                            333.7607755661011
+                        ],
+                        [
+                            1106672828,
+                            343.7607831954956
+                        ],
+                        [
+                            1106675230,
+                            353.76081371307373
+                        ],
+                        [
+                            1106677692,
+                            363.76084423065186
+                        ]
+                    ],
+                    "n_avg_mb": 213.8633680343628,
+                    "n_copy_mb_s": 0.0,
+                    "n_core_utilization": 0.07398382439911497,
+                    "n_cpu_percent_c": 5.279559018413339,
+                    "n_cpu_percent_python": 0.29705867532866065,
+                    "n_gpu_avg_memory_mb": 0.0,
+                    "n_gpu_peak_memory_mb": 0.0,
+                    "n_gpu_percent": 0,
+                    "n_growth_mb": 213.8633680343628,
+                    "n_malloc_mb": 213.8633680343628,
+                    "n_mallocs": 1,
+                    "n_peak_mb": 213.8633680343628,
+                    "n_python_fraction": 0.9999998597234153,
+                    "n_sys_percent": 3.845404179002508,
+                    "n_usage_fraction": 0.5882277990920985,
+                    "start_region_line": 3
+                },
+                {
+                    "end_region_line": 22,
+                    "line": "\n",
+                    "lineno": 22,
+                    "memory_samples": [],
+                    "n_avg_mb": 0.0,
+                    "n_copy_mb_s": 0.0,
+                    "n_core_utilization": 0.0,
+                    "n_cpu_percent_c": 0.0,
+                    "n_cpu_percent_python": 0.0,
+                    "n_gpu_avg_memory_mb": 0.0,
+                    "n_gpu_peak_memory_mb": 0.0,
+                    "n_gpu_percent": 0,
+                    "n_growth_mb": 0.0,
+                    "n_malloc_mb": 0.0,
+                    "n_mallocs": 0,
+                    "n_peak_mb": 0.0,
+                    "n_python_fraction": 0,
+                    "n_sys_percent": 0.0,
+                    "n_usage_fraction": 0.0,
+                    "start_region_line": 22
+                },
+                {
+                    "end_region_line": 23,
+                    "line": "sieve(100_000_000)\n",
+                    "lineno": 23,
+                    "memory_samples": [
+                        [
+                            1220802100,
+                            274.404034614563
+                        ],
+                        [
+                            1220804652,
+                            230.44689655303955
+                        ],
+                        [
+                            1220811631,
+                            220.44686889648438
+                        ],
+                        [
+                            1220813193,
+                            210.44683837890625
+                        ],
+                        [
+                            1220814797,
+                            200.44680786132812
+                        ],
+                        [
+                            1220816398,
+                            190.44677734375
+                        ],
+                        [
+                            1220817860,
+                            180.44674682617188
+                        ],
+                        [
+                            1220819374,
+                            170.44671630859375
+                        ],
+                        [
+                            1220820795,
+                            160.44668579101562
+                        ],
+                        [
+                            1220822466,
+                            150.4466552734375
+                        ],
+                        [
+                            1220823905,
+                            140.44662475585938
+                        ],
+                        [
+                            1220825395,
+                            130.44659423828125
+                        ],
+                        [
+                            1220826792,
+                            120.44656372070312
+                        ],
+                        [
+                            1220828359,
+                            110.446533203125
+                        ],
+                        [
+                            1220829788,
+                            100.44650268554688
+                        ],
+                        [
+                            1220831226,
+                            90.44647216796875
+                        ],
+                        [
+                            1220832688,
+                            80.44644165039062
+                        ],
+                        [
+                            1220834322,
+                            70.4464111328125
+                        ],
+                        [
+                            1220835766,
+                            60.446380615234375
+                        ],
+                        [
+                            1220837344,
+                            10.572502136230469
+                        ]
+                    ],
+                    "n_avg_mb": 0.0,
+                    "n_copy_mb_s": 0.0,
+                    "n_core_utilization": 0.0,
+                    "n_cpu_percent_c": 0.0,
+                    "n_cpu_percent_python": 0.0,
+                    "n_gpu_avg_memory_mb": 0.0,
+                    "n_gpu_peak_memory_mb": 0.0,
+                    "n_gpu_percent": 0,
+                    "n_growth_mb": 0.0,
+                    "n_malloc_mb": 0.0,
+                    "n_mallocs": 0,
+                    "n_peak_mb": 0.0,
+                    "n_python_fraction": 0,
+                    "n_sys_percent": 0.0,
+                    "n_usage_fraction": 0.0,
+                    "start_region_line": 23
+                }
+            ],
+            "percent_cpu_time": 100.0
+        }
+    },
+    "gpu": false,
+    "growth_rate": 2.933871331878506,
+    "max_footprint_fname": "sieve_vector.py",
+    "max_footprint_lineno": 21,
+    "max_footprint_mb": 363.949330329895,
+    "memory": true,
+    "program": "sieve_vector.py",
+    "samples": [
+        [
+            115724670,
+            10.064393997192383
+        ],
+        [
+            115727928,
+            10.158637046813965
+        ],
+        [
+            142201991,
+            10.252880096435547
+        ],
+        [
+            142203773,
+            106.0328016281128
+        ],
+        [
+            1106572088,
+            106.12704467773438
+        ],
+        [
+            1106575299,
+            149.99171924591064
+        ],
+        [
+            1106576161,
+            150.08596229553223
+        ],
+        [
+            1106576889,
+            193.94888019561768
+        ],
+        [
+            1106577489,
+            203.9489107131958
+        ],
+        [
+            1106578251,
+            213.94891834259033
+        ],
+        [
+            1106578927,
+            223.94894886016846
+        ],
+        [
+            1106579553,
+            233.94897937774658
+        ],
+        [
+            1106580188,
+            243.9490098953247
+        ],
+        [
+            1106580834,
+            253.94904041290283
+        ],
+        [
+            1106581464,
+            263.94904804229736
+        ],
+        [
+            1106589662,
+            273.9490785598755
+        ],
+        [
+            1106590234,
+            283.9491090774536
+        ],
+        [
+            1106590920,
+            293.94913959503174
+        ],
+        [
+            1106600610,
+            303.94917011260986
+        ],
+        [
+            1106601735,
+            313.949200630188
+        ],
+        [
+            1106602821,
+            323.9492311477661
+        ],
+        [
+            1106604317,
+            333.94926166534424
+        ],
+        [
+            1106605001,
+            343.94926929473877
+        ],
+        [
+            1106605594,
+            353.9492998123169
+        ],
+        [
+            1106606157,
+            363.949330329895
+        ],
+        [
+            1220766899,
+            274.404034614563
+        ],
+        [
+            1220769525,
+            230.44689655303955
+        ],
+        [
+            1220770587,
+            230.54113960266113
+        ],
+        [
+            1220772078,
+            220.54111194610596
+        ],
+        [
+            1220772971,
+            210.54108142852783
+        ],
+        [
+            1220773720,
+            200.5410509109497
+        ],
+        [
+            1220774611,
+            190.54102039337158
+        ],
+        [
+            1220775344,
+            180.54098987579346
+        ],
+        [
+            1220776468,
+            170.54095935821533
+        ],
+        [
+            1220777280,
+            160.5409288406372
+        ],
+        [
+            1220778146,
+            150.54089832305908
+        ],
+        [
+            1220778934,
+            140.54086780548096
+        ],
+        [
+            1220779745,
+            130.54083728790283
+        ],
+        [
+            1220780478,
+            120.5408067703247
+        ],
+        [
+            1220781269,
+            110.54077625274658
+        ],
+        [
+            1220782001,
+            100.54074573516846
+        ],
+        [
+            1220783013,
+            90.54071521759033
+        ],
+        [
+            1220783754,
+            80.5406847000122
+        ],
+        [
+            1220784568,
+            70.54065418243408
+        ],
+        [
+            1220785316,
+            60.54062366485596
+        ],
+        [
+            1220786108,
+            10.66674518585205
+        ]
+    ],
+    "stacks": []
+}
