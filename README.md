@@ -24,17 +24,13 @@
 ### 3. Calidad de software
 
 - [Introducción a QA](02_QA/00_intro_qa.ipynb)
+- [Análisis estático](02_QA/00_j_static_code_analysis.ipynb)
 - [Debugging + Unit Testing](02_QA/01_testing.ipynb)
 - [Code Coverage](02_QA/02_codecoverage.ipynb)
 - [Mock](02_QA/03_mock.ipynb)
 - [Property Base Testing](02_QA/04_pbt.ipynb)
 - [Mutation Testing](02_QA/05_mutation.ipynb)
 - [Profiling](02_QA/06_profiling.ipynb)
-
-#### de aca par abajo todos los links estan rotos en esta unidad
-
-- [Análisis estático](02_QA/100_static_code_analysis.ipynb)  (aca esta el tema de estilo)
-
 
 ### 4. Diseño de software
 
@@ -50,6 +46,7 @@ Estos temas no tienen un contenido teórico muy robusto e involucran primordialm
 - [Objetos en el mundo real](NN_offline/oo_real_world/oo_real_world.md)
 - [Pakaging](NN_offline/packaging/packaging.md)
 - **** - [TOX]
+- **** - [Licenciamiento]
 - **** - [Integración continua]
 - **** - [Documentación]
 
