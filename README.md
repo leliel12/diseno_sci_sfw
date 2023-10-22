@@ -34,19 +34,28 @@
 
 ### 4. Diseño de software
 
+- [Patrones de diseño](03_DIS/00_patterns.ipynb)
+- [Antipatrones]
+- [Code-Smells]
+- [SOLID]
+
+
 ### 5. Optimización, concurrencia y paralelismo
 
 
 ### 6. Tooling 🧉
 
-Estos temas no tienen un contenido teórico muy robusto e involucran primordialmente aprender a utilizar alguna librería o framework que implementa alguna técnica de calidad o patrón de diseño
+Estos temas no tienen un contenido teórico muy robusto e involucran
+primordialmente aprender a utilizar alguna librería o framework que implementa
+alguna técnica de calidad o patrón de diseño
 
 - [Git](NN_offline/git.md)
 - [Librerías de cómputo científico](NN_offline/scipy/scipy.md)
 - [Objetos en el mundo real](NN_offline/oo_real_world/oo_real_world.md)
 - [Pakaging](NN_offline/packaging/packaging.md)
-- **** - [TOX]
-- **** - [Licenciamiento]
+- [Entornos virtuales](NN_offline/venv/venv.md)
+- [TOX](NN_offline/tox/tox.md)
+- [Licenciamiento](NN_offline/lic/lic.md)
 - **** - [Integración continua]
 - **** - [Documentación]
 
