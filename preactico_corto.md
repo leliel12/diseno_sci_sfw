@@ -9,6 +9,8 @@ La nota máxima de este trabajo es *8* y la mínima *7* (se rechazan otros traba
 El practico se entrega con la ultima versión de este documento (revisar
 antes de mandar).
 
+No hay clases de consulta en este práctico.
+
 
 ## Objetivo
 
