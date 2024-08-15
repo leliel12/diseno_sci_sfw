@@ -1,0 +1,7 @@
+pandas==2.2.2
+pipdeptree==2.23.1
+rise==5.7.1
+scipy==1.14.0
+numpy
+jupyterlab
+notebook

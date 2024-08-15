@@ -22,10 +22,15 @@
 </a>
 ```
 
+# Class 2022
+
+??
+
 # Class 2021
 
 - Scikit-NeuroMSI
 - StratoPy
+
 # Class 2020
 
 ## Arby (MB)

@@ -1,5 +1,7 @@
 # Curso doctoral FAMAF: Diseño de software para cómputo científico
 
+# Versión. 2024
+
 [![https://github.com/leliel12/diseno_sci_sfw](https://img.shields.io/badge/DiSoftCompCi-FAMAF-ffda00)](https://github.com/leliel12/diseno_sci_sfw)
 
 - Presentación de la materia: [slides.pdf](slides.pdf)
@@ -10,6 +12,7 @@
 - [Introducción a la ingeniería de software y gestión de proyectos](00_antecedentes/00_ing_softy.ipynb).
 - [Caso de estudio: From FATS to feets](00_antecedentes/01_from_FATS_to_feets.ipynb).
 - [Niveles de abstracción en lenguajes de programación](00_antecedentes/02_niveles_de_abstraccion.ipynb)
+
 
 ### 2. Enfoque práctico en paradigmas de programación
 
@@ -67,10 +70,10 @@ alguna técnica de calidad o patrón de diseño
 ### Máximas
 
 1. Si el código del práctico no está en un repositorio, y no esta con PEP-8, No se revisa.
-2. ~Si el código no tiene testing no se existe.~
+2. Si el código no tiene testing no se existe.
 
 
-### Entrega 0: 04 de Sept 2023
+### Entrega 0:
 
 - **Establecer el problema científico a resolver.** Las bases teóricas del problema deben estar bien entendidas. Recordar que esto no es un proyecto de investigación científica, es un proyecto de desarrollo de software. El problema no debe tener una implementación de Python. BUSCAR en PyPI https://pypi.org/
 - **Repositorio público en GitHub/Gitlab/BitBucket**. El prototipo debe estar disponible en un repositorio de github con el nombre del proyecto. Configurar el repositorio para que todos los integrantes del grupo tengan acceso.
@@ -98,6 +101,8 @@ Todas las clases van a haber consultas.
    [`flake8-builtins`](https://pypi.org/project/flake8-builtins/)
 
 - Usar un integrador de testing (como [tox](https://pypi.org/project/tox/) o un Make), que integre tests, coverage, check-manifest, docstyle y doc-build.
+- Tiene que andar y ser probado (local y remotamente) con todo python "vivo" actualmente.
+  Vivo es todo lo que este en *security* o *bugfix* en este enlace https://devguide.python.org/versions/
 - Algún integrador continuo (travis, github actions, gitlab, circle-ci, azure, etc) que se encargue de comprobar las métricas de testing del proyecto
 - Documentación online que incluya:
     - Motivación.
@@ -144,6 +149,7 @@ Estos son los [editores o IDE](https://realpython.com/lessons/ides-vs-code-edito
 
 ## Ediciones anteriores ⏰
 
+- [2023](https://github.com/leliel12/diseno_sci_sfw/tree/2023)
 - [2022](https://github.com/leliel12/diseno_sci_sfw/tree/2022)
 - [2021](https://github.com/leliel12/diseno_sci_sfw/tree/2021) (con videos)
 - [2020](https://github.com/leliel12/diseno_sci_sfw/tree/2020)
