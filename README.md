@@ -20,7 +20,7 @@
 - [Orientación a objetos](01_paradigmas/02_OOP.ipynb)
 - [Modelo de objetos + Composición](01_paradigmas/03_model.ipynb)
 - [Manejo de excepciones](01_paradigmas/04_exceptions.ipynb)
-- [Decoradores](01_paradigmas/05_decoradores.ipynb)
+- [Decoradores y manejadores de contexto](01_paradigmas/05_decoradores.ipynb)
 - [Clases abstractas + Meta programación](01_paradigmas/06_meta.ipynb)
 - [Structural Pattern Matching](01_paradigmas/08_match_statement.ipynb)
 
