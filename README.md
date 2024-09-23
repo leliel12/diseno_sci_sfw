@@ -82,7 +82,7 @@ alguna técnica de calidad o patrón de diseño
 
 ### Entrega 1: Aun No definido
 
-- **Prototipo funcional de código.** El prototipo debe ser capaz de resolver el problema científico propuesto. Considerar que en esta etapa no se pide ningún criterio de calidad de software, solo la funcionalidad del prototipo. El prototipo debe estar escrito en Python 3.11 válido.
+- **Prototipo funcional de código.** El prototipo debe ser capaz de resolver el problema científico propuesto. Considerar que en esta etapa no se pide ningún criterio de calidad de software, solo la funcionalidad del prototipo. El prototipo debe estar escrito en *Python 3.12* válido.
 
 ### Entrega $i-ésima$:
 
