@@ -7,3 +7,5 @@ jupyterlab
 notebook
 jupyterlab-rise
 sh
+pytest
+bottle
