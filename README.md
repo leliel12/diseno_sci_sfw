@@ -31,7 +31,7 @@
 - [Debugging + Unit Testing](02_QA/01_testing.ipynb)
 - [Mock](02_QA/02_mock.ipynb)
 - [Code Coverage](02_QA/03_codecoverage.ipynb)
-- [Property Base Testing](02_QA/04_pbt.ipynb)
+- [Property Based, Stateful & Fuzzy Testing](02_QA/04_PBT.ipynb)
 - [Mutation Testing](02_QA/05_mutation.ipynb)
 - [Profiling](02_QA/06_profiling.ipynb)
 

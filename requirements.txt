@@ -9,3 +9,5 @@ jupyterlab-rise
 sh
 pytest
 bottle
+hypothesis
+hypofuzz
