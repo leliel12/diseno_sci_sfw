@@ -11,3 +11,4 @@ pytest
 bottle
 hypothesis
 hypofuzz
+cosmic-ray
