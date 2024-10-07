@@ -12,13 +12,17 @@
     
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="https://sdk.amazonaws.com/js/aws-sdk-2.1543.0.min.js"></script>
     <style>
-body { 
+#vg-tooltip-element {
+  z-index: 2000;
+}
+ body { 
   padding: 0 0 90px 0;
 }
     </style>
     <style>
-/* PrismJS 1.26.0
+      /* PrismJS 1.26.0
 https://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javascript+python&plugins=normalize-whitespace */
 /**
  * prism.js default theme for JavaScript, CSS and HTML
@@ -161,7 +165,7 @@ pre[class*="language-"] {
 	cursor: help;
 }
 
-      
+
     </style>
     <style>
       .table-condensed>thead>tr>th, .table-condensed>tbody>tr>th, .table-condensed>tfoot>tr>th, .table-condensed>thead>tr>td, .table-condensed>tbody>tr>td, .table-condensed>tfoot>tr>td{
@@ -175,7 +179,39 @@ pre[class*="language-"] {
     form label:active, form button:active {
       background-color: blue;
       color: white;
-    }      
+    }
+
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+	
+    .text-and-upload {
+      display: inline-flex;
+      align-items: center; /* Align items vertically */
+      }
+      
+      /* Ensuring the p tag takes the full width */
+    .text-center {
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Styling for the SVG */
+    .svg-upload {
+        height: 20px;
+        width: 20px;
+        cursor: pointer;
+    }
+    
+    /* Hiding the file input but keeping it functional */
+    #fileinput {
+        height: 0;
+        width: 0;
+        opacity: 0;
+        position: absolute;
+    }
     </style>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-4JXPHEBMTY"></script>
@@ -188,7 +224,7 @@ pre[class*="language-"] {
     </script>
 
     <script>
-/* PrismJS 1.26.0
+      /* PrismJS 1.26.0
 https://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javascript+python&plugins=normalize-whitespace */
 /// <reference lib="WebWorker"/>
 
@@ -196,9 +232,9 @@ var _self =
   typeof window !== "undefined"
     ? window // if in browser
     : typeof WorkerGlobalScope !== "undefined" &&
-      self instanceof WorkerGlobalScope
-    ? self // if in worker
-    : {}; // if in node js
+        self instanceof WorkerGlobalScope
+      ? self // if in worker
+      : {}; // if in node js
 
 /**
  * Prism: Lightweight, robust, elegant syntax highlighting
@@ -359,12 +395,11 @@ var Prism = (function (_self) {
             clone = [];
             visited[id] = clone;
 
-            /** @type {Array} */ (/** @type {any} */ (o)).forEach(function (
-              v,
-              i
-            ) {
-              clone[i] = deepClone(v, visited);
-            });
+            /** @type {Array} */ (/** @type {any} */ (o)).forEach(
+              function (v, i) {
+                clone[i] = deepClone(v, visited);
+              },
+            );
 
             return /** @type {any} */ (clone);
 
@@ -725,7 +760,7 @@ var Prism = (function (_self) {
       _.hooks.run("before-highlightall", env);
 
       env.elements = Array.prototype.slice.apply(
-        env.container.querySelectorAll(env.selector)
+        env.container.querySelectorAll(env.selector),
       );
 
       _.hooks.run("before-all-elements-highlight", env);
@@ -835,7 +870,7 @@ var Prism = (function (_self) {
             language: env.language,
             code: env.code,
             immediateClose: true,
-          })
+          }),
         );
       } else {
         insertHighlightedCode(_.highlight(env.code, env.grammar, env.language));
@@ -1142,7 +1177,7 @@ var Prism = (function (_self) {
     grammar,
     startNode,
     startPos,
-    rematch
+    rematch,
   ) {
     for (var token in grammar) {
       if (!grammar.hasOwnProperty(token) || !grammar[token]) {
@@ -1266,7 +1301,7 @@ var Prism = (function (_self) {
             token,
             inside ? _.tokenize(matchStr, inside) : matchStr,
             alias,
-            matchStr
+            matchStr,
           );
           currentNode = addAfter(tokenList, removeFrom, wrapped);
 
@@ -1289,7 +1324,7 @@ var Prism = (function (_self) {
               grammar,
               currentNode.prev,
               pos,
-              nestedRematch
+              nestedRematch,
             );
 
             // the reach might have been extended because of the rematching
@@ -1402,7 +1437,7 @@ var Prism = (function (_self) {
             _self.close();
           }
         },
-        false
+        false,
       );
     }
 
@@ -1440,7 +1475,7 @@ var Prism = (function (_self) {
     ) {
       document.addEventListener(
         "DOMContentLoaded",
-        highlightAutomaticallyCallback
+        highlightAutomaticallyCallback,
       );
     } else {
       if (window.requestAnimationFrame) {
@@ -1639,9 +1674,9 @@ Object.defineProperty(Prism.languages.markup.tag, "addInlined", {
           /__/g,
           function () {
             return tagName;
-          }
+          },
         ),
-        "i"
+        "i",
       ),
       lookbehind: true,
       greedy: true,
@@ -1671,7 +1706,7 @@ Object.defineProperty(Prism.languages.markup.tag, "addAttribute", {
           attrName +
           ")" +
           /\s*=\s*(?:"[^"]*"|'[^']*'|[^\s'">=]+(?=[\s>]))/.source,
-        "i"
+        "i",
       ),
       lookbehind: true,
       inside: {
@@ -1739,7 +1774,7 @@ Prism.languages.rss = Prism.languages.xml;
           "|" +
           /(?:[^\\\r\n()"']|\\[\s\S])*/.source +
           ")\\)",
-        "i"
+        "i",
       ),
       greedy: true,
       inside: {
@@ -1755,7 +1790,7 @@ Prism.languages.rss = Prism.languages.xml;
       pattern: RegExp(
         "(^|[{}\\s])[^{}\\s](?:[^{};\"'\\s]|\\s+(?![\\s{])|" +
           string.source +
-          ")*(?=\\s*\\{)"
+          ")*(?=\\s*\\{)",
       ),
       lookbehind: true,
     },
@@ -1865,7 +1900,7 @@ Prism.languages.javascript = Prism.languages.extend("clike", {
           /(?:\d+(?:_\d+)*(?:\.(?:\d+(?:_\d+)*)?)?|\.\d+(?:_\d+)*)(?:[Ee][+-]?\d+(?:_\d+)*)?/
             .source) +
         ")" +
-        /(?![\w$])/.source
+        /(?![\w$])/.source,
     ),
     lookbehind: true,
   },
@@ -1985,7 +2020,7 @@ if (Prism.languages.markup) {
   Prism.languages.markup.tag.addAttribute(
     /on(?:abort|blur|change|click|composition(?:end|start|update)|dblclick|error|focus(?:in|out)?|key(?:down|up)|load|mouse(?:down|enter|leave|move|out|over|up)|reset|resize|scroll|select|slotchange|submit|unload|wheel)/
       .source,
-    "javascript"
+    "javascript",
   );
 }
 
@@ -2166,7 +2201,7 @@ Prism.languages.py = Prism.languages.python;
     indent: function (input, tabs) {
       return input.replace(
         /^[^\S\n\r]*(?=\S)/gm,
-        new Array(++tabs).join("\t") + "$&"
+        new Array(++tabs).join("\t") + "$&",
       );
     },
     breakLines: function (input, characters) {
@@ -2271,10 +2306,10 @@ Prism.languages.py = Prism.languages.python;
     }
   });
 })();
-      
+
 </script>
-		       <script>
-(function () {
+    <script>
+      (function () {
   function Tablesort(el, options) {
     if (!(this instanceof Tablesort)) return new Tablesort(el, options);
 
@@ -2555,9 +2590,10 @@ Prism.languages.py = Prism.languages.python;
     window.Tablesort = Tablesort;
   }
 })();
-</script>
-		       <script>
-(function () {
+
+    </script>
+    <script>
+      (function () {
   var cleanNumber = function (i) {
       return i.replace(/[^\-?0-9.]/g, "");
     },
@@ -2585,48 +2621,54 @@ Prism.languages.py = Prism.languages.python;
       b = cleanNumber(b);
 
       return compareNumber(b, a);
-    }
+    },
   );
 })();
-			 
-		       </script>
+
+    </script>
     <script>
       const profile = {
-    "alloc_samples": 678,
+    "alloc_samples": 43,
     "args": [
-        "problem1.py"
+        "sieve_jit.py"
     ],
-    "elapsed_time_sec": 22.38340735435486,
-    "filename": "/home/juanbc/proyectos/dis_ssw/src/02_QA/06_profiling/scalene",
+    "elapsed_time_sec": 1.9022266864776611,
+    "entrypoint_dir": "/home/juan/misc/proyectos/dscsi/src/02_QA/06_profiling/scalene",
+    "filename": "/home/juan/misc/proyectos/dscsi/src/02_QA/06_profiling/scalene",
     "files": {
-        "/home/juanbc/proyectos/dis_ssw/src/02_QA/06_profiling/scalene/problem1.py": {
+        "/home/juan/misc/proyectos/dscsi/src/02_QA/06_profiling/scalene/sieve_jit.py": {
             "functions": [],
             "imports": [
-                "import numpy as np"
+                "from numba import jit"
             ],
             "leaks": {},
             "lines": [
                 {
                     "end_outermost_loop": 1,
                     "end_region_line": 1,
-                    "line": "import numpy as np\n",
+                    "line": "from numba import jit\n",
                     "lineno": 1,
-                    "memory_samples": [],
+                    "memory_samples": [
+                        [
+                            1901476368,
+                            10.0033597946167
+                        ]
+                    ],
                     "n_avg_mb": 0.0,
-                    "n_copy_mb_s": 0.0,
+                    "n_copy_mb_s": 14.80234183871514,
                     "n_core_utilization": 0.0,
                     "n_cpu_percent_c": 0.0,
                     "n_cpu_percent_python": 0.0,
                     "n_gpu_avg_memory_mb": 0.0,
                     "n_gpu_peak_memory_mb": 0.0,
                     "n_gpu_percent": 0,
-                    "n_growth_mb": 0.0,
-                    "n_malloc_mb": 0.0,
+                    "n_growth_mb": 10.0033597946167,
+                    "n_malloc_mb": 10.0033597946167,
                     "n_mallocs": 0,
-                    "n_peak_mb": 0.0,
-                    "n_python_fraction": 0,
+                    "n_peak_mb": 10.0033597946167,
+                    "n_python_fraction": 0.985536,
                     "n_sys_percent": 0.0,
-                    "n_usage_fraction": 0.0,
+                    "n_usage_fraction": 0.028692511823278633,
                     "start_outermost_loop": 1,
                     "start_region_line": 1
                 },
@@ -2655,9 +2697,9 @@ Prism.languages.py = Prism.languages.python;
                     "start_region_line": 2
                 },
                 {
-                    "end_outermost_loop": 6,
-                    "end_region_line": 6,
-                    "line": "def main():\n",
+                    "end_outermost_loop": 3,
+                    "end_region_line": 3,
+                    "line": "@jit(nopython=True)\n",
                     "lineno": 3,
                     "memory_samples": [],
                     "n_avg_mb": 0.0,
@@ -2679,9 +2721,9 @@ Prism.languages.py = Prism.languages.python;
                     "start_region_line": 3
                 },
                 {
-                    "end_outermost_loop": 6,
-                    "end_region_line": 6,
-                    "line": "    for i in range(10):\n",
+                    "end_outermost_loop": 24,
+                    "end_region_line": 24,
+                    "line": "def sieve(n):\n",
                     "lineno": 4,
                     "memory_samples": [],
                     "n_avg_mb": 0.0,
@@ -2703,412 +2745,11 @@ Prism.languages.py = Prism.languages.python;
                     "start_region_line": 4
                 },
                 {
-                    "end_outermost_loop": 6,
-                    "end_region_line": 6,
-                    "line": "        x = np.array(range(10**7))\n",
+                    "end_outermost_loop": 5,
+                    "end_region_line": 24,
+                    "line": "    \"\"\"\n",
                     "lineno": 5,
-                    "memory_samples": [
-                        [
-                            909024906,
-                            86.0599718093872
-                        ],
-                        [
-                            909049394,
-                            136.06010150909424
-                        ],
-                        [
-                            909157940,
-                            386.0608186721802
-                        ],
-                        [
-                            909162238,
-                            467.52495288848877
-                        ],
-                        [
-                            909260936,
-                            167.52403736114502
-                        ],
-                        [
-                            909264390,
-                            86.0630693435669
-                        ],
-                        [
-                            2360839630,
-                            925.2991075515747
-                        ],
-                        [
-                            2360850658,
-                            975.2992601394653
-                        ],
-                        [
-                            2360861014,
-                            995.2993211746216
-                        ],
-                        [
-                            2360878172,
-                            1075.2995653152466
-                        ],
-                        [
-                            2360881487,
-                            1085.2995958328247
-                        ],
-                        [
-                            2360907525,
-                            1215.2999925613403
-                        ],
-                        [
-                            2360911654,
-                            1225.3000230789185
-                        ],
-                        [
-                            2909002159,
-                            1306.7639894485474
-                        ],
-                        [
-                            2909006968,
-                            1286.763928413391
-                        ],
-                        [
-                            2909053956,
-                            925.3021059036255
-                        ],
-                        [
-                            2909055626,
-                            849.0052537918091
-                        ],
-                        [
-                            4335942957,
-                            925.2994737625122
-                        ],
-                        [
-                            4335989373,
-                            1145.300145149231
-                        ],
-                        [
-                            4971876043,
-                            1155.300175666809
-                        ],
-                        [
-                            4971901187,
-                            1165.3002061843872
-                        ],
-                        [
-                            4971920364,
-                            1225.300389289856
-                        ],
-                        [
-                            4972146481,
-                            1306.7644472122192
-                        ],
-                        [
-                            4972152788,
-                            1286.764386177063
-                        ],
-                        [
-                            4972176949,
-                            1166.7640199661255
-                        ],
-                        [
-                            4972211992,
-                            1006.7635316848755
-                        ],
-                        [
-                            4972214087,
-                            925.3025636672974
-                        ],
-                        [
-                            4973055067,
-                            849.0057048797607
-                        ],
-                        [
-                            6434204704,
-                            925.2998180389404
-                        ],
-                        [
-                            6434269337,
-                            1225.3007335662842
-                        ],
-                        [
-                            7030624661,
-                            1306.7647686004639
-                        ],
-                        [
-                            7030629907,
-                            1286.7647075653076
-                        ],
-                        [
-                            7030641282,
-                            1216.7644939422607
-                        ],
-                        [
-                            7030646861,
-                            1196.7644329071045
-                        ],
-                        [
-                            7030677360,
-                            1006.7638530731201
-                        ],
-                        [
-                            7030680629,
-                            849.0060405731201
-                        ],
-                        [
-                            8613187015,
-                            925.3001842498779
-                        ],
-                        [
-                            8613217913,
-                            1055.3005809783936
-                        ],
-                        [
-                            8613222149,
-                            1065.3006114959717
-                        ],
-                        [
-                            8613240467,
-                            1145.3008556365967
-                        ],
-                        [
-                            8613267308,
-                            1225.3010997772217
-                        ],
-                        [
-                            9208635112,
-                            1306.7651348114014
-                        ],
-                        [
-                            9208640269,
-                            1286.7650737762451
-                        ],
-                        [
-                            9208687007,
-                            1006.7642192840576
-                        ],
-                        [
-                            9208690276,
-                            849.0064067840576
-                        ],
-                        [
-                            10769250131,
-                            925.3005046844482
-                        ],
-                        [
-                            10769277935,
-                            1055.3009014129639
-                        ],
-                        [
-                            10769287753,
-                            1095.3010234832764
-                        ],
-                        [
-                            10769323303,
-                            1195.3013286590576
-                        ],
-                        [
-                            10769329628,
-                            1225.301420211792
-                        ],
-                        [
-                            11362532565,
-                            1306.76540184021
-                        ],
-                        [
-                            11362541340,
-                            1296.7653713226318
-                        ],
-                        [
-                            11362545638,
-                            1276.7653102874756
-                        ],
-                        [
-                            11362590166,
-                            1006.7644863128662
-                        ],
-                        [
-                            11362591850,
-                            925.3035182952881
-                        ],
-                        [
-                            11362594574,
-                            849.0067272186279
-                        ],
-                        [
-                            12971207870,
-                            925.3008785247803
-                        ],
-                        [
-                            12971214927,
-                            945.3009395599365
-                        ],
-                        [
-                            12971247533,
-                            1095.3013973236084
-                        ],
-                        [
-                            12971253459,
-                            1105.3014278411865
-                        ],
-                        [
-                            12971277578,
-                            1215.301763534546
-                        ],
-                        [
-                            12971280893,
-                            1225.301794052124
-                        ],
-                        [
-                            13577222025,
-                            1306.7658290863037
-                        ],
-                        [
-                            13577261881,
-                            1086.765157699585
-                        ],
-                        [
-                            13577267562,
-                            1066.7650966644287
-                        ],
-                        [
-                            13577278104,
-                            1006.76491355896
-                        ],
-                        [
-                            13577281703,
-                            849.0071544647217
-                        ],
-                        [
-                            15217564497,
-                            925.3013744354248
-                        ],
-                        [
-                            15217584798,
-                            1015.3016490936279
-                        ],
-                        [
-                            15217591035,
-                            1025.301679611206
-                        ],
-                        [
-                            15217614047,
-                            1125.3019847869873
-                        ],
-                        [
-                            15217620349,
-                            1145.3020458221436
-                        ],
-                        [
-                            15217639215,
-                            1225.3022899627686
-                        ],
-                        [
-                            15854144493,
-                            1306.7662715911865
-                        ],
-                        [
-                            15854149707,
-                            1286.7662105560303
-                        ],
-                        [
-                            15854161562,
-                            1216.7659969329834
-                        ],
-                        [
-                            15854168996,
-                            1206.7659664154053
-                        ],
-                        [
-                            15854183497,
-                            1146.7657833099365
-                        ],
-                        [
-                            15854207239,
-                            1006.7653560638428
-                        ],
-                        [
-                            15854210548,
-                            849.0075359344482
-                        ],
-                        [
-                            17562046184,
-                            925.3016338348389
-                        ],
-                        [
-                            17562067330,
-                            1015.301908493042
-                        ],
-                        [
-                            17562082948,
-                            1025.3019390106201
-                        ],
-                        [
-                            17562091665,
-                            1055.3020305633545
-                        ],
-                        [
-                            17562131238,
-                            1225.3025493621826
-                        ],
-                        [
-                            18215759702,
-                            1306.7665843963623
-                        ],
-                        [
-                            18215764681,
-                            1286.766523361206
-                        ],
-                        [
-                            18215787089,
-                            1156.7661266326904
-                        ],
-                        [
-                            18215794073,
-                            1146.7660961151123
-                        ],
-                        [
-                            18215817494,
-                            1006.7656688690186
-                        ],
-                        [
-                            18215820740,
-                            849.0079097747803
-                        ],
-                        [
-                            19994468861,
-                            925.3021831512451
-                        ],
-                        [
-                            19994482499,
-                            965.3023052215576
-                        ],
-                        [
-                            19994519951,
-                            1095.3027019500732
-                        ],
-                        [
-                            19994525849,
-                            1105.3027324676514
-                        ],
-                        [
-                            19994563114,
-                            1225.3030986785889
-                        ],
-                        [
-                            20784869913,
-                            1306.7671337127686
-                        ],
-                        [
-                            20784878803,
-                            1276.7670421600342
-                        ],
-                        [
-                            20784939364,
-                            1006.7662181854248
-                        ],
-                        [
-                            20784943849,
-                            849.0084590911865
-                        ]
-                    ],
+                    "memory_samples": [],
                     "n_avg_mb": 0.0,
                     "n_copy_mb_s": 0.0,
                     "n_core_utilization": 0.0,
@@ -3117,201 +2758,44 @@ Prism.languages.py = Prism.languages.python;
                     "n_gpu_avg_memory_mb": 0.0,
                     "n_gpu_peak_memory_mb": 0.0,
                     "n_gpu_percent": 0,
-                    "n_growth_mb": 543.8241481781006,
-                    "n_malloc_mb": 4587.355725288391,
+                    "n_growth_mb": 0.0,
+                    "n_malloc_mb": 0.0,
                     "n_mallocs": 0,
-                    "n_peak_mb": 543.8241481781006,
-                    "n_python_fraction": 0.8341595070379223,
+                    "n_peak_mb": 0.0,
+                    "n_python_fraction": 0,
                     "n_sys_percent": 0.0,
-                    "n_usage_fraction": 0.23114546815859188,
-                    "start_outermost_loop": 4,
+                    "n_usage_fraction": 0.0,
+                    "start_outermost_loop": 5,
                     "start_region_line": 4
                 },
                 {
                     "end_outermost_loop": 6,
-                    "end_region_line": 6,
-                    "line": "        y = np.array(np.random.uniform(0, 100, size=(10**(8))))\n",
+                    "end_region_line": 24,
+                    "line": "    Returns a list of all prime numbers up to n using the Sieve of Eratosthenes algorithm.\n",
                     "lineno": 6,
-                    "memory_samples": [
-                        [
-                            909271509,
-                            849.0048189163208
-                        ],
-                        [
-                            2360831811,
-                            1611.9459962844849
-                        ],
-                        [
-                            2360836013,
-                            849.0046052932739
-                        ],
-                        [
-                            2909058574,
-                            1611.9470109939575
-                        ],
-                        [
-                            4335930987,
-                            2374.8882417678833
-                        ],
-                        [
-                            4335937903,
-                            1611.9468507766724
-                        ],
-                        [
-                            4335939860,
-                            849.0054903030396
-                        ],
-                        [
-                            4973059016,
-                            1611.9474620819092
-                        ],
-                        [
-                            6434196367,
-                            2374.8885860443115
-                        ],
-                        [
-                            6434199358,
-                            1611.9471950531006
-                        ],
-                        [
-                            6434201338,
-                            849.0058345794678
-                        ],
-                        [
-                            7030684095,
-                            1611.9477977752686
-                        ],
-                        [
-                            8613175905,
-                            2374.888967514038
-                        ],
-                        [
-                            8613180135,
-                            1611.9475765228271
-                        ],
-                        [
-                            8613182253,
-                            849.0062007904053
-                        ],
-                        [
-                            9208693130,
-                            1611.948163986206
-                        ],
-                        [
-                            10769241191,
-                            2374.8892192840576
-                        ],
-                        [
-                            10769244407,
-                            1611.9478282928467
-                        ],
-                        [
-                            10769246528,
-                            849.0065212249756
-                        ],
-                        [
-                            11362597823,
-                            1611.9484844207764
-                        ],
-                        [
-                            12971194695,
-                            2374.8896465301514
-                        ],
-                        [
-                            12971199337,
-                            1611.9482555389404
-                        ],
-                        [
-                            12971202479,
-                            849.0068950653076
-                        ],
-                        [
-                            13577284902,
-                            1611.9489116668701
-                        ],
-                        [
-                            15217555139,
-                            2374.890142440796
-                        ],
-                        [
-                            15217559000,
-                            1611.948751449585
-                        ],
-                        [
-                            15217561137,
-                            849.0073909759521
-                        ],
-                        [
-                            15854213538,
-                            1611.9492931365967
-                        ],
-                        [
-                            17562033392,
-                            2374.89040184021
-                        ],
-                        [
-                            17562038390,
-                            1611.949010848999
-                        ],
-                        [
-                            17562040605,
-                            849.0076503753662
-                        ],
-                        [
-                            18215823694,
-                            1611.9496669769287
-                        ],
-                        [
-                            19994457071,
-                            2374.8908977508545
-                        ],
-                        [
-                            19994461593,
-                            1611.9495067596436
-                        ],
-                        [
-                            19994464487,
-                            849.0081996917725
-                        ],
-                        [
-                            20784948040,
-                            1611.950216293335
-                        ],
-                        [
-                            22375561203,
-                            2374.8914470672607
-                        ],
-                        [
-                            22375566802,
-                            1611.9500560760498
-                        ],
-                        [
-                            22375571438,
-                            849.008695602417
-                        ]
-                    ],
+                    "memory_samples": [],
                     "n_avg_mb": 0.0,
-                    "n_copy_mb_s": 342.38865739166425,
+                    "n_copy_mb_s": 0.0,
                     "n_core_utilization": 0.0,
                     "n_cpu_percent_c": 0.0,
                     "n_cpu_percent_python": 0.0,
                     "n_gpu_avg_memory_mb": 0.0,
                     "n_gpu_peak_memory_mb": 0.0,
                     "n_gpu_percent": 0,
-                    "n_growth_mb": 2288.825973510742,
-                    "n_malloc_mb": 15258.829284667969,
+                    "n_growth_mb": 0.0,
+                    "n_malloc_mb": 0.0,
                     "n_mallocs": 0,
-                    "n_peak_mb": 2288.825973510742,
-                    "n_python_fraction": 2.5000001914994955e-06,
+                    "n_peak_mb": 0.0,
+                    "n_python_fraction": 0,
                     "n_sys_percent": 0.0,
-                    "n_usage_fraction": 0.7688545318414082,
-                    "start_outermost_loop": 4,
+                    "n_usage_fraction": 0.0,
+                    "start_outermost_loop": 6,
                     "start_region_line": 4
                 },
                 {
                     "end_outermost_loop": 7,
-                    "end_region_line": 7,
-                    "line": "\n",
+                    "end_region_line": 24,
+                    "line": "    \"\"\"\n",
                     "lineno": 7,
                     "memory_samples": [],
                     "n_avg_mb": 0.0,
@@ -3330,12 +2814,12 @@ Prism.languages.py = Prism.languages.python;
                     "n_sys_percent": 0.0,
                     "n_usage_fraction": 0.0,
                     "start_outermost_loop": 7,
-                    "start_region_line": 7
+                    "start_region_line": 4
                 },
                 {
-                    "end_outermost_loop": 8,
-                    "end_region_line": 8,
-                    "line": "\n",
+                    "end_outermost_loop": 24,
+                    "end_region_line": 24,
+                    "line": "    # Create a list of boolean values, indicating whether each number is prime or not.\n",
                     "lineno": 8,
                     "memory_samples": [],
                     "n_avg_mb": 0.0,
@@ -3353,13 +2837,13 @@ Prism.languages.py = Prism.languages.python;
                     "n_python_fraction": 0,
                     "n_sys_percent": 0.0,
                     "n_usage_fraction": 0.0,
-                    "start_outermost_loop": 8,
-                    "start_region_line": 8
+                    "start_outermost_loop": 4,
+                    "start_region_line": 4
                 },
                 {
                     "end_outermost_loop": 9,
-                    "end_region_line": 9,
-                    "line": "main()\n",
+                    "end_region_line": 24,
+                    "line": "    is_prime = [True] * (n + 1)\n",
                     "lineno": 9,
                     "memory_samples": [],
                     "n_avg_mb": 0.0,
@@ -3378,419 +2862,770 @@ Prism.languages.py = Prism.languages.python;
                     "n_sys_percent": 0.0,
                     "n_usage_fraction": 0.0,
                     "start_outermost_loop": 9,
-                    "start_region_line": 9
+                    "start_region_line": 4
+                },
+                {
+                    "end_outermost_loop": 10,
+                    "end_region_line": 24,
+                    "line": "    is_prime[0] = is_prime[1] = False\n",
+                    "lineno": 10,
+                    "memory_samples": [],
+                    "n_avg_mb": 0.0,
+                    "n_copy_mb_s": 0.0,
+                    "n_core_utilization": 0.0,
+                    "n_cpu_percent_c": 0.0,
+                    "n_cpu_percent_python": 0.0,
+                    "n_gpu_avg_memory_mb": 0.0,
+                    "n_gpu_peak_memory_mb": 0.0,
+                    "n_gpu_percent": 0,
+                    "n_growth_mb": 0.0,
+                    "n_malloc_mb": 0.0,
+                    "n_mallocs": 0,
+                    "n_peak_mb": 0.0,
+                    "n_python_fraction": 0,
+                    "n_sys_percent": 0.0,
+                    "n_usage_fraction": 0.0,
+                    "start_outermost_loop": 10,
+                    "start_region_line": 4
+                },
+                {
+                    "end_outermost_loop": 11,
+                    "end_region_line": 24,
+                    "line": "\n",
+                    "lineno": 11,
+                    "memory_samples": [],
+                    "n_avg_mb": 0.0,
+                    "n_copy_mb_s": 0.0,
+                    "n_core_utilization": 0.0,
+                    "n_cpu_percent_c": 0.0,
+                    "n_cpu_percent_python": 0.0,
+                    "n_gpu_avg_memory_mb": 0.0,
+                    "n_gpu_peak_memory_mb": 0.0,
+                    "n_gpu_percent": 0,
+                    "n_growth_mb": 0.0,
+                    "n_malloc_mb": 0.0,
+                    "n_mallocs": 0,
+                    "n_peak_mb": 0.0,
+                    "n_python_fraction": 0,
+                    "n_sys_percent": 0.0,
+                    "n_usage_fraction": 0.0,
+                    "start_outermost_loop": 11,
+                    "start_region_line": 4
+                },
+                {
+                    "end_outermost_loop": 24,
+                    "end_region_line": 24,
+                    "line": "    # Loop through all numbers up to the square root of n.\n",
+                    "lineno": 12,
+                    "memory_samples": [],
+                    "n_avg_mb": 0.0,
+                    "n_copy_mb_s": 0.0,
+                    "n_core_utilization": 0.0,
+                    "n_cpu_percent_c": 0.0,
+                    "n_cpu_percent_python": 0.0,
+                    "n_gpu_avg_memory_mb": 0.0,
+                    "n_gpu_peak_memory_mb": 0.0,
+                    "n_gpu_percent": 0,
+                    "n_growth_mb": 0.0,
+                    "n_malloc_mb": 0.0,
+                    "n_mallocs": 0,
+                    "n_peak_mb": 0.0,
+                    "n_python_fraction": 0,
+                    "n_sys_percent": 0.0,
+                    "n_usage_fraction": 0.0,
+                    "start_outermost_loop": 4,
+                    "start_region_line": 4
+                },
+                {
+                    "end_outermost_loop": 17,
+                    "end_region_line": 17,
+                    "line": "    for i in range(2, int(n ** 0.5) + 1):\n",
+                    "lineno": 13,
+                    "memory_samples": [],
+                    "n_avg_mb": 0.0,
+                    "n_copy_mb_s": 0.0,
+                    "n_core_utilization": 0.0,
+                    "n_cpu_percent_c": 0.0,
+                    "n_cpu_percent_python": 0.0,
+                    "n_gpu_avg_memory_mb": 0.0,
+                    "n_gpu_peak_memory_mb": 0.0,
+                    "n_gpu_percent": 0,
+                    "n_growth_mb": 0.0,
+                    "n_malloc_mb": 0.0,
+                    "n_mallocs": 0,
+                    "n_peak_mb": 0.0,
+                    "n_python_fraction": 0,
+                    "n_sys_percent": 0.0,
+                    "n_usage_fraction": 0.0,
+                    "start_outermost_loop": 13,
+                    "start_region_line": 13
+                },
+                {
+                    "end_outermost_loop": 17,
+                    "end_region_line": 17,
+                    "line": "        # If the current number is prime, mark all its multiples as composite.\n",
+                    "lineno": 14,
+                    "memory_samples": [],
+                    "n_avg_mb": 0.0,
+                    "n_copy_mb_s": 0.0,
+                    "n_core_utilization": 0.0,
+                    "n_cpu_percent_c": 0.0,
+                    "n_cpu_percent_python": 0.0,
+                    "n_gpu_avg_memory_mb": 0.0,
+                    "n_gpu_peak_memory_mb": 0.0,
+                    "n_gpu_percent": 0,
+                    "n_growth_mb": 0.0,
+                    "n_malloc_mb": 0.0,
+                    "n_mallocs": 0,
+                    "n_peak_mb": 0.0,
+                    "n_python_fraction": 0,
+                    "n_sys_percent": 0.0,
+                    "n_usage_fraction": 0.0,
+                    "start_outermost_loop": 13,
+                    "start_region_line": 13
+                },
+                {
+                    "end_outermost_loop": 17,
+                    "end_region_line": 17,
+                    "line": "        if is_prime[i]:\n",
+                    "lineno": 15,
+                    "memory_samples": [],
+                    "n_avg_mb": 0.0,
+                    "n_copy_mb_s": 0.0,
+                    "n_core_utilization": 0.0,
+                    "n_cpu_percent_c": 0.0,
+                    "n_cpu_percent_python": 0.0,
+                    "n_gpu_avg_memory_mb": 0.0,
+                    "n_gpu_peak_memory_mb": 0.0,
+                    "n_gpu_percent": 0,
+                    "n_growth_mb": 0.0,
+                    "n_malloc_mb": 0.0,
+                    "n_mallocs": 0,
+                    "n_peak_mb": 0.0,
+                    "n_python_fraction": 0,
+                    "n_sys_percent": 0.0,
+                    "n_usage_fraction": 0.0,
+                    "start_outermost_loop": 13,
+                    "start_region_line": 13
+                },
+                {
+                    "end_outermost_loop": 17,
+                    "end_region_line": 17,
+                    "line": "            for j in range(i ** 2, n + 1, i):\n",
+                    "lineno": 16,
+                    "memory_samples": [],
+                    "n_avg_mb": 0.0,
+                    "n_copy_mb_s": 0.0,
+                    "n_core_utilization": 0.0,
+                    "n_cpu_percent_c": 0.0,
+                    "n_cpu_percent_python": 0.0,
+                    "n_gpu_avg_memory_mb": 0.0,
+                    "n_gpu_peak_memory_mb": 0.0,
+                    "n_gpu_percent": 0,
+                    "n_growth_mb": 0.0,
+                    "n_malloc_mb": 0.0,
+                    "n_mallocs": 0,
+                    "n_peak_mb": 0.0,
+                    "n_python_fraction": 0,
+                    "n_sys_percent": 0.0,
+                    "n_usage_fraction": 0.0,
+                    "start_outermost_loop": 13,
+                    "start_region_line": 16
+                },
+                {
+                    "end_outermost_loop": 17,
+                    "end_region_line": 17,
+                    "line": "                is_prime[j] = False\n",
+                    "lineno": 17,
+                    "memory_samples": [],
+                    "n_avg_mb": 0.0,
+                    "n_copy_mb_s": 0.0,
+                    "n_core_utilization": 0.0,
+                    "n_cpu_percent_c": 0.0,
+                    "n_cpu_percent_python": 0.0,
+                    "n_gpu_avg_memory_mb": 0.0,
+                    "n_gpu_peak_memory_mb": 0.0,
+                    "n_gpu_percent": 0,
+                    "n_growth_mb": 0.0,
+                    "n_malloc_mb": 0.0,
+                    "n_mallocs": 0,
+                    "n_peak_mb": 0.0,
+                    "n_python_fraction": 0,
+                    "n_sys_percent": 0.0,
+                    "n_usage_fraction": 0.0,
+                    "start_outermost_loop": 13,
+                    "start_region_line": 16
+                },
+                {
+                    "end_outermost_loop": 18,
+                    "end_region_line": 24,
+                    "line": "\n",
+                    "lineno": 18,
+                    "memory_samples": [],
+                    "n_avg_mb": 0.0,
+                    "n_copy_mb_s": 0.0,
+                    "n_core_utilization": 0.0,
+                    "n_cpu_percent_c": 0.0,
+                    "n_cpu_percent_python": 0.0,
+                    "n_gpu_avg_memory_mb": 0.0,
+                    "n_gpu_peak_memory_mb": 0.0,
+                    "n_gpu_percent": 0,
+                    "n_growth_mb": 0.0,
+                    "n_malloc_mb": 0.0,
+                    "n_mallocs": 0,
+                    "n_peak_mb": 0.0,
+                    "n_python_fraction": 0,
+                    "n_sys_percent": 0.0,
+                    "n_usage_fraction": 0.0,
+                    "start_outermost_loop": 18,
+                    "start_region_line": 4
+                },
+                {
+                    "end_outermost_loop": 24,
+                    "end_region_line": 24,
+                    "line": "    # Return a list of all prime numbers up to n.\n",
+                    "lineno": 19,
+                    "memory_samples": [],
+                    "n_avg_mb": 0.0,
+                    "n_copy_mb_s": 0.0,
+                    "n_core_utilization": 0.0,
+                    "n_cpu_percent_c": 0.0,
+                    "n_cpu_percent_python": 0.0,
+                    "n_gpu_avg_memory_mb": 0.0,
+                    "n_gpu_peak_memory_mb": 0.0,
+                    "n_gpu_percent": 0,
+                    "n_growth_mb": 0.0,
+                    "n_malloc_mb": 0.0,
+                    "n_mallocs": 0,
+                    "n_peak_mb": 0.0,
+                    "n_python_fraction": 0,
+                    "n_sys_percent": 0.0,
+                    "n_usage_fraction": 0.0,
+                    "start_outermost_loop": 4,
+                    "start_region_line": 4
+                },
+                {
+                    "end_outermost_loop": 20,
+                    "end_region_line": 24,
+                    "line": "    primes = []\n",
+                    "lineno": 20,
+                    "memory_samples": [],
+                    "n_avg_mb": 0.0,
+                    "n_copy_mb_s": 0.0,
+                    "n_core_utilization": 0.0,
+                    "n_cpu_percent_c": 0.0,
+                    "n_cpu_percent_python": 0.0,
+                    "n_gpu_avg_memory_mb": 0.0,
+                    "n_gpu_peak_memory_mb": 0.0,
+                    "n_gpu_percent": 0,
+                    "n_growth_mb": 0.0,
+                    "n_malloc_mb": 0.0,
+                    "n_mallocs": 0,
+                    "n_peak_mb": 0.0,
+                    "n_python_fraction": 0,
+                    "n_sys_percent": 0.0,
+                    "n_usage_fraction": 0.0,
+                    "start_outermost_loop": 20,
+                    "start_region_line": 4
+                },
+                {
+                    "end_outermost_loop": 23,
+                    "end_region_line": 23,
+                    "line": "    for i in range(2, n + 1):\n",
+                    "lineno": 21,
+                    "memory_samples": [],
+                    "n_avg_mb": 0.0,
+                    "n_copy_mb_s": 0.0,
+                    "n_core_utilization": 0.0,
+                    "n_cpu_percent_c": 0.0,
+                    "n_cpu_percent_python": 0.0,
+                    "n_gpu_avg_memory_mb": 0.0,
+                    "n_gpu_peak_memory_mb": 0.0,
+                    "n_gpu_percent": 0,
+                    "n_growth_mb": 0.0,
+                    "n_malloc_mb": 0.0,
+                    "n_mallocs": 0,
+                    "n_peak_mb": 0.0,
+                    "n_python_fraction": 0,
+                    "n_sys_percent": 0.0,
+                    "n_usage_fraction": 0.0,
+                    "start_outermost_loop": 21,
+                    "start_region_line": 21
+                },
+                {
+                    "end_outermost_loop": 23,
+                    "end_region_line": 23,
+                    "line": "        if is_prime[i]:\n",
+                    "lineno": 22,
+                    "memory_samples": [],
+                    "n_avg_mb": 0.0,
+                    "n_copy_mb_s": 0.0,
+                    "n_core_utilization": 0.0,
+                    "n_cpu_percent_c": 0.0,
+                    "n_cpu_percent_python": 0.0,
+                    "n_gpu_avg_memory_mb": 0.0,
+                    "n_gpu_peak_memory_mb": 0.0,
+                    "n_gpu_percent": 0,
+                    "n_growth_mb": 0.0,
+                    "n_malloc_mb": 0.0,
+                    "n_mallocs": 0,
+                    "n_peak_mb": 0.0,
+                    "n_python_fraction": 0,
+                    "n_sys_percent": 0.0,
+                    "n_usage_fraction": 0.0,
+                    "start_outermost_loop": 21,
+                    "start_region_line": 21
+                },
+                {
+                    "end_outermost_loop": 23,
+                    "end_region_line": 23,
+                    "line": "            primes.append(i)\n",
+                    "lineno": 23,
+                    "memory_samples": [],
+                    "n_avg_mb": 0.0,
+                    "n_copy_mb_s": 0.0,
+                    "n_core_utilization": 0.0,
+                    "n_cpu_percent_c": 0.0,
+                    "n_cpu_percent_python": 0.0,
+                    "n_gpu_avg_memory_mb": 0.0,
+                    "n_gpu_peak_memory_mb": 0.0,
+                    "n_gpu_percent": 0,
+                    "n_growth_mb": 0.0,
+                    "n_malloc_mb": 0.0,
+                    "n_mallocs": 0,
+                    "n_peak_mb": 0.0,
+                    "n_python_fraction": 0,
+                    "n_sys_percent": 0.0,
+                    "n_usage_fraction": 0.0,
+                    "start_outermost_loop": 21,
+                    "start_region_line": 21
+                },
+                {
+                    "end_outermost_loop": 24,
+                    "end_region_line": 24,
+                    "line": "    return primes\n",
+                    "lineno": 24,
+                    "memory_samples": [],
+                    "n_avg_mb": 0.0,
+                    "n_copy_mb_s": 0.0,
+                    "n_core_utilization": 0.0,
+                    "n_cpu_percent_c": 0.0,
+                    "n_cpu_percent_python": 0.0,
+                    "n_gpu_avg_memory_mb": 0.0,
+                    "n_gpu_peak_memory_mb": 0.0,
+                    "n_gpu_percent": 0,
+                    "n_growth_mb": 0.0,
+                    "n_malloc_mb": 0.0,
+                    "n_mallocs": 0,
+                    "n_peak_mb": 0.0,
+                    "n_python_fraction": 0,
+                    "n_sys_percent": 0.0,
+                    "n_usage_fraction": 0.0,
+                    "start_outermost_loop": 24,
+                    "start_region_line": 4
+                },
+                {
+                    "end_outermost_loop": 25,
+                    "end_region_line": 25,
+                    "line": "\n",
+                    "lineno": 25,
+                    "memory_samples": [],
+                    "n_avg_mb": 0.0,
+                    "n_copy_mb_s": 0.0,
+                    "n_core_utilization": 0.0,
+                    "n_cpu_percent_c": 0.0,
+                    "n_cpu_percent_python": 0.0,
+                    "n_gpu_avg_memory_mb": 0.0,
+                    "n_gpu_peak_memory_mb": 0.0,
+                    "n_gpu_percent": 0,
+                    "n_growth_mb": 0.0,
+                    "n_malloc_mb": 0.0,
+                    "n_mallocs": 0,
+                    "n_peak_mb": 0.0,
+                    "n_python_fraction": 0,
+                    "n_sys_percent": 0.0,
+                    "n_usage_fraction": 0.0,
+                    "start_outermost_loop": 25,
+                    "start_region_line": 25
+                },
+                {
+                    "end_outermost_loop": 26,
+                    "end_region_line": 26,
+                    "line": "sieve(100_000_000)\n",
+                    "lineno": 26,
+                    "memory_samples": [
+                        [
+                            1901483276,
+                            20.003714561462402
+                        ],
+                        [
+                            1901486406,
+                            30.011982917785645
+                        ],
+                        [
+                            1901488444,
+                            40.02333927154541
+                        ],
+                        [
+                            1901490890,
+                            134.68325328826904
+                        ],
+                        [
+                            1901494672,
+                            39.34862041473389
+                        ],
+                        [
+                            1901496790,
+                            83.30498027801514
+                        ],
+                        [
+                            1901499452,
+                            93.30501079559326
+                        ],
+                        [
+                            1901501132,
+                            103.30504131317139
+                        ],
+                        [
+                            1901502715,
+                            113.30507183074951
+                        ],
+                        [
+                            1901504413,
+                            123.30507946014404
+                        ],
+                        [
+                            1901506149,
+                            133.30510997772217
+                        ],
+                        [
+                            1901508282,
+                            143.3051404953003
+                        ],
+                        [
+                            1901509968,
+                            153.30517101287842
+                        ],
+                        [
+                            1901511601,
+                            163.30520153045654
+                        ],
+                        [
+                            1901513472,
+                            173.30523204803467
+                        ],
+                        [
+                            1901515114,
+                            183.3052625656128
+                        ],
+                        [
+                            1901516684,
+                            193.30529308319092
+                        ],
+                        [
+                            1901518345,
+                            203.30532360076904
+                        ],
+                        [
+                            1901519926,
+                            213.30533123016357
+                        ],
+                        [
+                            1901521492,
+                            223.3053617477417
+                        ],
+                        [
+                            1901523128,
+                            233.30539226531982
+                        ],
+                        [
+                            1901524701,
+                            243.30542278289795
+                        ],
+                        [
+                            1901526363,
+                            253.30545330047607
+                        ],
+                        [
+                            1901528223,
+                            212.8399534225464
+                        ],
+                        [
+                            1901529618,
+                            202.8399305343628
+                        ],
+                        [
+                            1901531004,
+                            192.83990001678467
+                        ],
+                        [
+                            1901532269,
+                            182.83986949920654
+                        ],
+                        [
+                            1901533493,
+                            172.83983898162842
+                        ],
+                        [
+                            1901534548,
+                            162.8398084640503
+                        ],
+                        [
+                            1901535629,
+                            152.83977794647217
+                        ],
+                        [
+                            1901536710,
+                            142.83974742889404
+                        ],
+                        [
+                            1901537805,
+                            132.83971691131592
+                        ],
+                        [
+                            1901538844,
+                            122.8396863937378
+                        ],
+                        [
+                            1901540145,
+                            112.83965587615967
+                        ],
+                        [
+                            1901541201,
+                            102.83962535858154
+                        ],
+                        [
+                            1901542242,
+                            92.83959484100342
+                        ],
+                        [
+                            1901543301,
+                            82.8395643234253
+                        ],
+                        [
+                            1901544368,
+                            72.83953380584717
+                        ],
+                        [
+                            1901545379,
+                            62.83950328826904
+                        ],
+                        [
+                            1901546435,
+                            52.83947277069092
+                        ],
+                        [
+                            1901547473,
+                            42.83944225311279
+                        ],
+                        [
+                            1901548677,
+                            0
+                        ]
+                    ],
+                    "n_avg_mb": 0.0,
+                    "n_copy_mb_s": 0.0,
+                    "n_core_utilization": 0.0,
+                    "n_cpu_percent_c": 0.0,
+                    "n_cpu_percent_python": 0.0,
+                    "n_gpu_avg_memory_mb": 0.0,
+                    "n_gpu_peak_memory_mb": 0.0,
+                    "n_gpu_percent": 0,
+                    "n_growth_mb": 243.30209350585938,
+                    "n_malloc_mb": 338.63672637939453,
+                    "n_mallocs": 0,
+                    "n_peak_mb": 243.30209350585938,
+                    "n_python_fraction": 0.7136307424334347,
+                    "n_sys_percent": 0.0,
+                    "n_usage_fraction": 0.9713074881767214,
+                    "start_outermost_loop": 26,
+                    "start_region_line": 26
                 }
             ],
             "percent_cpu_time": 0
         }
     },
     "gpu": false,
-    "growth_rate": 4.277944074271653,
-    "max_footprint_fname": "/home/juanbc/proyectos/dis_ssw/src/02_QA/06_profiling/scalene/problem1.py",
-    "max_footprint_lineno": 6,
-    "max_footprint_mb": 2374.8914470672607,
+    "gpu_device": "",
+    "growth_rate": 0.0,
+    "max_footprint_fname": "/home/juan/misc/proyectos/dscsi/src/02_QA/06_profiling/scalene/sieve_jit.py",
+    "max_footprint_lineno": 26,
+    "max_footprint_mb": 253.30545330047607,
+    "max_footprint_python_fraction": 1.0,
     "memory": true,
-    "program": "/home/juanbc/proyectos/dis_ssw/src/02_QA/06_profiling/scalene/problem1.py",
+    "program": "/home/juan/misc/proyectos/dscsi/src/02_QA/06_profiling/scalene/sieve_jit.py",
     "samples": [
         [
-            908904455,
-            86.0599718093872
+            1901434947,
+            10.0033597946167
         ],
         [
-            908929680,
-            266.0604524612427
+            1901438477,
+            20.003714561462402
         ],
         [
-            908948459,
-            457.52492237091064
+            1901439362,
+            30.011982917785645
         ],
         [
-            908960681,
-            377.52467823028564
+            1901440051,
+            40.02333927154541
         ],
         [
-            908964210,
-            367.5246477127075
+            1901440439,
+            134.68325328826904
         ],
         [
-            908994307,
-            86.0630693435669
+            1901443459,
+            39.34862041473389
         ],
         [
-            2360803812,
-            1611.9459962844849
+            1901443858,
+            83.30498027801514
         ],
         [
-            2360809798,
-            925.2991075515747
+            1901444234,
+            93.30501079559326
         ],
         [
-            2360815312,
-            1035.299443244934
+            1901444532,
+            103.30504131317139
         ],
         [
-            2360824199,
-            1225.3000230789185
+            1901444913,
+            113.30507183074951
         ],
         [
-            2908964299,
-            1306.7639894485474
+            1901445203,
+            123.30507946014404
         ],
         [
-            2908967756,
-            1296.7639589309692
+            1901445533,
+            133.30510997772217
         ],
         [
-            2908968822,
-            1286.763928413391
+            1901445932,
+            143.3051404953003
         ],
         [
-            2908979173,
-            1166.7635622024536
+            1901446282,
+            153.30517101287842
         ],
         [
-            2908989713,
-            1006.7630739212036
+            1901446578,
+            163.30520153045654
         ],
         [
-            4335894539,
-            2374.8882417678833
+            1901446915,
+            173.30523204803467
         ],
         [
-            4335898823,
-            1611.9468507766724
+            1901447265,
+            183.3052625656128
         ],
         [
-            4335900924,
-            925.2994737625122
+            1901447681,
+            193.30529308319092
         ],
         [
-            4335902052,
-            945.2995347976685
+            1901448019,
+            203.30532360076904
         ],
         [
-            4335907263,
-            1065.299901008606
+            1901448350,
+            213.30533123016357
         ],
         [
-            4335914086,
-            1075.299931526184
+            1901448626,
+            223.3053617477417
         ],
         [
-            4335919714,
-            1205.3003282546997
+            1901449060,
+            233.30539226531982
         ],
         [
-            4335921880,
-            1225.300389289856
+            1901449685,
+            243.30542278289795
         ],
         [
-            4972101666,
-            1306.7644472122192
+            1901450037,
+            253.30545330047607
         ],
         [
-            4972105352,
-            1286.764386177063
+            1901450992,
+            212.8399534225464
         ],
         [
-            4972123476,
-            1116.7638673782349
+            1901451808,
+            202.8399305343628
         ],
         [
-            4972131561,
-            1106.7638368606567
+            1901452330,
+            192.83990001678467
         ],
         [
-            4972140021,
-            1006.7635316848755
+            1901452777,
+            182.83986949920654
         ],
         [
-            4972140852,
-            925.3025636672974
+            1901453199,
+            172.83983898162842
         ],
         [
-            4973049096,
-            849.0057048797607
+            1901453637,
+            162.8398084640503
         ],
         [
-            4973050799,
-            1611.9474620819092
+            1901454058,
+            152.83977794647217
         ],
         [
-            6434161661,
-            1611.9471950531006
+            1901454444,
+            142.83974742889404
         ],
         [
-            6434165308,
-            849.0058345794678
+            1901454808,
+            132.83971691131592
         ],
         [
-            6434166076,
-            925.2998180389404
+            1901455295,
+            122.8396863937378
         ],
         [
-            6434175595,
-            1125.300428390503
+            1901455719,
+            112.83965587615967
         ],
         [
-            6434182598,
-            1135.300458908081
+            1901456083,
+            102.83962535858154
         ],
         [
-            6434188030,
-            1225.3007335662842
+            1901456445,
+            92.83959484100342
         ],
         [
-            7030591403,
-            1296.7647380828857
+            1901456801,
+            82.8395643234253
         ],
         [
-            7030614003,
-            1611.9477977752686
+            1901457234,
+            72.83953380584717
         ],
         [
-            8613137326,
-            1611.9475765228271
+            1901457589,
+            62.83950328826904
         ],
         [
-            8613144094,
-            925.3001842498779
+            1901457947,
+            52.83947277069092
         ],
         [
-            8613146518,
-            965.3003063201904
+            1901458415,
+            42.83944225311279
         ],
         [
-            8613150491,
-            1045.3005504608154
-        ],
-        [
-            8613154476,
-            1055.3005809783936
-        ],
-        [
-            8613158492,
-            1135.3008251190186
-        ],
-        [
-            8613160125,
-            1155.3008861541748
-        ],
-        [
-            8613163497,
-            1225.3010997772217
-        ],
-        [
-            9208598533,
-            1296.7651042938232
-        ],
-        [
-            9208603129,
-            1236.7649211883545
-        ],
-        [
-            9208621996,
-            1036.764310836792
-        ],
-        [
-            9208625222,
-            849.0064067840576
-        ],
-        [
-            9208625807,
-            1611.948163986206
-        ],
-        [
-            10769210795,
-            965.3006267547607
-        ],
-        [
-            10769213971,
-            975.3006572723389
-        ],
-        [
-            10769218819,
-            1065.300931930542
-        ],
-        [
-            10769222337,
-            1075.3009624481201
-        ],
-        [
-            10769229363,
-            1225.301420211792
-        ],
-        [
-            11362500647,
-            1296.7653713226318
-        ],
-        [
-            11362502435,
-            1276.7653102874756
-        ],
-        [
-            12971152926,
-            2374.8896465301514
-        ],
-        [
-            12971157986,
-            849.0068950653076
-        ],
-        [
-            12971158745,
-            925.3008785247803
-        ],
-        [
-            12971167932,
-            1105.3014278411865
-        ],
-        [
-            12971179577,
-            1155.3015804290771
-        ],
-        [
-            13577147139,
-            1296.7657985687256
-        ],
-        [
-            13577187935,
-            1286.7657680511475
-        ],
-        [
-            13577200606,
-            1116.7652492523193
-        ],
-        [
-            13577203270,
-            1106.7652187347412
-        ],
-        [
-            13577210390,
-            1006.76491355896
-        ],
-        [
-            13577211720,
-            849.0071544647217
-        ],
-        [
-            15217518131,
-            2374.890142440796
-        ],
-        [
-            15217524882,
-            925.3013744354248
-        ],
-        [
-            15217531796,
-            1055.3017711639404
-        ],
-        [
-            15217535622,
-            1065.3018016815186
-        ],
-        [
-            15217543556,
-            1225.3022899627686
-        ],
-        [
-            15854075955,
-            1306.7662715911865
-        ],
-        [
-            15854079483,
-            1296.7662410736084
-        ],
-        [
-            15854080496,
-            1286.7662105560303
-        ],
-        [
-            15854088044,
-            1186.765905380249
-        ],
-        [
-            15854133319,
-            1006.7653560638428
-        ],
-        [
-            15854135356,
-            1611.9492931365967
-        ],
-        [
-            17561961832,
-            2374.89040184021
-        ],
-        [
-            17561973501,
-            849.0076503753662
-        ],
-        [
-            17562016149,
-            1225.3025493621826
-        ],
-        [
-            18215738671,
-            1116.766004562378
-        ],
-        [
-            18215741133,
-            1106.7659740447998
-        ],
-        [
-            18215750259,
-            849.0079097747803
-        ],
-        [
-            18215750886,
-            1611.9496669769287
-        ],
-        [
-            19994418588,
-            849.0081996917725
-        ],
-        [
-            19994439309,
-            1225.3030986785889
-        ],
-        [
-            20784788640,
-            1296.7671031951904
-        ],
-        [
-            20784808419,
-            1256.766981124878
-        ],
-        [
-            20784814279,
-            1236.7669200897217
-        ],
-        [
-            20784819346,
-            1206.7668285369873
-        ],
-        [
-            20784852967,
-            1006.7662181854248
-        ],
-        [
-            20784853908,
-            925.3052501678467
-        ],
-        [
-            20784858400,
-            1611.950216293335
-        ],
-        [
-            22375540544,
-            2374.8914470672607
-        ],
-        [
-            22375546594,
-            1611.9500560760498
-        ],
-        [
-            22375548368,
-            849.008695602417
+            1901458891,
+            0
         ]
     ],
     "stacks": []
@@ -3800,51 +3635,139 @@ Prism.languages.py = Prism.languages.python;
     <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
-    <!--
-	<script src="https://cdn.jsdelivr.net/npm/vega@5.21.0"></script>
-	<script src="https://cdn.jsdelivr.net/npm/vega-lite@5.2.0"></script>
-	<script src="https://cdn.jsdelivr.net/npm/vega-embed@6.20.0"></script>
-	-->
+    <script>
+        function clickToLoadFile() {
+            // Trigger the file input when the SVG is clicked
+            document.getElementById('fileinput').click();
+        }
+
+        function handleFileChange() {
+            var fileInput = document.getElementById('fileinput');
+            if (fileInput.files.length > 0) {
+                // Here, you can add what you want to do with the file
+                console.log('File selected:', fileInput.files[0].name);
+            }
+        }
+    </script>
+	
   </head>
   <body>
-    <a href="https://github.com/plasma-umass/scalene">
+    <div class="header">
       <p class="text-center">
-	<img src="https://github.com/plasma-umass/scalene/raw/master/scalene/scalene-gui/scalene-image.png" height="100">
+	<a href="https://github.com/plasma-umass/scalene">
+	  <img src="https://github.com/plasma-umass/scalene/raw/master/scalene/scalene-gui/scalene-image.png" height="100">
+	</a>
       </p>
-    </a>
-    <p />
+    </div>
 	<div class="d-flex justify-content-center">
-	  <details>
-	    <summary style="font-size:0.8rem; color: blue">advanced options</summary>
+	  <details id="ai-optimization-options">
+	    <summary style="font-size:0.8rem; color: blue">AI optimization options</summary>
 	  <!-- <label for='demoinput' style="padding: 5px 5px; border-radius: 5px; border: 1px ridge black; font-size: 0.8rem; height: auto;">demo</label>
 	  <input style="height: 0; width: 0; opacity:0" type='button' id='demoinput' accept='.json' onclick="loadDemo();">
 	  -->
-	  <B style="font-size:0.8rem">Proposed optimizations</B><BR />
-	  <label for='api-key' style="font-size: 0.8rem">Enter an <a href="https://beta.openai.com/signup">OpenAI key</a> to enable:</label>
-	  <input type="text" style="font-size: 0.8rem" size="22" placeholder="(OpenAI API key)" id="api-key" oninput="checkApiKey(event.target.value)"></input>
-	  <span id='valid-api-key'></span>
+        <label for="service-select" style="font-size: 0.8rem">AI service provider:</label>
+        <select style="font-size: 0.8rem" id="service-select" class="persistent" onchange="toggleServiceFields()">
+          <option value="openai">OpenAI</span></option>
+<!--          <option value="amazon">Amazon Bedrock</option> -->
+          <option value="azure-openai">Azure OpenAI</option>
+          <option value="local">Local</option>
+    </select>
+    <hr />
+        <!-- OpenAI API Key Field -->
+        <div id="openai-fields">
+          <label for='api-key' style="font-size: 0.8rem">OpenAI <a href="https://beta.openai.com/signup">API key</a>:</label>
+          <input type="text" style="font-size: 0.8rem" size="22" placeholder="(OpenAI API key)" id="api-key" oninput="checkApiKey(event.target.value)"></input>
+          <span id="valid-api-key"></span>
+          <br />
+          <label style="font-size: 0.8rem" for="language-model-openai">
+            Language model:
+          </label>
+          <select style="font-size: 0.8rem" id="language-model-openai" class="persistent" name="language-model-openai-label">
+            <option value="gpt-3.5-turbo">GPT 3.5</option>
+            <option value="gpt-4" selected>GPT 4.0</option>
+          </select>
+	      </div>
+        
+        <!-- Azure OpenAI API Key Field -->
+        <div id="azure-openai-fields" style = "display: none;">
+          
+          <label for='azure-api-key' style="font-size: 0.8rem">Azure OpenAI API key:</label>
+          <input type="text" style="font-size: 0.8rem" size="22" placeholder="(Azure OpenAI API key)" id="azure-api-key"></input>
+          <span id="valid-api-key"></span>
+          <br />
+          <label style="font-size: 0.8rem" for="azure-api-url">
+            API URL Azure Open AI:
+          </label>
+          <input type="text" style="font-size: 0.8rem" size="22" placeholder="(Azure OpenAI API URL)" id="azure-api-url"></input>
+          <br />
+          <label style="font-size: 0.8rem" for="azure-api-model">
+            Language model:
+          </label>
+          <input type="text" style="font-size: 0.8rem" size="22" placeholder="(Azure OpenAI API Model)" id="azure-api-model"></input>
+          <br />
+          <label style="font-size: 0.8rem" for="azure-api-model-version">
+            API Version:
+          </label>
+          <input type="text" style="font-size: 0.8rem" size="22" placeholder="(Azure OpenAI API Version)" id="azure-api-model-version"></input>
+	      </div>
+
+        <!-- Amazon Bedrock Fields -->
+        <div id="amazon-fields" style="display: none;">
+          <label for='aws-access-key' style="font-size: 0.8rem">AWS Access Key ID:</label>
+    <input type="text" style="font-size: 0.8rem" size="22" placeholder="AKIAxxxxxxxxxxxxxxxx" id="aws-access-key" class="persistent"></input>
+    <br />
+    <label for='aws-secret-key' style="font-size: 0.8rem">AWS Secret Access Key:</label>
+    <input type="text" style="font-size: 0.8rem" size="22" placeholder="(Secret Access Key)" id="aws-secret-key" class="persistent"></input>
+    <br />
+          <label style="font-size: 0.8rem" for="language-model-amazon">
+            Language model:
+          </label>
+          <select style="font-size: 0.8rem" id="language-model-amazon" name="language-model-amazon-label">
+            <option value="claude-2.1" selected>Claude 2.1</option>
+          </select>
+        </div>
+
+        <!-- Local Fields -->
+    <div id="local-fields" style="display: none; font-size: 0.8rem">
+    Use this option if you are running a local language model. We currently support <a href="https://ollama.ai/">Ollama</a>.
+    <br />
+          <label for='local-ip' style="font-size: 0.8rem">IP Address:</label>
+          <input type="text" style="font-size: 0.8rem" size="22" placeholder="localhost" id="local-ip" class="persistent" value="localhost"></input>
+          <label for='local-port' style="font-size: 0.8rem">Port:</label>
+    <input type="number" style="font-size: 0.8rem" size="22" placeholder="11434" id="local-port" class="persistent" value="11434"></input>
+    <br />
+    <div id="install-models-message" style="display:none;">
+      <span style="color: red">Server not found or no language models installed.</span><br />
+      Install language models as in <span style="background-color:rgb(220 220 220);"><code>ollama pull codellama:34b-python</code></span>.
+    </div>
+
+    <br />
+    <div id="local-models-list">
+          <label style="font-size: 0.8rem" for="language-model-local">
+            Language model:
+          </label>
+    <span style="font-size: 0.8rem">
+    </span>
+    <div id="language-local-models"></div>
+    </div>
+        </div>
 	  <br />
-	  <label style="font-size: 0.8rem" for="language-model">
-	    Language model:
-	  </label>
-	  <select style="font-size: 0.8rem" id="language-model" name="language-model-label">
-	    <option style="font-size: 0.8rem" value="gpt-3.5-turbo">GPT 3.5</option>
-	    <option style="font-size: 0.8rem" value="gpt-4" selected>GPT 4.0</option>
-	  </select>
+	  <B style="font-size:0.8rem">Proposed optimizations</B><BR />
 	  <div>
-	    <input type="radio" name="optimize-radio" id="optimize-performance" value="performance" checked>
+	    <input type="radio" name="optimize-radio" id="optimize-performance" value="performance" class="persistent" checked>
 	    <label style="font-size: 0.8rem" for="optimize-performance">
 	      Optimize runtime performance
 	    </label>
 	  </div>
 	  <div>
-	    <input type="radio" name="optimize-radio" id="optimize-memory" value="memory">
+	    <input type="radio" name="optimize-radio" id="optimize-memory" class="persistent" value="memory">
 	    <label style="font-size: 0.8rem" for="optimize-memory">
 	      Optimize memory efficiency
 	    </label>
 	  </div>
-	  <input type="checkbox" id="use-gpu-checkbox" name="use-gpu-checkbox-label" onclick="try { window.localStorage.setItem('scalene-gpu-checkbox', document.getElementById('use-gpu-checkbox').checked); } catch {}">
-	  <label style="font-size: 0.8rem" for="use-gpu-checkbox">
+	  <input type="checkbox" id="use-gpu-checkbox" name="use-gpu-checkbox-label" class="persistent" >
+	  <!-- onclick="try { window.localStorage.setItem('scalene-gpu-checkbox', document.getElementById('use-gpu-checkbox').checked); } catch {}" -->
+	  <label style="font-size: 0.8rem" for="use-gpu-checkbox" class="persistent">
 	    Include GPU optimizations
 	  </label>
 	  <br />
@@ -3856,32 +3779,139 @@ Prism.languages.py = Prism.languages.python;
 	    <br />
 	  </font>
 	  <br />
-	  <!--
-	      <br />
-    <form id="jsonFile" name="jsonFile" enctype="multipart/form-data" method="post">
-      <div class="form-group">
-	      <label for='fileinput' style="padding: 5px 5px; border-radius: 5px; border: 1px ridge black; font-size: 0.8rem; height: auto;">Load a profile (.json)</label>
-	      <input style="height: 0; width: 10; opacity:0" type='file' id='fileinput' accept='.json' onchange="loadFile();"></input>
-      </div>
-    </form>
-    -->
 	  </details>
 	</div>
     <div id="profile">
     </div>
     <script type="text/javascript">
-      function vsNavigate(filename, lineno) {
-    // If we are in VS Code, clicking on a line number in Scalene's web UI will navigate to that line in the source code.
-    try {
-	const vscode = acquireVsCodeApi();
-        vscode.postMessage({
-            command: 'jumpToLine',
-            filePath: filename,
-            lineNumber: lineno
-        });
-    } catch {
-    }
-    
+      /// <reference types="aws-sdk" />
+
+function vsNavigate(filename, lineno) {
+  // If we are in VS Code, clicking on a line number in Scalene's web UI will navigate to that line in the source code.
+  try {
+    const vscode = acquireVsCodeApi();
+    vscode.postMessage({
+      command: "jumpToLine",
+      filePath: filename,
+      lineNumber: lineno,
+    });
+  } catch {}
+}
+
+function generateScaleneOptimizedCodeRequest(
+  context,
+  sourceCode,
+  line,
+  recommendedLibraries = [],
+  includeGpuOptimizations = false,
+) {
+  // Default high-performance libraries known for their efficiency
+  const defaultLibraries = [
+    "NumPy",
+    "Scikit-learn",
+    "Pandas",
+    "TensorFlow",
+    "PyTorch",
+  ];
+  const highPerformanceLibraries = [
+    ...new Set([...defaultLibraries, ...recommendedLibraries]),
+  ];
+
+  let promptParts = [
+    "Optimize the following Python code to make it more efficient WITHOUT CHANGING ITS RESULTS.\n\n",
+    context.trim(),
+    "\n# Start of code\n",
+    sourceCode.trim(),
+    "\n# End of code\n\n",
+    "Rewrite the above Python code from 'Start of code' to 'End of code', aiming for clear and simple optimizations. ",
+    "Your output should consist only of valid Python code, with brief explanatory comments prefaced with #. ",
+    "Include a detailed explanatory comment before the code, starting with '# Proposed optimization:'. ",
+    "Leverage high-performance native libraries, especially those utilizing GPU, for significant performance improvements. ",
+    "Consider using the following other libraries, if appropriate:\n",
+    highPerformanceLibraries.map((e) => "  import " + e).join("\n") + "\n",
+    "Eliminate as many for loops, while loops, and list or dict comprehensions as possible, replacing them with vectorized equivalents. ",
+    //    "Consider GPU utilization, memory consumption, and copy volume when using GPU-accelerated libraries. ",
+    //    "Low GPU utilization and high copy volume indicate inefficient use of such libraries. ",
+    "Quantify the expected speedup in terms of orders of magnitude if possible. ",
+    "Fix any errors in the optimized code. ",
+    //    "Consider the peak amount of memory used per line and CPU utilization for targeted optimization. ",
+    //    "Note on CPU utilization: Low utilization in libraries known for multi-threading/multi-processing indicates inefficiency.\n\n",
+  ];
+
+  // Conditional inclusion of GPU optimizations
+  if (includeGpuOptimizations) {
+    promptParts.push(
+      "Use GPU-accelerated libraries whenever it would substantially increase performance. ",
+    );
+  }
+
+  // Performance Insights
+  promptParts.push(
+    "Consider the following insights gathered from the Scalene profiler for optimization:\n",
+  );
+  const total_cpu_percent =
+    line.n_cpu_percent_python + line.n_cpu_percent_c + line.n_sys_percent;
+
+  promptParts.push(
+    `- CPU time: percent spent in the Python interpreter: ${((100 * line.n_cpu_percent_python) / total_cpu_percent).toFixed(2)}%\n`,
+  );
+  promptParts.push(
+    `- CPU time: percent spent executing native code: ${((100 * line.n_cpu_percent_c) / total_cpu_percent).toFixed(2)}%\n`,
+  );
+  promptParts.push(
+    `- CPU time: percent of system time: ${((100 * line.n_sys_percent) / total_cpu_percent).toFixed(2)}%\n`,
+  );
+  // `- CPU utilization: ${performanceMetrics.cpu_utilization}. Low utilization with high-core count might indicate inefficient use of multi-threaded/multi-process libraries.\n`,
+  promptParts.push(
+    `- Core utilization: ${((100 * line.n_core_utilization) / total_cpu_percent).toFixed(2)}%\n`,
+  );
+  //      `- Peak memory per line: Focus on lines with high memory usage, specifically ${performanceMetrics.peak_memory_per_line}.\n`,
+  promptParts.push(
+    `- Peak memory usage: ${line.n_peak_mb.toFixed(0)}MB (${(100 * line.n_python_fraction).toFixed(2)}% Python memory)\n`,
+  );
+  //      `- Copy volume: ${performanceMetrics.copy_volume} MB. High volume indicates inefficient data handling with GPU libraries.\n`,
+  if (line.n_copy_mb_s > 1) {
+    promptParts.push(
+      `- Megabytes copied per second by memcpy/strcpy: ${line.n_copy_mb_s.toFixed(2)}\n`,
+    );
+  }
+  if (includeGpuOptimizations) {
+    // `  - GPU utilization: ${performanceMetrics.gpu_utilization}%. Low utilization indicates potential inefficiencies in GPU-accelerated library use.\n`
+    promptParts.push(
+      `- GPU percent utilization: ${(100 * line.n_gpu_percent).toFixed(2)}%\n`,
+    );
+    // `  - GPU memory usage: ${performanceMetrics.gpu_memory} MB. Optimize to reduce unnecessary GPU memory consumption.\n`
+    // TODO GPU memory
+  }
+  promptParts.push(`Optimized code:`);
+  return promptParts.join("");
+}
+
+const recommendedLibraries = ["Cython", "Dask"]; // Add any domain-specific libraries here
+
+// const prompt = generateScaleneOptimizedCodeRequest(context, sourceCode, line, recommendedLibraries, true);
+
+function extractPythonCodeBlock(markdown) {
+  // Pattern to match code blocks optionally tagged with "python"
+  // - ``` optionally followed by "python"
+  // - Non-greedy match for any characters (including new lines) between the backticks
+  // - Flags:
+  //   - 'g' for global search to find all matches
+  //   - 's' to allow '.' to match newline characters
+  const pattern = /```python\s*([\s\S]*?)```|```([\s\S]*?)```/g;
+
+  let match;
+  let extractedCode = "";
+  // Use a loop to find all matches
+  while ((match = pattern.exec(markdown)) !== null) {
+    // Check which group matched. Group 1 is for explicitly tagged Python code, group 2 for any code block
+    const codeBlock = match[1] ? match[1] : match[2];
+    // Concatenate the extracted code blocks, separated by new lines if there's more than one block
+    if (extractedCode && codeBlock) extractedCode += "\n\n";
+    extractedCode += codeBlock;
+  }
+
+  return extractedCode;
 }
 
 const RightTriangle = "&#9658"; // right-facing triangle symbol (collapsed view)
@@ -3904,68 +3934,73 @@ async function tryApi(apiKey) {
   const response = await fetch("https://api.openai.com/v1/completions", {
     method: "GET",
     headers: {
-	  "Content-Type": "application/json",
+      "Content-Type": "application/json",
       Authorization: `Bearer ${apiKey}`,
-    }
+    },
   });
-    return response;
+  return response;
 }
 
 async function isValidApiKey(apiKey) {
-    const response = await tryApi(apiKey);
-    const data = await response.json();
-    if (data.error && (data.error.code in { "invalid_api_key" : true,
-					    "invalid_request_error" : true,
-					    "model_not_found" : true,
-					    "insufficient_quota" : true })) {
-	return false;
-    } else {
-	return true;
-    }
+  const response = await tryApi(apiKey);
+  const data = await response.json();
+  if (
+    data.error &&
+    data.error.code in
+      {
+        invalid_api_key: true,
+        invalid_request_error: true,
+        model_not_found: true,
+        insufficient_quota: true,
+      }
+  ) {
+    return false;
+  } else {
+    return true;
+  }
 }
 
 function checkApiKey(apiKey) {
-    (async () => {
-	try {	
-	    window.localStorage.setItem("scalene-api-key", apiKey);
-	} catch {
-	}
+  (async () => {
+    try {
+      window.localStorage.setItem("scalene-api-key", apiKey);
+    } catch {}
     // If the API key is empty, clear the status indicator.
     if (apiKey.length === 0) {
       document.getElementById("valid-api-key").innerHTML = "";
       return;
     }
-	const isValid = await isValidApiKey(apiKey);
-	if (!isValid) {
-	    document.getElementById("valid-api-key").innerHTML = "&#10005;";
-	} else {
-	    document.getElementById("valid-api-key").innerHTML = "&check;";
-	}
-    })();
+    const isValid = await isValidApiKey(apiKey);
+    if (!isValid) {
+      document.getElementById("valid-api-key").innerHTML = "&#10005;";
+    } else {
+      document.getElementById("valid-api-key").innerHTML = "&check;";
+    }
+  })();
 }
 
 function extractCode(text) {
   /**
-  * Extracts code block from the given completion text.
-  *
-  * @param {string} text - A string containing text and other data.
-  * @returns {string} Extracted code block from the completion object.
-  */
-    if (!text) {
-	return text;
-    }
-  const lines = text.split('\n');
+   * Extracts code block from the given completion text.
+   *
+   * @param {string} text - A string containing text and other data.
+   * @returns {string} Extracted code block from the completion object.
+   */
+  if (!text) {
+    return text;
+  }
+  const lines = text.split("\n");
   let i = 0;
-  while (i < lines.length && lines[i].trim() === '') {
+  while (i < lines.length && lines[i].trim() === "") {
     i++;
   }
-    const first_line = lines[i].trim();
+  const first_line = lines[i].trim();
   let code_block;
-  if (first_line === '```') {
+  if (first_line === "```") {
     code_block = text.slice(3);
-  } else if (first_line.startsWith('```')) {
+  } else if (first_line.startsWith("```")) {
     const word = first_line.slice(3).trim();
-    if (word.length > 0 && !word.includes(' ')) {
+    if (word.length > 0 && !word.includes(" ")) {
       code_block = text.slice(first_line.length);
     } else {
       code_block = text;
@@ -3973,7 +4008,7 @@ function extractCode(text) {
   } else {
     code_block = text;
   }
-  const end_index = code_block.indexOf('```');
+  const end_index = code_block.indexOf("```");
   if (end_index !== -1) {
     code_block = code_block.slice(0, end_index);
   }
@@ -3981,65 +4016,272 @@ function extractCode(text) {
 }
 
 async function sendPromptToOpenAI(prompt, len, apiKey) {
-    const endpoint = "https://api.openai.com/v1/chat/completions";
-    const model = document.getElementById('language-model').value;
-    
-    const body = JSON.stringify({
-	model: model,
-	messages: [
-	    {
-		role: 'system',
-		content: 'You are a Python programming assistant who ONLY responds with blocks of commented, optimized code. You never respond with text. Just code, starting with ``` and ending with ```.'
-	    },
-	    {
-		role: 'user',
-		content: prompt
-	    }
-	],
-	temperature: 0.3,
-	frequency_penalty: 0,
-	presence_penalty: 0,
-	user: "scalene-user"
-    });
+  const endpoint = "https://api.openai.com/v1/chat/completions";
+  const model = document.getElementById("language-model-openai").value;
 
-    console.log(body);
-    
-    const response = await fetch(endpoint, {
-	method: "POST",
-	headers: {
-	    "Content-Type": "application/json",
-	    Authorization: `Bearer ${apiKey}`,
-	},
-	body: body,
-    });
+  const body = JSON.stringify({
+    model: model,
+    messages: [
+      {
+        role: "system",
+        content:
+          "You are a Python programming assistant who ONLY responds with blocks of commented, optimized code. You never respond with text. Just code, starting with ``` and ending with ```.",
+      },
+      {
+        role: "user",
+        content: prompt,
+      },
+    ],
+    user: "scalene-user",
+  });
 
-    const data = await response.json();
-    if (data.error) {
-	if (data.error.code in { "invalid_request_error" : true,
-				 "model_not_found" : true,
-				 "insufficient_quota" : true }) {
-	    if ((data.error.code === "model_not_found") && (model === "gpt-4")) {
-		// Technically, model_not_found applies only for GPT-4.0
-		// if an account has not been funded with at least $1.
-		alert("You either need to add funds to your OpenAI account to use this feature, or you need to switch to GPT-3.5 if you are using free credits.");
-	    } else {
-		alert("You need to add funds to your OpenAI account to use this feature.");
-	    }
-	    return "";
-	}
+  console.log(body);
+
+  const response = await fetch(endpoint, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `Bearer ${apiKey}`,
+    },
+    body: body,
+  });
+
+  const data = await response.json();
+  if (data.error) {
+    if (
+      data.error.code in
+      {
+        invalid_request_error: true,
+        model_not_found: true,
+        insufficient_quota: true,
+      }
+    ) {
+      if (data.error.code === "model_not_found" && model === "gpt-4") {
+        // Technically, model_not_found applies only for GPT-4.0
+        // if an account has not been funded with at least $1.
+        alert(
+          "You either need to add funds to your OpenAI account to use this feature, or you need to switch to GPT-3.5 if you are using free credits.",
+        );
+      } else {
+        alert(
+          "You need to add funds to your OpenAI account to use this feature.",
+        );
+      }
+      return "";
     }
+  }
+  try {
+    console.log(
+      `Debugging info: Retrieved ${JSON.stringify(data.choices[0], null, 4)}`,
+    );
+  } catch {
+    console.log(
+      `Debugging info: Failed to retrieve data.choices from the server. data = ${JSON.stringify(
+        data,
+      )}`,
+    );
+  }
+
+  try {
+    return data.choices[0].message.content.replace(/^\s*[\r\n]/gm, "");
+  } catch {
+    // return "# Query failed. See JavaScript console (in Chrome: View > Developer > JavaScript Console) for more info.\n";
+    return "# Query failed. See JavaScript console (in Chrome: View > Developer > JavaScript Console) for more info.\n";
+  }
+}
+
+async function sendPromptToAzureOpenAI(prompt, len, apiKey, apiUrl, aiModel) {
+  const apiVersion = document.getElementById("azure-api-model-version").value;
+  const endpoint = `${apiUrl}/openai/deployments/${aiModel}/chat/completions?api-version=${apiVersion}`;
+
+  const body = JSON.stringify({
+    messages: [
+      {
+        role: "system",
+        content:
+          "You are a Python programming assistant who ONLY responds with blocks of commented, optimized code. You never respond with text. Just code, starting with ``` and ending with ```.",
+      },
+      {
+        role: "user",
+        content: prompt,
+      },
+    ],
+    user: "scalene-user",
+  });
+
+  console.log(body);
+
+  const response = await fetch(endpoint, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      "api-key": apiKey,
+    },
+    body: body,
+  });
+
+  const data = await response.json();
+  if (data.error) {
+    if (
+      data.error.code in
+      {
+        invalid_request_error: true,
+        model_not_found: true,
+        insufficient_quota: true,
+      }
+    ) {
+      return "";
+    }
+  }
+  try {
+    console.log(
+      `Debugging info: Retrieved ${JSON.stringify(data.choices[0], null, 4)}`,
+    );
+  } catch {
+    console.log(
+      `Debugging info: Failed to retrieve data.choices from the server. data = ${JSON.stringify(
+        data,
+      )}`,
+    );
+  }
+
+  try {
+    return data.choices[0].message.content.replace(/^\s*[\r\n]/gm, "");
+  } catch {
+    // return "# Query failed. See JavaScript console (in Chrome: View > Developer > JavaScript Console) for more info.\n";
+    return "# Query failed. See JavaScript console (in Chrome: View > Developer > JavaScript Console) for more info.\n";
+  }
+}
+
+async function sendPromptToAmazon(prompt, len) {
+  const serviceName = "bedrock";
+  const region = "us-west-2";
+  const modelId = "anthropic.claude-v2";
+  const endpoint = `https://${serviceName}-runtime.${region}.amazonaws.com/model/${modelId}/invoke`;
+  // const model = document.getElementById('language-model-amazon').value;
+
+  const body = JSON.stringify({
+    prompt: `Human: ${prompt}\n\nAssistant:\n`,
+    max_tokens_to_sample: 2048,
+    temperature: 0,
+    top_k: 250,
+    top_p: 1,
+    stop_sequences: ["\n\nHuman:"],
+    anthropic_version: "bedrock-2023-05-31",
+  });
+
+  console.log(body);
+
+  var bedrockruntime = new AWS.BedrockRuntime();
+  bedrockruntime.invokeModel(body, function (err, data) {
+    if (err)
+      console.log(err, err.stack); // an error occurred
+    else console.log(data); // successful response
+  });
+  const response = await fetch(endpoint, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      //	    Authorization: `Bearer ${apiKey}`,
+    },
+    body: body,
+  });
+
+  const data = await response.json();
+  console.log(data);
+  try {
+    console.log(
+      `Debugging info: Retrieved ${JSON.stringify(data.choices[0], null, 4)}`,
+    );
+  } catch {
+    console.log(
+      `Debugging info: Failed to retrieve data.choices from the server. data = ${JSON.stringify(
+        data,
+      )}`,
+    );
+  }
+
+  try {
+    return data.choices[0].message.content.replace(/^\s*[\r\n]/gm, "");
+  } catch {
+    // return "# Query failed. See JavaScript console (in Chrome: View > Developer > JavaScript Console) for more info.\n";
+    return "# Query failed. See JavaScript console (in Chrome: View > Developer > JavaScript Console) for more info.\n";
+  }
+}
+
+async function sendPromptToOllama(prompt, len, model, ipAddr, portNum) {
+  const url = `http://${ipAddr}:${portNum}/api/chat`;
+  const headers = { "Content-Type": "application/json" };
+  const body = JSON.stringify({
+    model: model,
+    messages: [
+      {
+        role: "system",
+        content:
+          "You are an expert code assistant who only responds in Python code.", //You are a Python programming assistant who ONLY responds with blocks of commented, optimized code. You never respond with text. Just code, in a JSON object with the key "code".'
+      },
+      {
+        role: "user",
+        content: prompt,
+      },
+    ],
+    stream: false,
+    //	format: "json",
+    temperature: 0.3,
+    frequency_penalty: 0,
+    presence_penalty: 0,
+    user: "scalene-user",
+  });
+
+  console.log(body);
+
+  let done = false;
+  let responseAggregated = "";
+  let retried = 0;
+  const retries = 3;
+
+  while (!done) {
+    if (retried >= retries) {
+      return {};
+    }
+
     try {
-	console.log(`Debugging info: Retrieved ${JSON.stringify(data.choices[0], null, 4)}`);
-    } catch {
-	console.log(`Debugging info: Failed to retrieve data.choices from the server. data = ${JSON.stringify(data)}`);
+      const response = await fetch(url, {
+        method: "POST",
+        headers: headers,
+        body: body,
+      });
+
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+
+      const text = await response.text();
+      const responses = text.split("\n");
+      for (const resp of responses) {
+        const responseJson = JSON.parse(resp);
+        if (responseJson.message && responseJson.message.content) {
+          responseAggregated += responseJson.message.content;
+        }
+
+        if (responseJson.done) {
+          done = true;
+          break;
+        }
+      }
+    } catch (error) {
+      console.log(`Error: ${error}`);
+      retried++;
     }
-    
-    try {
-	return data.choices[0].message.content.replace(/^\s*[\r\n]/gm, "");
-    } catch {
-	// return "# Query failed. See JavaScript console (in Chrome: View > Developer > JavaScript Console) for more info.\n";
-	return "# Query failed. See JavaScript console (in Chrome: View > Developer > JavaScript Console) for more info.\n";
-    }
+  }
+
+  console.log(responseAggregated);
+  try {
+    return responseAggregated; // data.choices[0].message.content.replace(/^\s*[\r\n]/gm, "");
+  } catch {
+    // return "# Query failed. See JavaScript console (in Chrome: View > Developer > JavaScript Console) for more info.\n";
+    return "# Query failed. See JavaScript console (in Chrome: View > Developer > JavaScript Console) for more info.\n";
+  }
 }
 
 function countSpaces(str) {
@@ -4055,111 +4297,233 @@ function countSpaces(str) {
   return 0;
 }
 
-async function optimizeCode(imports, code, context) {
-    // Tailor prompt to request GPU optimizations or not.
-    const useGPUs = document.getElementById('use-gpu-checkbox').checked; // globalThis.profile.gpu;
-    const useGPUstring = useGPUs ? " or the GPU " : " ";
-    // Check for a valid API key.
-  const apiKey = document.getElementById("api-key").value;
-  if (!apiKey) {
-    alert(
-      "To activate proposed optimizations, enter an OpenAI API key in advanced options."
-    );
-    return '';
+async function optimizeCode(imports, code, line, context) {
+  // Tailor prompt to request GPU optimizations or not.
+  const useGPUs = document.getElementById("use-gpu-checkbox").checked; // globalThis.profile.gpu;
+
+  let recommendedLibraries = ["sklearn"];
+  if (useGPUs) {
+    // Suggest cupy if we are using the GPU.
+    recommendedLibraries.push("cupy");
+  } else {
+    // Suggest numpy otherwise.
+    recommendedLibraries.push("numpy");
   }
-    // If the code to be optimized is just one line of code, say so.
-    let lineOf = " ";
-    if (code.split("\n").length <= 2) {
-	lineOf = " line of ";
+  // TODO: remove anything already imported in imports
+
+  const bigPrompt = generateScaleneOptimizedCodeRequest(
+    context,
+    code,
+    line,
+    recommendedLibraries,
+    useGPUs,
+  );
+
+  const useGPUstring = useGPUs ? " or the GPU " : " ";
+  // Check for a valid API key.
+  // TODO: Add checks for Amazon / local
+  let apiKey = "";
+  let aiService = document.getElementById("service-select").value;
+  if (aiService === "openai") {
+    apiKey = document.getElementById("api-key").value;
+  } else if (aiService === "azure-openai") {
+    apiKey = document.getElementById("azure-api-key").value;
+  }
+
+  if ((aiService === "openai" || aiService === "azure-openai") && !apiKey) {
+    alert(
+      "To activate proposed optimizations, enter an OpenAI API key in AI optimization options.",
+    );
+    document.getElementById("ai-optimization-options").open = true;
+    return "";
+  }
+  // If the code to be optimized is just one line of code, say so.
+  let lineOf = " ";
+  if (code.split("\n").length <= 2) {
+    lineOf = " line of ";
+  }
+
+  let libraries = "import sklearn";
+  if (useGPUs) {
+    // Suggest cupy if we are using the GPU.
+    libraries += "\nimport cupy";
+  } else {
+    // Suggest numpy otherwise.
+    libraries += "\nimport numpy as np";
+  }
+
+  // Construct the prompt.
+
+  const optimizePerformancePrompt = `Optimize the following${lineOf}Python code:\n\n${context}\n\n# Start of code\n\n${code}\n\n# End of code\n\nRewrite the above Python code only from "Start of code" to "End of code", to make it more efficient WITHOUT CHANGING ITS RESULTS. Assume the code has already executed all these imports; do NOT include them in the optimized code:\n\n${imports}\n\nUse native libraries if that would make it faster than pure Python. Consider using the following other libraries, if appropriate:\n\n${libraries}\n\nYour output should only consist of valid Python code. Output the resulting Python with brief explanations only included as comments prefaced with #. Include a detailed explanatory comment before the code, starting with the text "# Proposed optimization:". Make the code as clear and simple as possible, while also making it as fast and memory-efficient as possible. Use vectorized operations${useGPUstring}whenever it would substantially increase performance, and quantify the speedup in terms of orders of magnitude. Eliminate as many for loops, while loops, and list or dict comprehensions as possible, replacing them with vectorized equivalents. If the performance is not likely to increase, leave the code unchanged. Fix any errors in the optimized code. Optimized${lineOf}code:`;
+
+  const context_ollama = "";
+  const optimizePerformancePrompt_ollama_prev = `Optimize the following${lineOf}Python code:\n\n${context_ollama}\n\n# Start of code\n\n${code}\n\n# End of code\n\nRewrite the above Python code only from "Start of code" to "End of code", to make it more efficient WITHOUT CHANGING ITS RESULTS. Only output your result in JSON, with the optimized code in "code". Optimized${lineOf}code:`;
+
+  const optimizePerformancePrompt_ollama_pp = `Rewrite the following Python code to make it run faster. Use vectorization if possible, eliminating as many loops as possible. Try to reduce computational complexity of operations. Only output the optimized code in JSON with the key 'code'. Original code: ${code}. Optimized code:`;
+
+  // TODO parameterize based on CPU utilization, Python vs. C time, GPU choice, memory efficiency.
+  const optimizePerformancePrompt_ollama = `# Original code\n${code}\n\n# This code is an optimized version of the original code that dramatically improves its performance. Whenever possible, the code has been changed to use native libraries and vectorization, and data structures like lists have been replaced by sets or dicts. Do not change any function names. Optimized code:\n`;
+
+  const pure_optimizePerformancePrompt = `Optimize the following${lineOf}Python code:\n\n${context}\n\n# Start of code\n\n${code}\n\n# End of code\n\nRewrite the above Python code only from "Start of code" to "End of code", to make it more efficient WITHOUT CHANGING ITS RESULTS. Assume the code has already executed all these imports; do NOT include them in the optimized code:\n\n${imports}\n\nONLY USE PURE PYTHON.\n\nYour output should only consist of valid Python code. Output the resulting Python with brief explanations only included as comments prefaced with #. Include a detailed explanatory comment before the code, starting with the text "# Proposed optimization:". Make the code as clear and simple as possible, while also making it as fast and memory-efficient as possible. If the performance is not likely to increase, leave the code unchanged. Fix any errors in the optimized code. Optimized${lineOf}code:`;
+
+  const memoryEfficiencyPrompt = `Optimize the following${lineOf} Python code:\n\n${context}\n\n# Start of code\n\n${code}\n\n\n# End of code\n\nRewrite the above Python code only from "Start of code" to "End of code", to make it more memory-efficient WITHOUT CHANGING ITS RESULTS. Assume the code has already executed all these imports; do NOT include them in the optimized code:\n\n${imports}\n\nUse native libraries if that would make it more space efficient than pure Python. Consider using the following other libraries, if appropriate:\n\n${libraries}\n\nYour output should only consist of valid Python code. Output the resulting Python with brief explanations only included as comments prefaced with #. Include a detailed explanatory comment before the code, starting with the text "# Proposed optimization:". Make the code as clear and simple as possible, while also making it as fast and memory-efficient as possible. Use native libraries whenever possible to reduce memory consumption; invoke del on variables and array elements as soon as it is safe to do so. If the memory consumption is not likely to be reduced, leave the code unchanged. Fix any errors in the optimized code. Optimized${lineOf}code:`;
+
+  const optimizePerf = document.getElementById("optimize-performance").checked;
+
+  let prompt;
+  if (optimizePerf) {
+    prompt = optimizePerformancePrompt;
+  } else {
+    prompt = memoryEfficiencyPrompt;
+  }
+
+  // Just use big prompt maybe FIXME
+  prompt = bigPrompt;
+
+  // Use number of words in the original code as a proxy for the number of tokens.
+  const numWords = code.match(/\b\w+\b/g).length;
+
+  switch (document.getElementById("service-select").value) {
+    case "openai": {
+      console.log(prompt);
+      const result = await sendPromptToOpenAI(
+        prompt,
+        Math.max(numWords * 4, 500),
+        apiKey,
+      );
+      return extractCode(result);
     }
-
-    let libraries = 'import sklearn';
-    if (useGPUs) {
-	// Suggest cupy if we are using the GPU.
-	libraries += '\nimport cupy';
-    } else {
-	// Suggest numpy otherwise.
-	libraries += '\nimport numpy as np';
+    case "local": {
+      console.log("Running " + document.getElementById("service-select").value);
+      console.log(prompt);
+      //      console.log(optimizePerformancePrompt_ollama);
+      const result = await sendPromptToOllama(
+        prompt, // optimizePerformancePrompt_ollama,
+        Math.max(numWords * 4, 500),
+        document.getElementById("language-model-local").value,
+        document.getElementById("local-ip").value,
+        document.getElementById("local-port").value,
+      );
+      if (result.includes("```")) {
+        return extractPythonCodeBlock(result);
+      } else {
+        return result;
+      }
     }
-    
-    // Construct the prompt.
-
-    const optimizePerformancePrompt = `Optimize the following${lineOf}Python code:\n\n${context}\n\n# Start of code\n\n${code}\n\n# End of code\n\nRewrite the above Python code only from "Start of code" to "End of code", to make it more efficient WITHOUT CHANGING ITS RESULTS. Assume the code has already executed all these imports; do NOT include them in the optimized code:\n\n${imports}\n\nUse native libraries if that would make it faster than pure Python. Consider using the following other libraries, if appropriate:\n\n${libraries}\n\nYour output should only consist of valid Python code. Output the resulting Python with brief explanations only included as comments prefaced with #. Include a detailed explanatory comment before the code, starting with the text "# Proposed optimization:". Make the code as clear and simple as possible, while also making it as fast and memory-efficient as possible. Use vectorized operations${useGPUstring}whenever it would substantially increase performance, and quantify the speedup in terms of orders of magnitude. Eliminate as many for loops, while loops, and list or dict comprehensions as possible, replacing them with vectorized equivalents. If the performance is not likely to increase, leave the code unchanged. Fix any errors in the optimized code. Optimized${lineOf}code:`
-
-    const pure_optimizePerformancePrompt = `Optimize the following${lineOf}Python code:\n\n${context}\n\n# Start of code\n\n${code}\n\n# End of code\n\nRewrite the above Python code only from "Start of code" to "End of code", to make it more efficient WITHOUT CHANGING ITS RESULTS. Assume the code has already executed all these imports; do NOT include them in the optimized code:\n\n${imports}\n\nONLY USE PURE PYTHON.\n\nYour output should only consist of valid Python code. Output the resulting Python with brief explanations only included as comments prefaced with #. Include a detailed explanatory comment before the code, starting with the text "# Proposed optimization:". Make the code as clear and simple as possible, while also making it as fast and memory-efficient as possible. If the performance is not likely to increase, leave the code unchanged. Fix any errors in the optimized code. Optimized${lineOf}code:`
-
-    const memoryEfficiencyPrompt = `Optimize the following${lineOf} Python code:\n\n${context}\n\n# Start of code\n\n${code}\n\n\n# End of code\n\nRewrite the above Python code only from "Start of code" to "End of code", to make it more memory-efficient WITHOUT CHANGING ITS RESULTS. Assume the code has already executed all these imports; do NOT include them in the optimized code:\n\n${imports}\n\nUse native libraries if that would make it more space efficient than pure Python. Consider using the following other libraries, if appropriate:\n\n${libraries}\n\nYour output should only consist of valid Python code. Output the resulting Python with brief explanations only included as comments prefaced with #. Include a detailed explanatory comment before the code, starting with the text "# Proposed optimization:". Make the code as clear and simple as possible, while also making it as fast and memory-efficient as possible. Use native libraries whenever possible to reduce memory consumption; invoke del on variables and array elements as soon as it is safe to do so. If the memory consumption is not likely to be reduced, leave the code unchanged. Fix any errors in the optimized code. Optimized${lineOf}code:`
-
-    const optimizePerf = document.getElementById('optimize-performance').checked;
-
-    let prompt;
-    if (optimizePerf) {
- 	prompt = optimizePerformancePrompt;
-    } else {
-	prompt = memoryEfficiencyPrompt;
+    case "amazon": {
+      console.log("Running " + document.getElementById("service-select").value);
+      console.log(prompt); // optimizePerformancePrompt_ollama);
+      const result = await sendPromptToAmazon(
+        prompt, // optimizePerformancePrompt_ollama,
+        Math.max(numWords * 4, 500),
+      );
+      console.log(
+        document.getElementById("service-select").value + " not yet supported.",
+      );
+      return "";
     }
-    
-    // const prompt = `Below is some Python code to optimize, from "Start of code" to "End of code":\n\n# Start of code\n\n${code}\n\n# End of code\n\nRewrite the above Python code to make it more efficient without changing the results. Assume the code has already executed these imports. Do NOT include them in the optimized code:\n\n${imports}\n\nUse fast native libraries if that would make it faster than pure Python. Your output should only consist of valid Python code. Output the resulting Python with brief explanations only included as comments prefaced with #. Include a detailed explanatory comment before the code, starting with the text "# Proposed optimization:". Make the code as clear and simple as possible, while also making it as fast and memory-efficient as possible. Use vectorized operations${useGPUstring}whenever it would substantially increase performance, and quantify the speedup in terms of orders of magnitude. If the performance is not likely to increase, leave the code unchanged. Check carefully by generating inputs to see that the output is identical for both the original and optimized versions. Correctly-optimized code:`;
-
-    console.log(prompt);
-    
-  // const prev_prompt =  `Below is some Python code to optimize:\n\n${code}\n\nRewrite the above Python code to make it more efficient while keeping the same semantics. Use fast native libraries if that would make it faster than pure Python. Your output should only consist of valid Python code. Output only the resulting Python with brief explanations only included as comments prefaced with #. Include a detailed explanatory comment before the code, starting with the text "# Proposed optimization:". Make the code as clear and simple as possible, while also making it as fast and memory-efficient as possible. Use vectorized operations or the GPU whenever it would substantially increase performance, and try to quantify the speedup in terms of orders of magnitude. If the performance is not likely to increase, leave the code unchanged. Your output should only consist of legal Python code. Format all comments to be less than 40 columns wide:\n\n`;
-
-    // Use number of words in the original code as a proxy for the number of tokens.
-    const numWords = (code.match(/\b\w+\b/g)).length;
-
-    const result = await sendPromptToOpenAI(prompt, Math.max(numWords * 4, 500), apiKey);
-    return extractCode(result);
+    case "azure-openai": {
+      console.log("Running " + document.getElementById("service-select").value);
+      console.log(prompt);
+      let azureOpenAiEndpoint = document.getElementById("azure-api-url").value;
+      let azureOpenAiModel = document.getElementById("azure-api-model").value;
+      const result = await sendPromptToAzureOpenAI(
+        prompt,
+        Math.max(numWords * 4, 500),
+        apiKey,
+        azureOpenAiEndpoint,
+        azureOpenAiModel,
+      );
+      return extractCode(result);
+    }
+  }
 }
 
-function proposeOptimizationRegion(filename, file_number, lineno) {
-  proposeOptimization(filename, file_number, lineno, { regions: true });
+function proposeOptimizationRegion(filename, file_number, line) {
+  proposeOptimization(
+    filename,
+    file_number,
+    JSON.parse(decodeURIComponent(line)),
+    { regions: true },
+  );
 }
 
-function proposeOptimizationLine(filename, file_number, lineno) {
-  proposeOptimization(filename, file_number, lineno, { regions: false });
+function proposeOptimizationLine(filename, file_number, line) {
+  proposeOptimization(
+    filename,
+    file_number,
+    JSON.parse(decodeURIComponent(line)),
+    { regions: false },
+  );
 }
 
-function proposeOptimization(filename, file_number, lineno, params) {
-    filename = unescape(filename)
+function proposeOptimization(filename, file_number, line, params) {
+  filename = unescape(filename);
   const useRegion = params["regions"];
   const prof = globalThis.profile;
   const this_file = prof.files[filename].lines;
   const imports = prof.files[filename].imports.join("\n");
-  const start_region_line = this_file[lineno - 1]["start_region_line"];
-  const end_region_line = this_file[lineno - 1]["end_region_line"];
-    let context; 
-  const code_line = this_file[lineno - 1]["line"];
+  const start_region_line = this_file[line.lineno - 1]["start_region_line"];
+  const end_region_line = this_file[line.lineno - 1]["end_region_line"];
+  let context;
+  const code_line = this_file[line.lineno - 1]["line"];
   let code_region;
   if (useRegion) {
     code_region = this_file
       .slice(start_region_line - 1, end_region_line)
       .map((e) => e["line"])
       .join("");
-    context = this_file.slice(Math.max(0, start_region_line - 10), Math.min(start_region_line - 1, this_file.length))
-	  .map((e) => e["line"])
-	  .join("");
+    context = this_file
+      .slice(
+        Math.max(0, start_region_line - 10),
+        Math.min(start_region_line - 1, this_file.length),
+      )
+      .map((e) => e["line"])
+      .join("");
   } else {
     code_region = code_line;
-    context = this_file.slice(Math.max(0, lineno - 10), Math.min(lineno - 1, this_file.length))
-	  .map((e) => e["line"])
-	  .join("");
+    context = this_file
+      .slice(
+        Math.max(0, line.lineno - 10),
+        Math.min(line.lineno - 1, this_file.length),
+      )
+      .map((e) => e["line"])
+      .join("");
   }
   // Count the number of leading spaces to match indentation level on output
   let leadingSpaceCount = countSpaces(code_line) + 3; // including the lightning bolt and explosion
   let indent =
     WhiteLightning + WhiteExplosion + "&nbsp;".repeat(leadingSpaceCount - 1);
-  const elt = document.getElementById(`code-${file_number}-${lineno}`);
+  const elt = document.getElementById(`code-${file_number}-${line.lineno}`);
   (async () => {
-    const isValid = await isValidApiKey(
-      document.getElementById("api-key").value
-    );
-    if (!isValid) {
-	alert("You must enter a valid OpenAI API key to activate proposed optimizations.");
-	return;
+    // TODO: check Amazon credentials
+    const service = document.getElementById("service-select").value;
+    if (service === "openai") {
+      const isValid = await isValidApiKey(
+        document.getElementById("api-key").value,
+      );
+      if (!isValid) {
+        alert(
+          "You must enter a valid OpenAI API key to activate proposed optimizations.",
+        );
+        document.getElementById("ai-optimization-options").open = true;
+        return;
+      }
+    }
+    if (service == "local") {
+      if (
+        document.getElementById("local-models-list").style.display === "none"
+      ) {
+        // No service was found.
+        alert(
+          "You must be connected to a running Ollama server to activate proposed optimizations.",
+        );
+        document.getElementById("ai-optimization-options").open = true;
+        return;
+      }
     }
     elt.innerHTML = `<em>${indent}working...</em>`;
-      let message = await optimizeCode(imports, code_region, context);
+    let message = await optimizeCode(imports, code_region, line, context);
     if (!message) {
       elt.innerHTML = "";
       return;
@@ -4171,27 +4535,26 @@ function proposeOptimization(filename, file_number, lineno, params) {
       .split("\n")
       .map(
         (line) =>
-          indent + Prism.highlight(line, Prism.languages.python, "python")
+          indent + Prism.highlight(line, Prism.languages.python, "python"),
       )
-	  .join("<br />");
-      // Display the proposed optimization, with click-to-copy functionality.
-      elt.innerHTML = `<hr><span title="click to copy" style="cursor: copy" id="opt-${file_number}-${lineno}">${formattedCode}</span>`;
-      thisElt = document.getElementById(`opt-${file_number}-${lineno}`);
-      thisElt.addEventListener("click",
-			       async (e) => {
-				   await copyOnClick(e, message);
-				   // After copying, briefly change the cursor back to the default to provide some visual feedback..
-				   thisElt.style = "cursor: auto";
-				   await new Promise(resolve => setTimeout(resolve, 125));
-				   thisElt.style = "cursor: copy";
-			       });
+      .join("<br />");
+    // Display the proposed optimization, with click-to-copy functionality.
+    elt.innerHTML = `<hr><span title="click to copy" style="cursor: copy" id="opt-${file_number}-${line.lineno}">${formattedCode}</span>`;
+    thisElt = document.getElementById(`opt-${file_number}-${line.lineno}`);
+    thisElt.addEventListener("click", async (e) => {
+      await copyOnClick(e, message);
+      // After copying, briefly change the cursor back to the default to provide some visual feedback..
+      thisElt.style = "cursor: auto";
+      await new Promise((resolve) => setTimeout(resolve, 125));
+      thisElt.style = "cursor: copy";
+    });
   })();
 }
 
 async function copyOnClick(event, message) {
-    event.preventDefault();
-    event.stopPropagation();
-    await navigator.clipboard.writeText(message);
+  event.preventDefault();
+  event.stopPropagation();
+  await navigator.clipboard.writeText(message);
 }
 
 function memory_consumed_str(size_in_mb) {
@@ -4199,11 +4562,11 @@ function memory_consumed_str(size_in_mb) {
   let gigabytes = Math.floor(size_in_mb / 1024);
   let terabytes = Math.floor(gigabytes / 1024);
   if (terabytes > 0) {
-    return `${(size_in_mb / 1048576).toFixed(3)} TB`;
+    return `${(size_in_mb / 1048576).toFixed(0)}T`;
   } else if (gigabytes > 0) {
-    return `${(size_in_mb / 1024).toFixed(3)} GB`;
+    return `${(size_in_mb / 1024).toFixed(0)}G`;
   } else {
-    return `${size_in_mb.toFixed(3)} MB`;
+    return `${size_in_mb.toFixed(0)}M`;
   }
 }
 
@@ -4216,18 +4579,28 @@ function time_consumed_str(time_in_ms) {
   let seconds_exact = (time_in_ms % 60000) / 1000;
   if (hours > 0) {
     return `${hours.toFixed(0)}h:${minutes_exact.toFixed(
-      0
+      0,
     )}m:${seconds_exact.toFixed(3)}s`;
   } else if (minutes >= 1) {
     return `${minutes.toFixed(0)}m:${seconds_exact.toFixed(3)}s`;
   } else if (seconds >= 1) {
     return `${seconds_exact.toFixed(3)}s`;
   } else {
-    return `${time_in_ms.toFixed(3)}ms`;
+    return `${time_in_ms.toFixed(0)}ms`;
   }
 }
 
+function makeTooltip(title, value) {
+    // Tooltip for time bars, below
+    let secs = value / 100 * globalThis.profile.elapsed_time_sec;
+    return `(${title}) ` + value.toFixed(1) + "%" + " [" + time_consumed_str(secs * 1e3) + "]"
+}
+
 function makeBar(python, native, system, params) {
+  // Make a time bar
+  const widthThreshold1 = 20;
+  const widthThreshold2 = 10;
+  // console.log(`makeBar ${python} ${native} ${system}`);
   return {
     $schema: "https://vega.github.io/schema/vega-lite/v5.json",
     config: {
@@ -4238,28 +4611,46 @@ function makeBar(python, native, system, params) {
     autosize: {
       contains: "padding",
     },
-      width: params.width,
-      height: params.height,
+    width: params.width,
+    height: params.height,
     padding: 0,
     data: {
       values: [
         {
           x: 0,
           y: python.toFixed(1),
-          c: "(Python) " + python.toFixed(1) + "%",
-          d: python.toFixed(0) + "%",
+          c: makeTooltip("Python", python),
+          d:
+            python >= widthThreshold1
+              ? python.toFixed(0) + "%"
+              : python >= widthThreshold2
+                ? python.toFixed(0)
+                : "",
+          q: python / 2,
         },
         {
           x: 0,
           y: native.toFixed(1),
-          c: "(native) " + native.toFixed(1) + "%",
-          d: native.toFixed(0) + "%",
+          c: makeTooltip("native", native),
+          d:
+            native >= widthThreshold1
+              ? native.toFixed(0) + "%"
+              : native >= widthThreshold2
+                ? native.toFixed(0)
+                : "",
+          q: python + native / 2,
         },
         {
           x: 0,
           y: system.toFixed(1),
-          c: "(system) " + system.toFixed(1) + "%",
-          d: system.toFixed(0) + "%",
+          c: makeTooltip("system", system),
+          d:
+            system >= widthThreshold1
+              ? system.toFixed(0) + "%"
+              : system >= widthThreshold2
+                ? system.toFixed(0)
+                : "",
+          q: python + native + system / 2,
         },
       ],
     },
@@ -4271,6 +4662,7 @@ function makeBar(python, native, system, params) {
             aggregate: "sum",
             field: "y",
             axis: false,
+            stack: "zero",
             scale: { domain: [0, 100] },
           },
           color: {
@@ -4282,30 +4674,30 @@ function makeBar(python, native, system, params) {
           tooltip: [{ field: "c", type: "nominal", title: "time" }],
         },
       },
-      /*	  ,
       {
-          mark: {
-              type: "text",
-              opacity: 1.0,
-              color: "white",
-              align: "right",
-              limit: 50,
+        mark: {
+          type: "text",
+          align: "center",
+          baseline: "middle",
+          dx: 0,
+        },
+        encoding: {
+          x: {
+            aggregate: "sum",
+            field: "q",
+            axis: false,
           },
-          encoding: {
-              x: { type: "quantitative", field: "y" },
-              text: {
-		  field: "d",
-		  bandPosition: 0.5,
-		  condition: { test: `datum['y'] < 20`, value: "" },
-              },
-          },
-	  },
-	  */
+          text: { field: "d" },
+          color: { value: "white" },
+          tooltip: [{ field: "c", type: "nominal", title: "time" }],
+        },
+      },
     ],
   };
 }
 
-function makeGPUPie(util) {
+
+function makeGPUPie(util, gpu_device, params) {
   return {
     $schema: "https://vega.github.io/schema/vega-lite/v5.json",
     config: {
@@ -4316,8 +4708,8 @@ function makeGPUPie(util) {
     autosize: {
       contains: "padding",
     },
-      width: 30,
-      height: 20,
+    width: 30,
+    height: 20,
     padding: 0,
     data: {
       values: [
@@ -4341,15 +4733,81 @@ function makeGPUPie(util) {
         legend: false,
         scale: { range: ["goldenrod", "#f4e6c2"] },
       },
-      tooltip: [{ field: "c", type: "nominal", title: "GPU" }],
+      tooltip: [{ field: "c", type: "nominal", title: gpu_device }],
     },
+  };
+}
+
+function makeGPUBar(util, gpu_device, params) {
+  return {
+    $schema: "https://vega.github.io/schema/vega-lite/v5.json",
+    config: {
+      view: {
+        stroke: "transparent",
+      },
+    },
+    autosize: {
+      contains: "padding",
+    },
+    width: params.width,
+    height: params.height,
+    padding: 0,
+    data: {
+      values: [
+        {
+            x: 0,
+            y: util.toFixed(0),
+	    q: (util / 2).toFixed(0),
+	    d: util >= 20 ? util.toFixed(0) + "%" : "",
+	    dd: "in use: " + util.toFixed(0) + "%",
+        },
+      ],
+    },
+    layer: [
+      {
+        mark: { type: "bar" },
+        encoding: {
+          x: {
+            aggregate: "sum",
+            field: "y",
+            axis: false,
+            scale: { domain: [0, 100] },
+          },
+          color: {
+            field: "dd",
+            type: "nominal",
+            legend: false,
+            scale: { range:  ["goldenrod", "#f4e6c2"] },
+          },
+          tooltip: [{ field: "dd", type: "nominal", title: gpu_device + ":" } ],
+        },
+      },
+      {
+        mark: {
+          type: "text",
+          align: "center",
+          baseline: "middle",
+            dx: 0,
+        },
+        encoding: {
+          x: {
+            aggregate: "sum",
+            field: "q",
+            axis: false,
+          },
+          text: { field: "d" },
+          color: { value: "white" },
+          tooltip: [{ field: "dd", type: "nominal", title: gpu_device + ":" } ],
+        },
+      },
+    ],
   };
 }
 
 function makeMemoryPie(native_mem, python_mem, params) {
   return {
     $schema: "https://vega.github.io/schema/vega-lite/v5.json",
-      width: params.width,
+    width: params.width,
     height: 20,
     padding: 0,
     data: {
@@ -4395,8 +4853,8 @@ function makeMemoryBar(memory, title, python_percent, total, color, params) {
     autosize: {
       contains: "padding",
     },
-      width: params.width,
-      height: params.height,
+    width: params.width,
+    height: params.height,
     padding: 0,
     data: {
       values: [
@@ -4404,40 +4862,65 @@ function makeMemoryBar(memory, title, python_percent, total, color, params) {
           x: 0,
           y: python_percent * memory,
           c: "(Python) " + memory_consumed_str(python_percent * memory),
+          d:
+            python_percent * memory > total * 0.2
+              ? memory_consumed_str(python_percent * memory)
+              : "",
+          q: (python_percent * memory) / 2,
         },
         {
           x: 0,
           y: (1.0 - python_percent) * memory,
           c: "(native) " + memory_consumed_str((1.0 - python_percent) * memory),
+          d:
+            (1.0 - python_percent) * memory > total * 0.2
+              ? memory_consumed_str((1.0 - python_percent) * memory)
+              : "",
+          q: python_percent * memory + ((1.0 - python_percent) * memory) / 2,
         },
       ],
     },
-    mark: { type: "bar" },
-    encoding: {
-      x: {
-        aggregate: "sum",
-        field: "y",
-        axis: false,
-        scale: { domain: [0, total] },
+    layer: [
+      {
+        mark: { type: "bar" },
+        encoding: {
+          x: {
+            aggregate: "sum",
+            field: "y",
+            axis: false,
+            scale: { domain: [0, total] },
+          },
+          color: {
+            field: "c",
+            type: "nominal",
+            legend: false,
+            scale: { range: [color, "#50C878", "green"] },
+          },
+          // tooltip: [{ field: "c", type: "nominal", title: title }],
+        },
       },
-      color: {
-        field: "c",
-        type: "nominal",
-        legend: false,
-        scale: { range: [color, "#50C878", "green"] },
+      {
+        mark: {
+          type: "text",
+          align: "center",
+          baseline: "middle",
+          dx: 0,
+        },
+        encoding: {
+          x: {
+            aggregate: "sum",
+            field: "q",
+            axis: false,
+          },
+          text: { field: "d" },
+          color: { value: "white" },
+        },
       },
-      tooltip: [{ field: "c", type: "nominal", title: title }],
-    },
+    ],
   };
 }
 
-function makeSparkline(
-  samples,
-  max_x,
-  max_y,
-    leak_velocity = 0,
-    params
-) {
+function makeSparkline(samples, max_x, max_y, leak_velocity = 0, params) {
   const values = samples.map((v, i) => {
     let leak_str = "";
     if (leak_velocity != 0) {
@@ -4457,7 +4940,7 @@ function makeSparkline(
   let leak_info = "";
   if (leak_velocity != 0) {
     leak_info = "possible leak";
-      params.height -= 10; // FIXME should be actual height of font
+    params.height -= 10; // FIXME should be actual height of font
   }
 
   const strokeWidth = 1; // 0.25;
@@ -4551,7 +5034,7 @@ const MemoryColor = "green";
 const CopyColor = "goldenrod";
 let columns = [];
 
-function makeTableHeader(fname, gpu, memory, params) {
+function makeTableHeader(fname, gpu, gpu_device, memory, params) {
   let tableTitle;
   if (params["functions"]) {
     tableTitle = "function profile";
@@ -4569,16 +5052,16 @@ function makeTableHeader(fname, gpu, memory, params) {
   if (memory) {
     columns = columns.concat([
       {
-        title: ["memory", "average"],
-        color: MemoryColor,
-        width: 0,
-        info: "Average amount of memory allocated by line / function",
-      },
-      {
         title: ["memory", "peak"],
         color: MemoryColor,
         width: 0,
         info: "Peak amount of memory allocated by line / function",
+      },
+      {
+        title: ["memory", "average"],
+        color: MemoryColor,
+        width: 0,
+        info: "Average amount of memory allocated by line / function",
       },
       {
         title: ["memory", "timeline"],
@@ -4602,16 +5085,16 @@ function makeTableHeader(fname, gpu, memory, params) {
   }
   if (gpu) {
     columns.push({
-      title: ["gpu", "util."],
+      title: [gpu_device, "util."],
       color: CopyColor,
       width: 0,
-      info: "% utilization of the GPU by line / function (may be inaccurate if GPU is not dedicated)",
+	info: `% utilization of ${gpu_device} by line / function (may be inaccurate if ${gpu_device} is not dedicated)`,
     });
     columns.push({
-      title: ["gpu", "memory"],
+      title: [gpu_device, "memory"],
       color: CopyColor,
       width: 0,
-      info: "Peak GPU memory allocated by line / function (may be inaccurate if GPU is not dedicated)",
+	info: `Peak ${gpu_device} memory allocated by line / function (may be inaccurate if ${gpu_device} is not dedicated)`,
     });
   }
   columns.push({ title: ["", ""], color: "black", width: 100 });
@@ -4619,7 +5102,11 @@ function makeTableHeader(fname, gpu, memory, params) {
   s += '<thead class="thead-light">';
   s += '<tr data-sort-method="thead">';
   for (const col of columns) {
-      s += `<th class="F${escape(fname)}-nonline"><font style="font-variant: small-caps; text-decoration: underline; width:${col.width}" color=${col.color}>`;
+    s += `<th class="F${escape(
+      fname,
+    )}-nonline"><font style="font-variant: small-caps; text-decoration: underline; width:${
+      col.width
+    }" color=${col.color}>`;
     if (col.info) {
       s += `<a style="cursor:pointer;" title="${col.info}">${col.title[0]}</a>`;
     } else {
@@ -4676,7 +5163,7 @@ function makeProfileLine(
   memory_sparklines,
   memory_activity,
   gpu_pies,
-  propose_optimizations
+  propose_optimizations,
 ) {
   let total_time =
     line.n_cpu_percent_python + line.n_cpu_percent_c + line.n_sys_percent;
@@ -4700,10 +5187,10 @@ function makeProfileLine(
       (currline.n_usage_fraction >= 0.01);
     region_has_gpu_results |= line.n_gpu_percent >= 1.0;
   }
-    // Disable optimization proposals for low CPU runtime lines.
+  // Disable optimization proposals for low CPU runtime lines.
 
-    // TODO: tailor prompt for memory optimization when that's the only inefficiency.
-    // ALSO propose optimizations not just for execution time but also for memory usage.
+  // TODO: tailor prompt for memory optimization when that's the only inefficiency.
+  // ALSO propose optimizations not just for execution time but also for memory usage.
   if (propose_optimizations) {
     if (total_time < 1.0 && line.start_region_line === line.end_region_line) {
       propose_optimizations = false;
@@ -4743,7 +5230,7 @@ function makeProfileLine(
 
   let s = "";
   if (
-    total_time ||
+    total_time > 1.0 ||
     has_memory_results ||
     has_gpu_results ||
     (showExplosion &&
@@ -4764,16 +5251,34 @@ function makeProfileLine(
       makeBar(
         line.n_cpu_percent_python,
         line.n_cpu_percent_c,
-          line.n_sys_percent,
-	  { height: 20, width: 100 }
-      )
+        line.n_sys_percent,
+          { height: 20, width: 100 },
+      ),
     );
   } else {
     cpu_bars.push(null);
   }
   if (prof.memory) {
     s += `<td style="height: 20; width: 100; vertical-align: middle" align="left" data-sort='${String(
-      line.n_avg_mb.toFixed(0)
+      line.n_peak_mb.toFixed(0),
+    ).padStart(10, "0")}'>`;
+    s += `<span style="height: 20; width: 100; vertical-align: middle" id="memory_bar${memory_bars.length}"></span>`;
+    if (line.n_peak_mb) {
+      memory_bars.push(
+        makeMemoryBar(
+          line.n_peak_mb.toFixed(0),
+          "peak memory",
+          parseFloat(line.n_python_fraction),
+          prof.max_footprint_mb.toFixed(2),
+          "darkgreen",
+          { height: 20, width: 100 },
+        ),
+      );
+    } else {
+      memory_bars.push(null);
+    }
+    s += `<td style="height: 20; width: 100; vertical-align: middle" align="left" data-sort='${String(
+      line.n_avg_mb.toFixed(0),
     ).padStart(10, "0")}'>`;
     s += `<span style="height: 20; width: 100; vertical-align: middle" id="memory_bar${memory_bars.length}"></span>`;
     s += "</td>";
@@ -4784,27 +5289,9 @@ function makeProfileLine(
           "average memory",
           parseFloat(line.n_python_fraction),
           prof.max_footprint_mb.toFixed(2),
-            "darkgreen",
-	    { height: 20, width: 100 }
-        )
-      );
-    } else {
-      memory_bars.push(null);
-    }
-    s += `<td style="height: 20; width: 100; vertical-align: middle" align="left" data-sort='${String(
-      line.n_peak_mb.toFixed(0)
-    ).padStart(10, "0")}'>`;
-    s += `<span style="height: 20; width: 100; vertical-align: middle" id="memory_bar${memory_bars.length}"></span>`;
-    if (line.n_peak_mb) {
-      memory_bars.push(
-        makeMemoryBar(
-          line.n_peak_mb.toFixed(0),
-          "peak memory",
-          parseFloat(line.n_python_fraction),
-          prof.max_footprint_mb.toFixed(2),
-            "darkgreen",
-	    { height: 20, width: 100 }
-        )
+          "darkgreen",
+          { height: 20, width: 100 },
+        ),
       );
     } else {
       memory_bars.push(null);
@@ -4824,9 +5311,9 @@ function makeProfileLine(
           line.memory_samples,
           prof.elapsed_time_sec * 1e9,
           prof.max_footprint_mb,
-            leak_velocity,
-	    {height: 20, width: 75 }
-        )
+          leak_velocity,
+          { height: 20, width: 75 },
+        ),
       );
     } else {
       memory_sparklines.push(null);
@@ -4839,9 +5326,9 @@ function makeProfileLine(
           100 *
             line.n_usage_fraction *
             (1 - parseFloat(line.n_python_fraction)),
-            100 * line.n_usage_fraction * parseFloat(line.n_python_fraction),
-	    { width: 30 }
-        )
+          100 * line.n_usage_fraction * parseFloat(line.n_python_fraction),
+          { width: 30 },
+        ),
       );
     } else {
       memory_activity.push(null);
@@ -4854,7 +5341,7 @@ function makeProfileLine(
       s += '<td style="width: 100"></td>';
     } else {
       s += `<td style="width: 100; vertical-align: middle" align="right"><font style="font-size: small" color="${CopyColor}">${line.n_copy_mb_s.toFixed(
-        0
+        0,
       )}&nbsp;&nbsp;&nbsp;</font></td>`;
     }
   }
@@ -4866,15 +5353,20 @@ function makeProfileLine(
       s += `<td style="width: 50; vertical-align: middle" align="right" data-sort="${line.n_gpu_percent}">`;
       s += `<span style="height: 20; width: 30; vertical-align: middle" id="gpu_pie${gpu_pies.length}"></span>`;
       s += "</td>";
-      gpu_pies.push(makeGPUPie(line.n_gpu_percent));
+      gpu_pies.push(makeGPUPie(line.n_gpu_percent, prof.gpu_device, { height: 20, width: 100 }));
+      // gpu_pies.push(makeGPUBar(line.n_gpu_percent, prof.gpu_device, { height: 20, width: 100 }));
     }
     if (true) {
       if (line.n_gpu_peak_memory_mb < 1.0 || line.n_gpu_percent < 1.0) {
         s += '<td style="width: 100"></td>';
       } else {
-        s += `<td style="width: 100; vertical-align: middle" align="right"><font style="font-size: small" color="${CopyColor}">${line.n_gpu_peak_memory_mb.toFixed(
-          0
-        )}</font></td>`;
+	  let mem = line.n_gpu_peak_memory_mb;
+	  let memStr = "MB";
+	  if (mem >= 1024) {
+	      mem /= 1024;
+	      memStr = "GB";
+	  }
+          s += `<td style="width: 100; vertical-align: middle" align="right"><font style="font-size: small" color="${CopyColor}">${mem.toFixed(0)}${memStr}&nbsp;&nbsp;</font></td>`;
       }
     }
   }
@@ -4885,22 +5377,50 @@ function makeProfileLine(
     end_region_line != start_region_line
       ? ""
       : "empty-profile";
-    s += `<td align="right" class="dummy ${empty_profile}" style="vertical-align: middle; width: 50" data-sort="${line.lineno}"><span onclick="vsNavigate('${escape(filename)}',${line.lineno})"><font color="gray" style="font-size: 70%; vertical-align: middle" >${line.lineno}&nbsp;</font></span></td>`;
+  s += `<td align="right" class="dummy ${empty_profile}" style="vertical-align: middle; width: 50" data-sort="${
+    line.lineno
+  }"><span onclick="vsNavigate('${escape(filename)}',${
+    line.lineno
+  })"><font color="gray" style="font-size: 70%; vertical-align: middle" >${
+    line.lineno
+  }&nbsp;</font></span></td>`;
 
   const regionOptimizationString =
     propose_optimizations && showExplosion
       ? `${explosionString}&nbsp;`
       : `${WhiteExplosion}&nbsp;`;
 
-    // Convert back any escaped Unicode.
+  // Convert back any escaped Unicode.
   line.line = unescapeUnicode(line.line);
 
   const codeLine = Prism.highlight(line.line, Prism.languages.python, "python");
   s += `<td style="height:10" align="left" bgcolor="whitesmoke" style="vertical-align: middle" data-sort="${line.lineno}">`;
+  let newLine = structuredClone(line);
+  // TODO: verify that this isn't double counting anything
   if (propose_optimizations && showExplosion) {
-      s += `<span style="vertical-align: middle; cursor: pointer" title="Propose an optimization for the entire region starting here." onclick="proposeOptimizationRegion('${escape(filename)}', ${file_number}, ${parseInt(
-      line.lineno
-    )}); event.preventDefault()">${regionOptimizationString}</span>`;
+    // Construct a new line corresponding to this region.
+    let mb_copied = 0;
+    for (let lineno = start_region_line; lineno < end_region_line; lineno++) {
+      currline = prof["files"][filename]["lines"][lineno];
+      mb_copied += currline.n_copy_mb * prof.elapsed_time_sec;
+      newLine.n_cpu_percent_python += currline.n_cpu_percent_python;
+      newLine.n_cpu_percent_c += currline.n_cpu_percent_c;
+      newLine.n_sys_percent += currline.n_sys_percent;
+      newLine.n_gpu_percent += currline.n_gpu_percent;
+      if (currline.n_peak_mb > newLine.n_peak_mb) {
+        newLine.n_peak_mb = currline.n_peak_mb;
+        newLine.n_python_fraction = currline.n_python_fraction;
+      }
+      // TODO:
+      // GPU memory
+      newLine.n_core_utilization +=
+        (currline.n_cpu_percent_python + currline.n_cpu_percent_c) *
+        currline.n_core_utilization; // weigh by percentage
+    }
+    newLine.n_copy_mb_s = mb_copied / prof.elapsed_time_sec;
+    s += `<span style="vertical-align: middle; cursor: pointer" title="Propose an optimization for the entire region starting here." onclick="proposeOptimizationRegion('${escape(
+      filename,
+    )}', ${file_number}, '${encodeURIComponent(JSON.stringify(newLine))}'); event.preventDefault()">${regionOptimizationString}</span>`;
   } else {
     s += regionOptimizationString;
   }
@@ -4909,33 +5429,14 @@ function makeProfileLine(
     ? `${Lightning}`
     : `${WhiteLightning}`;
   if (propose_optimizations) {
-      s += `<span style="vertical-align: middle; cursor: pointer" title="Propose an optimization for this line." onclick="proposeOptimizationLine('${escape(filename)}', ${file_number}, ${parseInt(
-      line.lineno
-    )}); event.preventDefault()">${lineOptimizationString}</span>`;
+    s += `<span style="vertical-align: middle; cursor: pointer" title="Propose an optimization for this line." onclick="proposeOptimizationLine('${escape(filename)}', ${file_number}, '${encodeURIComponent(JSON.stringify(line))}'); event.preventDefault()">${lineOptimizationString}</span>`;
+    // s += `<span style="vertical-align: middle; cursor: pointer" title="Propose an optimization for this line." onclick="proposeOptimizationLine('${escape(filename,)}', ${file_number}, ${JSON.stringify(line)}); event.preventDefault()">${lineOptimizationString}</span>`;
   } else {
     s += lineOptimizationString;
   }
-    s += `<pre style="height: 10; display: inline; white-space: pre-wrap; overflow-x: auto; border: 0px; vertical-align: middle"><code class="language-python ${empty_profile}">${codeLine}<span id="code-${file_number}-${line.lineno}" bgcolor="white"></span></code></pre></td>`;
+  s += `<pre style="height: 10; display: inline; white-space: pre-wrap; overflow-x: auto; border: 0px; vertical-align: middle"><code class="language-python ${empty_profile}">${codeLine}<span id="code-${file_number}-${line.lineno}" bgcolor="white"></span></code></pre></td>`;
   s += "</tr>";
   return s;
-}
-
-function buildAllocationMaps(prof, f) {
-  let averageMallocs = {};
-  let peakMallocs = {};
-  for (const line of prof.files[f].lines) {
-    const avg = parseFloat(line.n_avg_mb);
-    if (!averageMallocs[avg]) {
-      averageMallocs[avg] = [];
-    }
-    averageMallocs[avg].push(line.lineno);
-    const peak = parseFloat(line.n_peak_mb);
-    if (!peakMallocs[peak]) {
-      peakMallocs[peak] = [];
-    }
-    peakMallocs[peak].push(line.lineno);
-  }
-  return [averageMallocs, peakMallocs];
 }
 
 // Track all profile ids so we can collapse and expand them en masse.
@@ -4976,32 +5477,53 @@ function toggleDisplay(id) {
   }
 }
 
+String.prototype.padWithNonBreakingSpaces = function (targetLength) {
+  let nbsp = "&nbsp;";
+  let padding = "";
+  let currentLength = this.length * nbsp.length;
+  targetLength *= nbsp.length;
+
+  while (currentLength < targetLength) {
+    padding += nbsp;
+    currentLength += nbsp.length;
+  }
+
+  return padding + this;
+};
+
 async function display(prof) {
+  //    console.log(JSON.stringify(prof.stacks));
   // Clear explosions.
   showedExplosion = {};
-    // Restore the API key from local storage (if any).
-    let old_key = '';
-    old_key = window.localStorage.getItem("scalene-api-key");
-    
+  // Restore the API key from local storage (if any).
+  let old_key = "";
+  old_key = window.localStorage.getItem("scalene-api-key");
+
   if (old_key) {
     document.getElementById("api-key").value = old_key;
     // Update the status.
     checkApiKey(old_key);
   }
 
-    // Restore the old GPU toggle from local storage (if any).
-    const gpu_checkbox = document.getElementById('use-gpu-checkbox')
-    old_gpu_checkbox = window.localStorage.getItem("scalene-gpu-checkbox");
-    if (old_gpu_checkbox) {
-	if (gpu_checkbox.checked.toString() != old_gpu_checkbox) {
-	    gpu_checkbox.click();
-	}
-    } else {
-	// Set the GPU checkbox on if the profile indicated the presence of a GPU.
-	if (gpu_checkbox.checked != prof.gpu) {
-	    gpu_checkbox.click();
-	}
+  let selectedService = window.localStorage.getItem("scalene-service-select");
+  if (selectedService) {
+    document.getElementById("service-select").value = selectedService;
+    toggleServiceFields();
+  }
+
+  // Restore the old GPU toggle from local storage (if any).
+  const gpu_checkbox = document.getElementById("use-gpu-checkbox");
+  old_gpu_checkbox = window.localStorage.getItem("use-gpu-checkbox");
+  if (old_gpu_checkbox) {
+    if (gpu_checkbox.checked.toString() != old_gpu_checkbox) {
+      gpu_checkbox.click();
     }
+  } else {
+    // Set the GPU checkbox on if the profile indicated the presence of a GPU.
+    if (gpu_checkbox.checked != prof.gpu) {
+      gpu_checkbox.click();
+    }
+  }
   globalThis.profile = prof;
   let memory_sparklines = [];
   let memory_activity = [];
@@ -5021,7 +5543,7 @@ async function display(prof) {
     s += '<td width="10"></td>';
     s += '<td valign="middle" style="vertical-align: middle">';
     s += `<font style="font-size: small"><b>Memory timeline: </b>(max: ${memory_consumed_str(
-      prof.max_footprint_mb
+      prof.max_footprint_mb,
     )}, growth: ${prof.growth_rate.toFixed(1)}%)</font>`;
     s += "</td>";
   }
@@ -5042,8 +5564,8 @@ async function display(prof) {
         prof.elapsed_time_sec * 1e9,
         prof.max_footprint_mb,
         0,
-          { height: 20, width: 200 }
-      )
+        { height: 20, width: 200 },
+      ),
     );
   }
   s += "</tr>";
@@ -5055,45 +5577,72 @@ async function display(prof) {
   let mem_python = 0;
   let mem_native = 0;
   let max_alloc = 0;
+  let cp = {};
+  let cn = {};
+  let cs = {};
+  let mp = {};
+  let ma = {};
   for (const f in prof.files) {
-    let cp = 0;
-    let cn = 0;
-    let cs = 0;
-    let mp = 0;
+    cp[f] = 0;
+    cn[f] = 0;
+    cs[f] = 0;
+    mp[f] = 0;
+    ma[f] = 0;
     for (const l in prof.files[f].lines) {
       const line = prof.files[f].lines[l];
-      cp += line.n_cpu_percent_python;
-      cn += line.n_cpu_percent_c;
-      cs += line.n_sys_percent;
-      mp += line.n_malloc_mb * line.n_python_fraction;
+      cp[f] += line.n_cpu_percent_python;
+      cn[f] += line.n_cpu_percent_c;
+      cs[f] += line.n_sys_percent;
+      if (line.n_peak_mb > ma[f]) {
+        ma[f] = line.n_peak_mb;
+        mp[f] += line.n_peak_mb * line.n_python_fraction;
+      }
       max_alloc += line.n_malloc_mb;
     }
-    cpu_python += cp;
-    cpu_native += cn;
-    cpu_system += cs;
-    mem_python += mp;
+    cpu_python += cp[f];
+    cpu_native += cn[f];
+    cpu_system += cs[f];
+    mem_python += mp[f];
   }
-    cpu_bars.push(makeBar(cpu_python, cpu_native, cpu_system, { height: 20, width: 200 }));
+  cpu_bars.push(
+    makeBar(cpu_python, cpu_native, cpu_system, { height: 20, width: 200 }),
+  );
   if (prof.memory) {
     memory_bars.push(
       makeMemoryBar(
-        max_alloc,
+        prof.max_footprint_mb.toFixed(2),
         "memory",
         mem_python / max_alloc,
-        max_alloc,
-          "darkgreen",
-	  { height: 20, width: 150 }
-      )
+        prof.max_footprint_mb.toFixed(2),
+        "darkgreen",
+        { height: 20, width: 150 },
+      ),
     );
   }
 
-    
   s += '<tr><td colspan="10">';
   s += `<span class="text-center"><font style="font-size: 90%; font-style: italic; font-color: darkgray">hover over bars to see breakdowns; click on <font style="font-variant:small-caps; text-decoration:underline">column headers</font> to sort.</font></span>`;
   s += "</td></tr>";
   s += "</table>";
   s += "</span>";
   s += "</span>";
+
+  if (JSON.stringify(prof) === "{}") {
+    // Empty profile.
+    s += `
+    <form id="jsonFile" name="jsonFile" enctype="multipart/form-data" method="post">
+      <div class="form-group">
+	<div class="d-flex justify-content-center">
+	  <label for='fileinput' style="padding: 5px 5px; border-radius: 5px; border: 1px ridge black; font-size: 0.8rem; height: auto;">Select a profile (.json)</label>
+	  <input style="height: 0; width: 10; opacity:0" type='file' id='fileinput' accept='.json' onchange="loadFile();">
+	</div>
+      </div>
+    </form>
+    </div>`;
+    const p = document.getElementById("profile");
+    p.innerHTML = s;
+    return;
+  }
 
   s +=
     '<br class="text-left"><span style="font-size: 80%; color: blue; cursor : pointer;" onClick="expandAll()">&nbsp;show all</span> | <span style="font-size: 80%; color: blue; cursor : pointer;" onClick="collapseAll()">hide all</span>';
@@ -5109,30 +5658,65 @@ async function display(prof) {
   // Print profile for each file
   let fileIteration = 0;
   allIds = [];
+  let excludedFiles = new Set();
   for (const ff of files) {
+    fileIteration++;
+    // Stop once total CPU time / memory consumption are below some threshold (1%)
+    // NOTE: need to incorporate GPU time here as well. FIXME.
+    if (ff[1].percent_cpu_time < 1.0 && ma[ff[0]] < 0.01 * max_alloc) {
+      excludedFiles.add(ff);
+      continue;
+    }
     const id = `file-${fileIteration}`;
     allIds.push(id);
-      s += '<p class="text-left sticky-top bg-white bg-opacity-75" style="backdrop-filter: blur(2px);">';
-    s += `<span id="button-${id}" title="Click to show or hide profile." style="cursor: pointer; color: blue" onClick="toggleDisplay('${id}')">`;
-    s += `${DownTriangle}`;
+    s +=
+      '<p class="text-left sticky-top bg-white bg-opacity-75" style="backdrop-filter: blur(2px)">';
+    let displayStr = "display:block;";
+    let triangle = DownTriangle;
+    if (fileIteration !== 1) {
+      displayStr = "display:none;";
+      triangle = RightTriangle;
+    }
+
+    s += `<span style="height: 20; width: 100; vertical-align: middle" id="cpu_bar${cpu_bars.length}"></span>&nbsp;`;
+    cpu_bars.push(
+      makeBar(cp[ff[0]], cn[ff[0]], cs[ff[0]], { height: 20, width: 100 }),
+    );
+    if (prof.memory) {
+      s += `<span style="height: 20; width: 100; vertical-align: middle" id="memory_bar${memory_bars.length}"></span>`;
+      memory_bars.push(
+        makeMemoryBar(
+          ma[ff[0]],
+          "peak memory",
+          mp[ff[0]] / ma[ff[0]],
+          prof.max_footprint_mb.toFixed(2),
+          "darkgreen",
+          { height: 20, width: 100 },
+        ),
+      );
+    }
+    s += `<font style="font-size: 90%">% of time = ${ff[1].percent_cpu_time
+      .toFixed(1)
+      .padWithNonBreakingSpaces(5)}% (${time_consumed_str(
+      (ff[1].percent_cpu_time / 100.0) * prof.elapsed_time_sec * 1e3,
+    ).padWithNonBreakingSpaces(8)} / ${time_consumed_str(
+      prof.elapsed_time_sec * 1e3,
+    ).padWithNonBreakingSpaces(8)})<br />`;
+    s += `<span id="button-${id}" title="Click to show or hide profile." style="cursor: pointer; color: blue;" onClick="toggleDisplay('${id}')">`;
+    s += `${triangle}`;
     s += "</span>";
-    s += `<font style="font-size: 90%"><code>${
-      ff[0]
-    }</code>: % of time = ${ff[1].percent_cpu_time.toFixed(
-      1
-    )}% (${time_consumed_str(
-      (ff[1].percent_cpu_time / 100.0) * prof.elapsed_time_sec * 1e3
-    )}) out of ${time_consumed_str(prof.elapsed_time_sec * 1e3)}.</font></p>`;
-    s += `<div style="display: block" id="profile-${id}">`;
+    s += `<code> ${ff[0]}</code>`;
+    s += `</font></p>`;
+    s += `<div style="${displayStr}" id="profile-${id}">`;
     s += `<table class="profile table table-hover table-condensed" id="table-${tableID}">`;
     tableID++;
-      s += makeTableHeader(ff[0], prof.gpu, prof.memory, { functions: false });
+      s += makeTableHeader(ff[0], prof.gpu, prof.gpu_device, prof.memory, { functions: false });
     s += "<tbody>";
     // Print per-line profiles.
     let prevLineno = -1;
     for (const l in ff[1].lines) {
-	const line = ff[1].lines[l];
-	
+      const line = ff[1].lines[l];
+
       if (false) {
         // Disabling spacers
         // Add a space whenever we skip a line.
@@ -5141,9 +5725,9 @@ async function display(prof) {
           for (let i = 0; i < columns.length; i++) {
             s += "<td></td>";
           }
-          s += `<td class="F${
-            escape(ff[0])
-          }-blankline" style="line-height: 1px; background-color: lightgray" data-sort="${
+          s += `<td class="F${escape(
+            ff[0],
+          )}-blankline" style="line-height: 1px; background-color: lightgray" data-sort="${
             prevLineno + 1
           }">&nbsp;</td>`;
           s += "</tr>";
@@ -5160,7 +5744,7 @@ async function display(prof) {
         memory_sparklines,
         memory_activity,
         gpu_pies,
-        true
+        true,
       );
     }
     s += "</tbody>";
@@ -5168,7 +5752,7 @@ async function display(prof) {
     // Print out function summaries.
     if (prof.files[ff[0]].functions.length) {
       s += `<table class="profile table table-hover table-condensed" id="table-${tableID}">`;
-	s += makeTableHeader(ff[0], prof.gpu, prof.memory, { functions: true });
+	s += makeTableHeader(ff[0], prof.gpu, prof.gpu_device, prof.memory, { functions: true });
       s += "<tbody>";
       tableID++;
       for (const l in prof.files[ff[0]].functions) {
@@ -5183,18 +5767,20 @@ async function display(prof) {
           memory_sparklines,
           memory_activity,
           gpu_pies,
-          false // no optimizations here
+          false, // no optimizations here
         );
       }
       s += "</table>";
     }
     s += "</div>";
-    fileIteration++;
+    //    fileIteration++;
     // Insert empty lines between files.
     if (fileIteration < files.length) {
       s += "<hr>";
     }
   }
+  // Remove any excluded files.
+  files = files.filter((x) => !excludedFiles.has(x));
   s += "</div>";
   const p = document.getElementById("profile");
   p.innerHTML = s;
@@ -5203,10 +5789,14 @@ async function display(prof) {
 
   // If you click on any header to sort (except line profiles), turn gray lines off.
   for (const ff of files) {
-      const allHeaders = document.getElementsByClassName(`F${escape(ff[0])}-nonline`);
+    const allHeaders = document.getElementsByClassName(
+      `F${escape(ff[0])}-nonline`,
+    );
     for (let i = 0; i < allHeaders.length; i++) {
       allHeaders[i].addEventListener("click", (e) => {
-          const all = document.getElementsByClassName(`F${escape(ff[0])}-blankline`);
+        const all = document.getElementsByClassName(
+          `F${escape(ff[0])}-blankline`,
+        );
         for (let i = 0; i < all.length; i++) {
           all[i].style.display = "none";
         }
@@ -5217,9 +5807,11 @@ async function display(prof) {
   // If you click on the line profile header, and gray lines are off, turn them back on.
   for (const ff of files) {
     document
-	  .getElementById(`${escape(ff[0])}-lineProfile`)
+      .getElementById(`${escape(ff[0])}-lineProfile`)
       .addEventListener("click", (e) => {
-          const all = document.getElementsByClassName(`F${escape(ff[0])}-blankline`);
+        const all = document.getElementsByClassName(
+          `F${escape(ff[0])}-blankline`,
+        );
         for (let i = 0; i < all.length; i++) {
           if (all[i].style.display === "none") {
             all[i].style.display = "block";
@@ -5243,8 +5835,8 @@ async function display(prof) {
   });
   cpu_bars.forEach((p, index) => {
     if (p) {
-	(async () => {
-            await vegaEmbed(`#cpu_bar${index}`, p, { actions: false });
+      (async () => {
+        await vegaEmbed(`#cpu_bar${index}`, p, { actions: false });
       })();
     }
   });
@@ -5312,6 +5904,171 @@ function loadDemo() {
   load(example_profile);
 }
 
+// JavaScript function to toggle fields based on selected service
+function toggleServiceFields() {
+  let service = document.getElementById("service-select").value;
+  window.localStorage.setItem("scalene-service-select", service);
+  document.getElementById("openai-fields").style.display =
+    service === "openai" ? "block" : "none";
+  document.getElementById("amazon-fields").style.display =
+    service === "amazon" ? "block" : "none";
+  document.getElementById("local-fields").style.display =
+    service === "local" ? "block" : "none";
+  document.getElementById("azure-openai-fields").style.display =
+    service === "azure-openai" ? "block" : "none";
+}
+
+function revealInstallMessage() {
+  document.getElementById("install-models-message").style.display = "block";
+  document.getElementById("local-models-list").style.display = "none";
+}
+
+async function fetchModelNames() {
+  try {
+    const local_ip = document.getElementById("local-ip").value;
+    const local_port = document.getElementById("local-port").value;
+    const response = await fetch(`http://${local_ip}:${local_port}/api/tags`);
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+    const data = await response.json();
+
+    // Extracting the model names
+    const modelNames = data.models.map((model) => model.name);
+    if (modelNames.length === 0) {
+      revealInstallMessage();
+    }
+    return modelNames;
+  } catch (error) {
+    console.error("Error fetching model names:", error);
+    revealInstallMessage();
+    return [];
+  }
+}
+
+function createSelectElement(modelNames) {
+  // Create the select element
+  const select = document.createElement("select");
+  select.style.fontSize = "0.8rem";
+  select.id = "language-model-local";
+  select.classList.add("persistent");
+  select.name = "language-model-local-label";
+
+  // Add options to the select element
+  modelNames.forEach((modelName) => {
+    const option = document.createElement("option");
+    option.value = modelName;
+    option.textContent = modelName;
+    option.id = modelName;
+    select.appendChild(option);
+  });
+
+  return select;
+}
+
+function replaceDivWithSelect() {
+  fetchModelNames().then((modelNames) => {
+    // Create the select element with options
+    const selectElement = createSelectElement(modelNames);
+
+    // Find the div and replace its content with the select element
+    const div = document.getElementById("language-local-models");
+    if (div) {
+      div.innerHTML = ""; // Clear existing content
+      div.appendChild(selectElement);
+    } else {
+      console.error('Div with ID "language-local-models" not found.');
+    }
+    atLeastOneModel = true;
+  });
+}
+
+function restoreState(el) {
+  const savedValue = localStorage.getItem(el.id);
+
+  if (savedValue !== null) {
+    switch (el.type) {
+      case "checkbox":
+      case "radio":
+        el.checked = savedValue === "true";
+        break;
+      default:
+        el.value = savedValue;
+        break;
+    }
+  }
+}
+
+function saveState(el) {
+  el.addEventListener("change", () => {
+    switch (el.type) {
+      case "checkbox":
+      case "radio":
+        localStorage.setItem(el.id, el.checked);
+        break;
+      default:
+        localStorage.setItem(el.id, el.value);
+        break;
+    }
+  });
+}
+
+// Process all DOM elements in the class 'persistent', which saves their state in localStorage and restores them on load.
+function processPersistentElements() {
+  const persistentElements = document.querySelectorAll(".persistent");
+
+  // Restore state
+  persistentElements.forEach((el) => {
+    restoreState(el);
+  });
+
+  // Save state
+  persistentElements.forEach((el) => {
+    saveState(el);
+  });
+}
+
+// Call the function to replace the div with the select element
+replaceDivWithSelect();
+
+// Handle updating persistence when the DOM is updated.
+const observeDOM = () => {
+  const observer = new MutationObserver((mutations) => {
+    mutations.forEach((mutation) => {
+      if (mutation.addedNodes) {
+        mutation.addedNodes.forEach((node) => {
+          if (node.nodeType === 1 && node.matches(".persistent")) {
+            restoreState(node);
+            node.addEventListener("change", () => saveState(node));
+          }
+        });
+      }
+    });
+  });
+
+  observer.observe(document.body, {
+    childList: true,
+    subtree: true,
+  });
+};
+
+document.addEventListener("DOMContentLoaded", () => {
+  processPersistentElements();
+});
+
+observeDOM();
+
+// We periodically send a heartbeat to the server to keep it alive.
+// The server shuts down if it hasn't received a heartbeat in a sufficiently long interval;
+// This handles both the case when the browser tab is closed and when the browser is shut down.
+function sendHeartbeat() {
+  let xhr = new XMLHttpRequest();
+  xhr.open("GET", "/heartbeat", true);
+  xhr.send();
+}
+
+setInterval(sendHeartbeat, 10000); // Send heartbeat every 10 seconds
+
       window.addEventListener("load", () => {
 	  load(profile);
       });
@@ -5321,9 +6078,29 @@ function loadDemo() {
 	<div class="container justify-content-center">
 	  <p class="text-center">
 	    <font style="font-size:small">
-	      <a href="https://github.com/plasma-umass/scalene">Scalene</a> version 1.5.31.1, released 2023.09.15
-	      &nbsp;|&nbsp;
-	      <a href="https://github.com/plasma-umass/scalene/issues/58">share your Scalene success stories</a>
+	      <div class="text-and-upload">
+		  <a href="https://github.com/plasma-umass/scalene">Scalene</a> version 1.5.45, 2024.10.01
+		  &nbsp;|&nbsp;
+		  <a href="https://github.com/plasma-umass/scalene/issues/new/choose">report an issue or request a feature</a>
+		  &nbsp;|&nbsp;
+		  <a href="https://github.com/plasma-umass/scalene/issues/58">share your Scalene success stories</a>
+		  &nbsp;|&nbsp;
+		  <a href="javascript:void(0);" onclick="clickToLoadFile();">load another profile</a>
+		<form id="jsonFile" name="jsonFile" enctype="multipart/form-data" method="post" style="display: inline;">
+		  <input style="height: 0; width: 0; opacity: 0" type="file" id="fileinput" accept=".json" onchange="loadFile()">
+		  <!-- SVG icon -->
+		  <svg class="svg-upload" onclick="clickToLoadFile();" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+		    <title>Load another profile (.json)</title>
+		    <g data-name="upload">
+		      <rect width="16" height="2" x="4" y="4" rx="1" ry="1" transform="rotate(180 12 5)"></rect>
+		      <rect width="4" height="2" x="17" y="5" rx="1" ry="1" transform="rotate(90 19 6)"></rect>
+		      <rect width="4" height="2" x="3" y="5" rx="1" ry="1" transform="rotate(90 5 6)"></rect>
+		      <path d="M8 14a1 1 0 0 1-.8-.4 1 1 0 0 1 .2-1.4l4-3a1 1 0 0 1 1.18 0l4 2.82a1 1 0 0 1 .24 1.39 1 1 0 0 1-1.4.24L12 11.24 8.6 13.8a1 1 0 0 1-.6.2z"></path>
+		      <path d="M12 21a1 1 0 0 1-1-1v-8a1 1 0 0 1 2 0v8a1 1 0 0 1-1 1z"></path>
+		    </g>
+		  </svg>
+		</form>
+	      </div>
 	    </font>
 	  </p>
 	</div>

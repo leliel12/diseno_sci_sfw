@@ -12,3 +12,6 @@ bottle
 hypothesis
 hypofuzz
 cosmic-ray
+matplotlib
+seaborn
+
