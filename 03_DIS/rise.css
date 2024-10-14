@@ -77,11 +77,14 @@
     color: var(--primary) !important
 }
 
-.reveal-full-page .rise-enabled .jp-MarkdownOutput table.clean,
-.reveal-full-page .rise-enabled .jp-MarkdownOutput table.clean tr,
-.reveal-full-page .rise-enabled .jp-MarkdownOutput table.clean td {
+
+.reveal-full-page .rise-enabled .jp-MarkdownOutput table,
+.reveal-full-page .rise-enabled .jp-MarkdownOutput table tr,
+.reveal-full-page .rise-enabled .jp-MarkdownOutput table td {
     background-color: white;
     border: none;
+    font-size: 30px;
+    
 }
 
 .reveal-full-page .rise-enabled .jp-MarkdownOutput code {
