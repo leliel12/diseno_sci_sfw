@@ -37,10 +37,15 @@
 
 ### 4. Diseño de software
 
-- [Patrones de diseño](03_DIS/00_patterns.ipynb)
+- [Intro a diseño](03_DIS/00_design.ipynb)
+- [Patrones de diseño](03_DIS/01_patterns.ipynb)
+- [Pandas, plots & Accessors](03_DIS/02_plot_api_integration.ipynb)
+- [Manejo de obsolecencia](03_DIS/03_deprecate.ipynb)
+- [SOLID](03_DIS/04_solid.ipynb)
+- [Scikit-Learn Design](03_DIS/04_sklearn.ipynb)
 - [Antipatrones]
 - [Code-Smells]
-- [SOLID]
+
 
 
 ### 5. Optimización, concurrencia y paralelismo
