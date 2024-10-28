@@ -40,9 +40,9 @@
 - [Intro a diseño](03_DIS/00_design.ipynb)
 - [Patrones de diseño](03_DIS/01_patterns.ipynb)
 - [Pandas, plots & Accessors](03_DIS/02_plot_api_integration.ipynb)
-- [Manejo de obsolecencia](03_DIS/03_deprecate.ipynb)
+- [Manejo de obsolescencia](03_DIS/03_deprecate.ipynb)
 - [SOLID](03_DIS/04_solid.ipynb)
-- [Scikit-Learn Design](03_DIS/04_sklearn.ipynb)
+- [Scikit-Learn Design](03_DIS/05_sklearn.ipynb)
 - [Antipatrones]
 - [Code-Smells]
 
