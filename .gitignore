@@ -89,3 +89,10 @@ unidad4/04_nosql/mydata.fs.tmp
 **/hdf5/*
 **/unidad4/dd_data/
 .ipynb_checkpoints
+
+02_QA/05_mutation/cray.sqlite
+02_QA/05_mutation/report.html
+02_QA/06_profiling/scalene/_ipython-input-2-profile
+02_QA/06_profiling/scalene/_ipython-input-3-profile
+03_DIS/02_plot_api_integration/result_images/
+04_optimizacion/fake_files/
