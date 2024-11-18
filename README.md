@@ -51,6 +51,7 @@
 ### 5. Optimización, concurrencia y paralelismo
 
 
+
 ### 6. Tooling 🧉
 
 Estos temas no tienen un contenido teórico muy robusto e involucran
