@@ -43,12 +43,18 @@
 - [Manejo de obsolescencia](03_DIS/03_deprecate.ipynb)
 - [SOLID](03_DIS/04_solid.ipynb)
 - [Scikit-Learn Design](03_DIS/05_sklearn.ipynb)
-- [Antipatrones]
-- [Code-Smells]
-
+- [Code-Smells y refactoring](03_DIS/06_refactors.ipynb)
 
 
 ### 5. Optimización, concurrencia y paralelismo
+
+- [Intro a optimización](04_optimizacion/00_optimizacion.ipynb)
+- [Threads y procesos](04_optimizacion/01_thread_process.ipynb)
+- [Cómputo distribuido (Dask)](04_optimizacion/02_dask.ipynb)
+- [Compiladores Justo-A-Tiempo (Numba)](04_optimizacion/03_jit.ipynb)
+- [Extensión de Python para compilación estática y generación de código C/C++ (Cython)](04_optimizacion/04_Cython.ipynb)
+- [Integración de Python con C](04_optimizacion/05_C.ipynb)
+
 
 
 
